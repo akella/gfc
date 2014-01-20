@@ -10,7 +10,7 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/highcharts/highcharts.js"></script>
 	<script src="js/highcharts/modules/exporting.js"></script>
-	<script src="js/common.js"></script>
+	
 </head>
 <body>
 
@@ -23,11 +23,11 @@
 	</div></div>
 	<!-- end topline -->
 	<!-- begin nav  -->
-	<nav class="nav">
+	<nav class="gnav">
 		<ul>
-			<li><a href="#" class="is-active nav__dash" ><i ></i>Dashboard</a></li>
-			<li><a href="#" class="nav__trafik"><i></i>Traffik</a></li>
-			<li><a href="#" class="nav__alerts"><i></i>Alerts</a></li>
+			<li><a href="#" class="is-active gnav__dash" ><i ></i>Dashboard</a></li>
+			<li><a href="#" class="gnav__trafik"><i></i>Traffik</a></li>
+			<li><a href="#" class="gnav__alerts"><i></i>Alerts</a></li>
 		</ul>
 	</nav>
 	<!-- end nav -->
@@ -60,9 +60,11 @@
 		            title: {
 		                text: ' '
 		            },
-		            xAxis: {
-		                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-		            },
+		             xAxis: {
+			            tickInterval:1,
+			            tickmarkPlacement: 'on',
+			            gridLineWidth: 1
+			        },
 		            yAxis: {
 		                title: {
 		                    text: 'Money ($)'
@@ -103,7 +105,7 @@
 	<!-- end b -->
 
 	<!-- begin l  -->
-	<div class="l">
+	<div class="l l_dashboard">
 		<!-- begin l-col1  -->
 		<div class="l-col1">
 			<div class="b">
