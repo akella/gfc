@@ -8,6 +8,8 @@
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.js"></script>
+	<script src="js/highcharts/highcharts.js"></script>
+	<script src="js/highcharts/modules/exporting.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -35,18 +37,66 @@
 <!-- begin content  -->
 <div class="content">
 	<!-- begin b  -->
-	<div class="b">
+	<div class="b b_top">
 		<header class="b__header">
-			<h3>Volumes & Funds</h3>
+			<h3>Overview</h3>
 			<nav>
-				<a href="#" class="is-active">Today</a>
-				<a href="#">Yesterday</a>
-				<a href="#">Last week</a>
-				<a href="#">Last month</a>
+				<a href="#" class="is-active">Daily</a>
+				<a href="#">Weekly</a>
+				<a href="#">Monthly</a>
+			</nav>
+			<nav class="nav_center">
+				<a href="#" class="is-active">Profit</a>
+				<a href="#">ID's</a>
+				<a href="#">V&P</a>
 			</nav>
 		</header>
-		<div class="b__content">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, ex, ullam, alias tempora incidunt inventore quam doloribus quos molestiae ducimus accusamus cumque culpa nulla in corrupti quaerat fugit sit omnis.
+		<script type="text/javascript">
+$(function () {
+        $('#g1').highcharts({
+            chart: {
+                type: 'line'
+            },
+            title: {
+                text: ' '
+            },
+            xAxis: {
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            },
+            yAxis: {
+                title: {
+                    text: 'Temperature (°C)'
+                }
+            },
+            tooltip: {
+                enabled: false,
+                formatter: function() {
+                    return '<b>'+ this.series.name +'</b><br/>'+
+                        this.x +': '+ this.y +'°C';
+                }
+            },
+            plotOptions: {
+                line: {
+                    dataLabels: {
+                        enabled: true
+                    },
+                    enableMouseTracking: false
+                }
+            },
+            series: [{
+                name: 'Tokyo',
+                data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+            }, {
+                name: 'London',
+                data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+            }]
+        });
+    });
+    
+
+		</script>
+		<div class="b__content" id="g1">
+			
 		</div>
 	</div>
 	<!-- end b -->
