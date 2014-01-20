@@ -21,10 +21,15 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
 body { font-size: 12px; font-family: Arial, sans-serif; line-height: 1.4; }
 
-.l { *zoom: 1; }
+.content { padding-bottom: 20px; }
+
+.l { *zoom: 1; margin-top: 10px; margin-bottom: 10px; }
 .l:after { content: " "; display: table; clear: both; }
-.l .l-col1 { float: left; width: 20%; }
-.l .l-col2 { float: right; width: 70%; }
+.l .l-col1 { float: left; width: 45%; padding-right: 5%; border-right: 1px solid #ebebeb; padding-top: 25px; }
+.l .l-col2 { float: right; width: 45%; padding-top: 25px; }
+.l.l_alt { border-top: 1px solid #ebebeb; padding-top: 10px; }
+.l.l_alt .l-col1 { width: 30%; }
+.l.l_alt .l-col2 { width: 60%; }
 
 .header { margin-bottom: 30px; }
 

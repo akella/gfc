@@ -52,54 +52,354 @@
 			</nav>
 		</header>
 		<script type="text/javascript">
-$(function () {
-        $('#g1').highcharts({
-            chart: {
-                type: 'line'
-            },
-            title: {
-                text: ' '
-            },
-            xAxis: {
-                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-            },
-            yAxis: {
-                title: {
-                    text: 'Temperature (°C)'
-                }
-            },
-            tooltip: {
-                enabled: false,
-                formatter: function() {
-                    return '<b>'+ this.series.name +'</b><br/>'+
-                        this.x +': '+ this.y +'°C';
-                }
-            },
-            plotOptions: {
-                line: {
-                    dataLabels: {
-                        enabled: true
-                    },
-                    enableMouseTracking: false
-                }
-            },
-            series: [{
-                name: 'Tokyo',
-                data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
-            }, {
-                name: 'London',
-                data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
-            }]
-        });
-    });
-    
+			$(function () {
+		        $('#g1').highcharts({
+		            chart: {
+		                type: 'line'
+		            },
+		            title: {
+		                text: ' '
+		            },
+		            xAxis: {
+		                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+		            },
+		            yAxis: {
+		                title: {
+		                    text: 'Money ($)'
+		                },
+		                labels: {
+		                    formatter: function() {
+		                        return this.value +'$'
+		                    }
+		                }
 
+		            },
+		            tooltip: {
+		                enabled: false,
+		                formatter: function() {
+		                    return '<b>'+ this.series.name +'</b><br/>'+
+		                        this.x +': '+ this.y +'°C';
+		                }
+		            },
+		            plotOptions: {
+		                line: {
+		                    dataLabels: {
+		                        enabled: true
+		                    },
+		                    enableMouseTracking: false
+		                }
+		            },
+		            series: [{
+		                name: 'Something',
+		                data: [7.0, 6.9, 9.5, 14.5, 18.4, 211.5, 25.2, 26.5, 23.3, 188.3, 13.9, 9.6]
+		            }]
+		        });
+		    });
 		</script>
-		<div class="b__content" id="g1">
+		<div class="b__content" id="g1" style="height: 174px;">
 			
 		</div>
 	</div>
 	<!-- end b -->
+
+	<!-- begin l  -->
+	<div class="l">
+		<!-- begin l-col1  -->
+		<div class="l-col1">
+			<div class="b">
+				<header class="b__header">
+					<h3>Volumes & Peers</h3>
+					<nav>
+						<a href="#" class="is-active">Today</a>
+						<a href="#">Yesterday</a>
+						<a href="#">Last week</a>
+						<a href="#">Last month</a>
+					</nav>
+				</header>
+				<script type="text/javascript">
+					$(function () {
+				        $('#g2').highcharts({
+				            chart: {
+				                type: 'bar'
+				            },
+				            title: {
+				                text: ' '
+				            },
+		
+				            xAxis: {
+				                categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
+				                title: {
+				                    text: null
+				                }
+				            },
+				            yAxis: {
+				                min: 0,
+				                title: {
+				                    text: ' ',
+				                    align: 'high'
+				                },
+				                labels: {
+				                    overflow: 'justify'
+				                }
+				            },
+				            tooltip: {
+				                valueSuffix: ' millions'
+				            },
+				            plotOptions: {
+				                bar: {
+				                    dataLabels: {
+				                        enabled: true
+				                    }
+				                }
+				            },
+				            legend: {
+				                layout: 'vertical',
+				                align: 'right',
+				                verticalAlign: 'top',
+				                x: -40,
+				                y: 100,
+				                floating: true,
+				                borderWidth: 1,
+				                backgroundColor: '#FFFFFF',
+				                shadow: true
+				            },
+				            credits: {
+				                enabled: false
+				            },
+				            series: [{
+				                name: 'Blabla 1',
+				                data: [107, 31, 635]
+				            }, {
+				                name: 'Blabla 2',
+				                data: [133, 156, 947]
+				            }]
+				        });
+				    });
+				</script>
+				<div class="b__content" id="g2" style="height: 320px;;">
+					
+				</div>
+			</div>
+			<!-- end b -->
+		</div>
+		<!-- end l-col1 -->
+		<!-- begin l-col2  -->
+		<div class="l-col2">
+			<div class="b">
+				<header class="b__header">
+					<h3>Capacity</h3>
+					<nav>
+						<a href="#" class="is-active">Today</a>
+						<a href="#">Yesterday</a>
+						<a href="#">Last week</a>
+						<a href="#">Last month</a>
+					</nav>
+				</header>
+				<script type="text/javascript">
+					$(function () {
+				         // Create the chart
+			        chart = new Highcharts.Chart({
+			            chart: {
+			                renderTo: 'g3',
+			                type: 'pie'
+			            },
+			            title: {
+			                text: ' '
+			            },
+			            yAxis: {
+			                title: {
+			                    text: 'Total percent market share'
+			                }
+			            },
+			            plotOptions: {
+			                pie: {
+			                    shadow: false
+			                }
+			            },
+			            tooltip: {
+			                formatter: function() {
+			                    return '<b>'+ this.point.name +'</b>: '+ this.y +' %';
+			                }
+			            },
+			            series: [{
+			                name: 'Browsers',
+			                data: [["Firefox",6],["MSIE",4],["Chrome",7]],
+			                size: '80%',
+			                innerSize: '40%',
+			             
+			                dataLabels: {
+			                    enabled: true
+			                }
+			            }]
+			        });
+				    });
+				</script>
+				<div class="b__content" id="g3" style="height: 320px;padding-bottom:20px">
+					
+				</div>
+			</div>
+			<!-- end b -->
+		</div>
+		<!-- end l-col2 -->
+	</div>
+	<!-- end l -->
+
+
+	<!-- begin l  -->
+	<div class="l l_alt">
+		<!-- begin l-col1  -->
+		<div class="l-col1">
+			<div class="b">
+				<header class="b__header">
+					<h3>ID’s (numbers)</h3>
+					
+				</header>
+				<script type="text/javascript">
+					$(function () {
+				        $('#g4').highcharts({
+				            chart: {
+				                type: 'bar'
+				            },
+				            title: {
+				                text: ' '
+				            },
+		
+				            xAxis: {
+				                categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
+				                title: {
+				                    text: null
+				                }
+				            },
+				            yAxis: {
+				                min: 0,
+				                title: {
+				                    text: ' ',
+				                    align: 'high'
+				                },
+				                labels: {
+				                    overflow: 'justify'
+				                }
+				            },
+				            tooltip: {
+				                valueSuffix: ' millions'
+				            },
+				            plotOptions: {
+				                bar: {
+				                    dataLabels: {
+				                        enabled: true
+				                    }
+				                }
+				            },
+				            legend: {
+				                layout: 'vertical',
+				                align: 'right',
+				                verticalAlign: 'top',
+				                x: -40,
+				                y: 100,
+				                floating: true,
+				                borderWidth: 1,
+				                backgroundColor: '#FFFFFF',
+				                shadow: true
+				            },
+				            credits: {
+				                enabled: false
+				            },
+				            series: [{
+				                name: 'Blabla 1',
+				                data: [107, 31, 635]
+				            }]
+				        });
+				    });
+				    
+				</script>
+				<div class="b__content" id="g4" style="height: 240px;">
+					
+				</div>
+			</div>
+			<!-- end b -->
+		</div>
+		<!-- end l-col1 -->
+		<!-- begin l-col2  -->
+		<div class="l-col2">
+			<div class="b">
+				<header class="b__header">
+					<h3>Capacity</h3>
+					<nav>
+						<a href="#" class="is-active">Today</a>
+						<a href="#">Yesterday</a>
+						<a href="#">Last week</a>
+						<a href="#">Last month</a>
+					</nav>
+				</header>
+				<script type="text/javascript">
+					$(function () {
+				        
+				        $('#g5').highcharts({
+				            chart: {
+				                type: 'bar'
+				            },
+				            title: {
+				                text: ' '
+				            },
+		
+				            xAxis: {
+				                categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
+				                title: {
+				                    text: null
+				                }
+				            },
+				            yAxis: {
+				                min: 0,
+				                title: {
+				                    text: ' ',
+				                    align: 'high'
+				                },
+				                labels: {
+				                    overflow: 'justify'
+				                }
+				            },
+				            tooltip: {
+				                valueSuffix: ' millions'
+				            },
+				            plotOptions: {
+				                bar: {
+				                    dataLabels: {
+				                        enabled: true
+				                    }
+				                }
+				            },
+				            legend: {
+				                layout: 'vertical',
+				                align: 'right',
+				                verticalAlign: 'top',
+				                x: -40,
+				                y: 100,
+				                floating: true,
+				                borderWidth: 1,
+				                backgroundColor: '#FFFFFF',
+				                shadow: true
+				            },
+				            credits: {
+				                enabled: false
+				            },
+				            series: [{
+				                name: 'Blabla 1',
+				                data: [107, 31, 635]
+				            }]
+				        });
+				    });
+				    
+				</script>
+				<div class="b__content" id="g5" style="height: 240px">
+					
+				</div>
+			</div>
+			<!-- end b -->
+		</div>
+		<!-- end l-col2 -->
+	</div>
+	<!-- end l -->
+
 </div>
 <!-- end content -->
 
