@@ -1,9 +1,35 @@
 // default layout
 .l
-	+clr
+	width: 100%
+	display: inline-block
 	.l-col1
 		float: left
 		width: 20%
 	.l-col2
 		float: right
 		width: 70%
+		
+.l-col3
+	float: left
+	padding-left: 1% 
+	width: 33%
+	+box-sizing(border-box) 
+	min-height: 1px
+	&:first-child
+		padding-left: 0
+.l-col3_small
+	width: 20%
+.l-col3_width
+	width: 46%
+.l-col4
+	float: left
+	padding-left: 1% 
+	width: 25%
+	+box-sizing(border-box) 
+	&:first-child
+		padding-left: 0            
+
+.l-col-equal
+	width: 50%
+	float: left
+	+box-sizing(border-box)  
