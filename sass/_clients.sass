@@ -1,0 +1,282 @@
+html
+	+scrollbar
+		width: 8px
+		margin-right: 10px
+	+scrollbar-track
+		+border-radius(5px)
+		background: #ececec
+		+box-shadow(inset 0 0 3px rgba(44,44,44,.2), inset 0 0 0 1px #d5d5d5)
+	+scrollbar-thumb
+		width: 8px
+		border: 1px solid #2694bf
+		+border-radius(5px)
+		background: #2babdb
+body
+	color: #5c5c5c 
+	// +scrollbar-track-piece 
+	// 	background: #e1e1e1
+
+html
+	height: 100% 
+.is-popup
+	+background-image(linear-gradient(#fff, #DCDCDC))
+.icon
+	display: inline-block
+.icon_add
+	+s(add)
+.icon_export
+	+s(export)
+.icon_edit   
+	+s(edit-white)
+
+.tabwindow
+	.tabwindow__in
+		padding: 20px 
+	.tabwindow__content
+		background: #ffffff 
+		+box-shadow(0 0 10px rgba(#000, .2))
+		padding: 35px 20px 
+		position: relative
+.tabwindow__nav
+	+clr
+.tabs
+	float: left
+	list-style: none
+	display: inline-block
+	vertical-align: bottom     
+	position: relative
+	li
+		float: left
+		margin-right: 15px 
+	a
+		float: left
+		height: 32px 
+		line-height: 32px
+		padding: 0 17px
+		font-weight: bold 
+		background: #B0D0DA
+		font-size: 13px  
+		color: #86A3AD
+		font-size: 14px
+		text-decoration: none
+		text-shadow: 0 1px 0 #D2E2E8
+		+border-radius(8px 8px 0 0) 
+		+transition(all .1s ease-in-out)
+		+box-shadow(0 0 7px rgba(#000, .3))
+		&:hover
+			color: #333 
+		&.is-active
+			background: #fff
+			color: #5E5E5E   
+			z-index: 100
+			position: relative
+			&:before
+				position: absolute
+				content: ' '
+				width: 100%
+				height: 10px  
+				background: #fff
+				bottom: -10px  
+				left: 0 
+.tabwindow__state
+	float: right
+	color: #6a6969
+	font-size: 18px
+	font-weight: bold 
+
+.table-simple
+	border-spacing: 0
+	border-collapse: collapse
+	width: 100%
+	td, th
+		border: 1px solid #D5D5D5 
+		text-align: center
+		vertical-align: middle
+	th
+		padding: 7px 3px
+		background: #D5D5D5
+		border-color: #fff
+		text-align: center
+		font-weight: normal    
+		color: #666666
+		font-size: 12px  
+		min-height: 40px 
+		border-bottom-style: none
+		&:first-child
+			border-left: none 
+			border-top-left-radius: 4px
+		&:last-child
+			border-right-color: #D5D5D5 
+	td
+		padding: 4px 
+		&:first-child,&:last-child
+			padding-top: 6px 
+		&.td_icon
+			width: 33px 
+			text-align: center
+	tbody
+		tr
+			&:nth-child(2n)
+				background: #f0f0f0 
+	.input-wrap
+		margin-bottom: 0
+		.icon
+			position: absolute
+			top: 50%
+			right: 9px
+			left: auto
+		.icon_glass
+			margin-top: -7px
+		.input
+			&:focus
+				+ i
+					+s(glass-h)
+.customcheckbox
+	position: relative
+	display: inline-block
+	input  
+		position: relative
+		width: 17px
+		height: 17px
+		opacity: 0
+		z-index: 2
+		&:checked
+			+ i
+				&:before
+					display: block
+	i
+		position: absolute
+		top: 0
+		left: 0
+		width: 16px
+		height: 16px
+		border: 1px solid #d5d5d5
+		+border-radius(4px)
+		background: #fff
+		+box-shadow(inset 0 1px 3px rgba(0,0,0,.07))
+		&:before
+			display: none 
+			content: ""
+			position: absolute
+			top: 2px
+			left: 3px
+			+s(check) 
+
+.icon-delete
+	+s(delete)
+	cursor: pointer
+	display: inline-block
+	
+
+.chosen-container-multi
+	&:after
+		content: ""
+		position: absolute
+		top: 8px
+		right: 10px
+		+s(arr1)  
+.chosen-container-active
+	&:after
+		+s(arr2)
+
+
+.chosen-container
+	display: block
+
+.icon_glass
+	+s(glass)
+
+.wrap
+	+clr
+.col
+	float: left
+	width: 33.3%
+	padding-right: 4%
+	+box-sizing(border-box)
+	&:last-child
+		padding-right: 0
+	.group_width
+		margin-bottom: 28px
+		&.is-inactive-group
+			.row
+				+opacity(.3)
+				+transition(all .2s linear)
+				position: relative
+				&:before
+					position: absolute
+					top: 0
+					z-index: 20  
+					left: 0
+					right: 0  
+					bottom: 0
+					content: ' ' 
+		.group__title 
+			margin-bottom: 28px
+			left: -20px
+			h2
+				width: 100%
+.row
+	margin-bottom: 4px
+	font-size: 0
+	+transition(all .2s linear)
+	.button
+		margin-top: 17px
+	.actions
+		margin-top: 35px
+		text-align: left
+		.button
+			&:first-child
+				margin-left: 0
+.row__title
+	display: inline-block
+	margin-bottom: 10px
+	width: 33%
+	margin-left: 16.5%
+	text-align: center
+	color: #b0b0b0
+	font-weight: bold
+	font-size: 12px  
+.row__text,
+.row__main
+	display: inline-block
+	vertical-align: middle
+.row__text
+	width: 26%
+	padding-right: 5px
+	font-size: 12px
+	text-align: right
+	+box-sizing(border-box)
+.row__add-text
+	display: inline-block
+	font-size: 12px
+	margin-left: 6px
+.row__main
+	width: 74%
+	+clr
+	+box-sizing(border-box)
+	.input_s
+		width: 40%
+		display: inline-block
+		text-align: right
+	.input_to-right
+		float: right
+	.input-wrap
+		margin-bottom: 0
+.icon_refresh
+	display: inline-block
+	vertical-align: middle
+	+s(refresh)
+	margin-right: 10px
+	
+
+.badge-label
+	display: inline-block
+	margin-right: 5px
+	padding: 0 8px 
+	font-size: 12px
+	color: #5c5c5c
+	height: 24px
+	line-height: 24px
+	+border-radius(2px)
+	background: #e3e3e3
+	margin-bottom: 1px 

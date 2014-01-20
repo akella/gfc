@@ -7,6 +7,44 @@
 	margin-bottom: 10px 
 	.l-col1
 		float: left
+		width: 25%
+	.l-col2
+		float: right
+		width: 70%
+		
+.l-col3
+	float: left
+	padding-left: 1% 
+	width: 33%
+	+box-sizing(border-box) 
+	min-height: 1px
+	&:first-child
+		padding-left: 0
+.l-col3_small
+	width: 20%
+.l-col3_width
+	width: 46%
+.l-col4
+	float: left
+	padding-left: 1% 
+	width: 25%
+	+box-sizing(border-box) 
+	&:first-child
+		padding-left: 0            
+
+.l-col-equal
+	width: 50%
+	float: left
+	+box-sizing(border-box)  
+	
+
+
+.l_dashboard
+	+clr
+	margin-top: 10px 
+	margin-bottom: 10px 
+	.l-col1
+		float: left
 		width: 45%
 		padding-right: 5%
 		border-right: 1px solid #EBEBEB 
@@ -15,10 +53,10 @@
 		float: right
 		width: 45%
 		padding-top: 25px 
-	&.l_alt
-		border-top: 1px solid #EBEBEB 
-		padding-top: 10px 
-		.l-col1
-			width: 30%
-		.l-col2
-			width: 60%
+.l_alt
+	border-top: 1px solid #EBEBEB 
+	padding-top: 10px 
+	.l-col1
+		width: 30%
+	.l-col2
+		width: 60%

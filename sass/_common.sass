@@ -1,49 +1,522 @@
-// # SHORT HOWTO
-// ## Sprites
-//     .whatever
-//          +sized-sprite($icons, coderiver) //or
-// 			+s(codedby) //gets default value for spritemap as $icons
-// ### animation example
-//     +include keyframes(rotate)
-//        from
-//           +rotate(0)
-//        to
-//           +rotate(360)
-// ## animation usage
-//     body:hover
-// 	    +animation(rotate 200s linear infinite)
-// ## animations easing, see easings.net for full list and examples, tnx @ai
-//     transition: all 1.2s ceaser($ease-in)
-// ## gradient example
-//     +background-image(linear-gradient(#232323, #5c5c5c));
-//     +g(#232323, #5c5c5c);
-//	   horizontal
-//     +gh(#232323, #5c5c5c);
-// ## making bw-images
-//     img
-//			@extend %gray
-// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
-//     +min-screen(320)
-//			display: none
-// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
-//
-// ## use cycles
-//     @for $i from 1 through 3
-//       .item-#{$i}
-//			width: 2em * $i;
-//     @each $s in a,b,c
-// 	    	#{$s}
-//				display: none
-// ## fonts 
-// Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
-// =book
-// 	font-family: "book",arial,sans-serif 
-	
++font(novareg, proximanova-reg)  
+// +font(novaregc, proximanova-cond-reg)  
+// +font(novabold, proximanova-bold)  
+// +font(novablackc, proximanova-cond-black)  
+// +font(rubl, alsrubl-tahoma-regular)
+// +font(rubl-b, alsrubl-tahoma-bold)
+=freg
+	font-family: "novareg", Arial, sans-serif 
+=ftah
+	font-family: Tahoma, Arial, sans-serif 
+// =fbold
+// 	font-family: "novabold", Arial, sans-serif 
+// =fregc
+// 	font-family: "novaregc", Arial, sans-serif 
+// =fblackc
+// 	font-family: "novablack", Arial, sans-serif 
+// =rubl
+// 	font-family: "rubl", Verdana, Arial, sans-serif 
+// =rubl-b
+// 	font-family: "rubl-b", Verdana, Arial, sans-serif 
+$blue: #5fafe1
+$red: #eb6868
 body
+	min-width: 1000px    
+	line-height: 1.1
+	+freg
+	color: #666  
+	&.is-fixed-table
+		.table-wrap
+			margin-top: 324px
+		.filter__in
+			position: fixed
+			left: 0
+			top: 0
+			right: 0
+			z-index: 2
+textarea,input
+	font-family: Tahoma,sans-serif 
+// resets
+a img,fieldset
+	border: none
+html
+	+scrollbar
+		width: 8px
+		margin-right: 10px
+	+scrollbar-track
+		+border-radius(5px)
+		background: #ececec
+		+box-shadow(inset 0 0 3px rgba(44,44,44,.2), inset 0 0 0 1px #d5d5d5)
+	+scrollbar-thumb
+		width: 8px
+		border: 1px solid #2694bf
+		+border-radius(5px)
+		background: #2babdb
+
+
+html
+	height: 100% 
+.header
+	border-bottom: 1px solid #fff 
+.header__top
+	overflow: hidden
+	padding: 12px 0
+	color: #fff 
+	background: #4c6a84  
+	text-shadow: 0 1px 1px rgba(0,0,0,.4)   
+.header__info
+	float: right
+	span
+		position: relative
+		padding-left: 10px
+		margin-left: 10px
+		display: inline-block
+		&:first-child
+			padding-left: 0
+			margin-left: 0
+			&:before
+				display: none
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			top: 2px
+			height: 14px
+			width: 1px
+			background: #c7c7c7  
+.header__user
+	float: right
+	margin-left: 73px
+	span
+		display: inline-block
+		position: relative
+		padding-right: 10px
+		margin-right: 10px
+		&:before
+			content: ""
+			position: absolute
+			right: 0
+			top: 2px
+			height: 14px
+			width: 1px
+			background: #c7c7c7  
+	a
+		color: #fff
+		text-decoration: none 
+		&:hover
+			color: #2cabdc 
+.l-container
+	width: 90%
+	margin: 0 auto 
+	+r(1650)
+		width: 98%
+.nav-wrap
+	background: #e7e7e7
+	height: 60px
+	line-height: 60px 
+.nav
+	+clr
+	float: left
+	i
+		display: inline-block
+		margin-right: 11px
+		vertical-align: middle
+.nav__item
+	position: relative
+	float: left
+	&.is-active
+		.nav__link
+			background: #fff
+			color: $blue  
+			box-shadow: inset 0 3px 0 $red
+		@for $i from 1 through 3
+			.nav__icon#{$i}       
+				+s(nav#{$i}-act)
+@for $i from 1 through 3
+	.nav__icon#{$i}       
+		+s(nav#{$i})
+.nav__link  
+	display: block
+	padding: 0 40px
+	font-size: 16px
+	color: #ababab
+	font-weight: bold  
+	text-decoration: none
+	+ftah
+.subnav
+	display: none
+	position: absolute
+	top: 52px
+	left: 0
+	right: 0
+	z-index: 100
+	background: #f7f7f7 
+	border-radius: 0 0 2px 2px
+	box-shadow: 0 4px 7px rgba(0,0,0,.4)
+.subnav__item
+	&.is-active
+		.subnzv__link
+			color: #fff 
+			background: #2aa6da
+.subnav__link
+	display: block
+	padding: 9px 5px 8px 18px 
+	line-height: 1.1
+	color: #505050 
+	font-size: 12px
+	text-decoration: none
+	//+transition(all .2s linear)
+	&:hover
+		background: #2aa6da
+		color: #fff  
+.nav-info
+	float: right
+	li
+		float: left
+		margin-left: 20px
+		.icon
+			margin-right: 10px
+		.icon,
+		span
+			display: inline-block
+			vertical-align: middle
+		@for $i from 1 through 4
+			.icon_nav#{$i} 
+				+s(icon#{$i})
+	a
+		font-size: 12px
+		text-decoration: none
+		color: #5c5c5c 
+.button
+	display: inline-block
+	border-radius: 2px
+	height: 28px
+	position: relative
+	overflow: hidden
+	padding: 0 15px
+	min-width: 120px
+	color: #838383 
+	text-align: center
+	font: bold 13px/28px Tahoma,Arial,sans-serif
+	font-weight: bold
+	background: #E8E8E8
+	text-shadow: 0 1px 0 #FAFAFA 
+	cursor: pointer
+	border: 0
+	text-decoration: none
+	+box-sizing(border-box)
+	+transition(background .2s linear)
+	&.button_blue
+		background: #2cabdc
+		color: #fff
+		text-shadow: 0 1px 2px rgba(#000, .4)   
+		&:hover
+			+opacity(1)
+			background: #238db5 
+	&.is-disabled
+		background: #e7e7e7
+		color: #fff
+		text-shadow: 0 1px 0 rgba(191,191,191,.2)  
+	&:hover
+		+opacity(.95)
+	&:focus
+		outline: none
+	&:active
+		position: relative
+		top: 1px 
+.button_big
+	height: 32px
+	font: bold 14px/32px Tahoma,Arial,sans-serif
+.button_gray
+	background: #c5c5c5
+	color: #5c5c5c  
+.button_green
+	background: #66bb38
+	color: #fff 
+	text-shadow: 0 1px 0 #54ad2a
+.button_icon
+	padding: 0 10px
+	.icon
+		margin-right: 13px
+		margin-top: -2px
+		vertical-align: middle
+.button_red
+	background: #DE5454 
+	color: #fff
+	text-shadow: 0 1px 0 #c21717 
+.tooltip
+	display: none
+	position: absolute
+	top: 100px
+	left: 0
+	z-index: 1000
+	padding: 15px 
+	background: #fff
+	//width: 377px
+	border-radius: 3px
+	box-shadow: 0 4px 7px rgba(0,0,0,.4)
+	&:before,
+	&:after 
+		content: "" 
+		position: absolute
+		width: 0px
+		height: 0px
+		border-style: solid
+	&:before
+		top: -8px
+		left: 16px
+		border-width: 0 6px 8px 6px
+		z-index: 2
+		border-color: transparent transparent #fff transparent
+	&:after
+		top: -9px
+		left: 15px
+		border-width: 0 7px 9px 7px
+		border-color: transparent transparent #ccc transparent
+	.button
+		float: right
+		margin-top: 0
+		width: 75px
+		&:first-child
+			float: left
+.tooltip_gray
+	background: #f7f7f7
+	padding-top: 23px
+	width: 315px   
+	margin-left: 10px
+	&:after,
+	&:before
+		display: none
+.tooltip__table
+	width: 100% 
+	border-spacing: 0
+	border-collapse: collapse
+	font-size: 12px
+	border: 1px solid #e6e6e6
+	thead
+		background: #e7e7e7 
+		th
+			font-weight: normal
+			padding: 3px 
+			border-left: 1px solid #fff
+			border-bottom: 1px solid #e6e6e6 
+			&:first-child
+				border-left: 0
+	tbody
+		tr
+			&:nth-child(2n)
+				background: #f7f7f7 
+		td
+			padding: 0
+			border-left: 1px solid #e6e6e6 
+			&:first-child
+				font-weight: bold
+				border-left: 0
+				padding: 7px
+		a
+			display: block
+			color: #5c5c5c 
+			padding: 7px 7px 
+			text-decoration: none
+			&:hover
+				background: #cdeaf5
+
+.actions
+	margin-top: 45px 
+	text-align: right
+	&>*
+		margin-left: 3% 
+.actions_fluid
+	overflow: hidden
+	.button
+		display: block
+		float: right
+		padding: 0
+		margin: 0
+		width: 47%
+		&:first-child
+			float: left
+
+.group
+	margin-bottom: 30px 
+	.group__title
+		position: relative
+		left: -20px 
+		font-size: 0 
+		margin-bottom: 13px 
+		.customcheckbox
+			margin: 2px 5px 0 0 
+		h2
+			display: inline-block
+			width: 186px 
+			padding-left: 20px 
+			background: #A3C1CB
+			font-weight: bold
+			height: 22px  
+			line-height: 22px
+			color: #fff  
+			text-transform: uppercase
+			text-shadow: 0 1px 1px #87A9B6
+			font-size: 12px  
+			letter-spacing: .5px
+			margin-right: 4px 
+			vertical-align: top
+		.group__add
+			+s(trunkadd)
+			vertical-align: top
+			cursor: pointer
+			display: inline-block
+			+unselectable
+.group_text
+	.table-simple
+		tbody
+			td
+				text-align: left
+				color: #5c5c5c 
+				padding: 7px 10px 
+				font-size: 12px
+				strong
+					display: inline-block
+					margin-right: 25px
+				a
+					font-size: 12px
+					color: #2cabdc
+					font-weight: bold
+					text-decoration: none 
+					
+		.icon-delete
+			margin: 0 auto
+			display: block 
+			
+.radio
+	position: relative
+	display: inline-block
+	width: 50px
+	min-height: 24px
+	input,i
+		position: absolute
+		left: 50%
+		top: 0
+		margin-left: -12px
+		width: 24px
+		height: 24px
+		border-radius: 50%
+		+box-sizing(border-box)
+	i
+		background: #d8d8d8
+		border: 1px solid #bababa
+		box-shadow: inset 0 1px 2px rgba(0,0,0,.15)
+	input
+		opacity: 0
+		&:checked
+			+ i
+				&:before
+					content: ""
+					position: absolute
+					top: 50%
+					left: 50%
+					margin: -8px 0 0 -8px 
+					width: 16px
+					height: 16px
+					border-radius: 50%
+					background: #2aa2d1
+					cursor: pointer
+					box-shadow: inset 2px -2px 2px rgba(0,0,0,.2), inset -2px 2px 2px rgba(255,255,255,.4) 
+	span
+		display: block
+		margin-top: 28px
+		color: #888
+		font-size: 11px  
+
+.radio-simple
+	position: relative
+	display: inline-block
+	input
+		position: absolute
+		left: 0
+		top: 50%
+		margin-top: -10px
+		width: 20px
+		height: 20px
+	input
+		opacity: 0
+		&:checked
+			+ span
+				&:after
+					display: block
+	span
+		position: relative
+		padding-left: 25px
+		font-size: 12px
+		display: inline-block
+		//text-transform: uppercase
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			top: 50%
+		&:before
+			left: 0
+			margin-top: -9px
+			border: 1px solid #cecece
+			width: 18px
+			height: 18px
+			border-radius: 50%
+			background: #fff
+			box-shadow: inset 0 2px 1px rgba(0,0,0,.07)
+		&:after
+			display: none
+			left: 5px
+			margin-top: -4px
+			width: 10px
+			height: 10px
+			border-radius: 50%
+			background: #2babdb
+
+.row__main
+	position: relative
+	.row__text,
+	.row__main
+		width: 50%
+	.row_radio
+		.row__text
+			text-align: left 
+			
+.is-active
+	.calendar
+		display: block
+
+.input,.textarea
+	+box-sizing(border-box)
+	padding: 5px
+	width: 100%
+	height: 32px
+	border: 1px solid #d5d5d5
+	+border-radius(3px)
 	font-size: 12px 
-	font-family: Arial, sans-serif 
-	line-height: 1.4
-
-
-// common blocks
+	background: #fff
+	color: #5c5c5c 
+	+box-shadow(inset 0 1px 1px rgba(0,1,1,.05))
+	&:focus
+		border: 1px solid #aacdda
+		background: #bfe5f3
+		outline: none  
+.input_textarea
+	resize: vertical
+	height: 62px
+	max-height: 120px
+.input_gray
+	background: #f6f6f6 
+	&+i
+		display: none
+		
+.input-file
+	height: 32px
+	width: 100%
+	+box-sizing(border-box)
+input[type="file"]
+	&::-webkit-file-upload-button
+		height: 24px
+		border-radius: 2px
+		background: #e7e7e7
+		border: 0

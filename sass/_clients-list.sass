@@ -1,0 +1,449 @@
+
+
+.table-head-wrap
+    border-bottom: 1px solid #fff       
+.table-head
+    width: 100% 
+    border-spacing: 0
+    border-collapse: collapse
+    background: #e7e7e7 
+    div
+        position: relative
+        height: 20px
+    tr
+        &:first-child
+            td
+                border-top: 1px solid #dedede 
+                border-bottom: 1px solid #dedede 
+        &:last-child
+            td
+                border-bottom: 1px solid #dedede 
+                
+    td
+        font-size: 13px
+        font-weight: normal
+        vertical-align: middle
+        text-align: center
+        border-left: 1px solid #fff
+        border-top: 1px solid #fff 
+        padding: 2px 3px
+        +r(1650)
+            //font-size: 11px
+        span
+            position: absolute
+            left: 4px
+            right: 4px
+            text-align: center
+    .is-rotate
+        display: block
+        width: 23px
+        span
+            position: static
+            display: block
+            +rotate(-90)
+    .btns-wrap
+        position: absolute
+        bottom: 0
+        left: -3px
+        right: -3px
+        top: 32px
+        height: 22px
+        background: #E7E7E7 
+.table-head_client-list
+    tr
+        &:first-child
+            td
+                &:nth-child(7)
+                    border-bottom: 1px solid #fff
+    .td-1,
+    .td-11,
+    .td-14,
+    .td-15,
+    .td-16,
+    .td-17,
+        span
+            top: -8px
+    .td-2
+        .is-rotate
+            span
+                margin-top: 5px
+    .td-3
+        .is-rotate
+            span
+                margin-top: 21px
+    .td-4,
+    .td-5
+        .is-rotate
+            span
+                margin-top: 10px
+    .td-6,
+    .td-9,
+    .td-10
+        span
+            top: 10px
+    .td-12
+        .is-rotate
+            span
+                margin-top: 16px  
+    .td-6,
+    .td-7,
+    .td-8,
+    .td-9,
+    .td-10
+        padding-bottom: 40px
+        +r(1650)
+            //padding-bottom: 60px
+    .td-6,
+    .td-9,
+    .td-10
+        .btns-wrap
+            top: 39px
+.table
+    width: 100% 
+    border-spacing: 0
+    border-collapse: collapse
+    //table-layout: fixed
+    .input-wrap
+        margin-bottom: 0
+    tr
+        +transition(background .2s linear)
+        &:nth-child(2n)
+            background: #f7f7f7
+        &:hover
+            background: #cfe8f0 
+        &.is-clicked
+            background: #ffefe5
+            &:nth-child(2n)
+                background: #f8e8de 
+    td
+        text-align: center
+        padding: 7px 10px
+        vertical-align: middle
+        border-left: 1px solid #e7e7e7 
+        +transition(background .2s linear)
+        &[data-href],
+        &[data-window-url]
+            cursor: pointer
+            &:hover
+                background: #9ed6ea
+    .to-left
+        text-align: left
+    .to-right
+        text-align: right
+    .is-green
+        color: #438420 !important
+    .is-red
+        color: #900 !important
+    .is-gray
+        color: #a9a9a9 !important
+    .to-center
+        text-align: center 
+    .td-icon
+        width: 30px
+        padding: 0
+        text-align: center
+        &:hover
+            background: #9ed6ea
+    button,
+    i
+        display: inline-block
+        vertical-align: middle
+.table_client-list
+    td
+        &:nth-child(1),
+        &:nth-child(7),
+        &:nth-child(10),
+        &:nth-child(11),
+        &.to-right
+            text-align: right
+        &:nth-child(2)
+            color: #5f889d 
+        &:nth-child(2),
+        &:nth-child(14),
+        &:nth-child(18),
+.btns-wrap
+    overflow: hidden
+.btn-sort
+    float: left
+    width: 50%
+    text-align: center
+    background: #e7e7e7
+    height: 21px
+    +box-sizing(border-box)
+    border-left: 1px solid #fff
+    border-top: 1px solid #fff
+    &:first-child
+        border-left: 0
+    &:hover
+        background: #c5c5c5
+    i
+        display: inline-block
+        margin-top: -2px
+        vertical-align: middle
+        width: 0px
+        height: 0px
+        border-style: solid
+.btn-sort_top
+    &:hover
+        i
+            border-color: transparent transparent #888 transparent
+    i
+        border-width: 0 4px 6px 4px
+        border-color: transparent transparent #cfcfcf transparent
+.btn-sort_down
+    &:hover
+        i
+            border-color: #888 transparent transparent transparent
+    i
+        border-width: 6px 4px 0 4px
+        border-color: #cfcfcf transparent transparent transparent
+.btn-edit
+    +s(edit)
+.btn-routing
+    +s(routing)
+.btn-block 
+    +s(block)
+.btn-rates
+    +s(rates)
+.btn-rates
+    +s(rates)
+.btn-dollar
+    +s(dollar)
+.btn-list
+    +s(list)
+.btn-traffic
+    +s(traffic)
+
+
+.filter
+    .row
+        margin-bottom: 18px
+    .row__text
+        width: 25%
+        //font-size: 14px
+    .row__main
+        width: 75%
+        padding-right: 30px
+        position: relative
+        .btn-bucket
+            position: absolute
+            top: 0
+            right: 0
+    .ui-multiselect
+        width: 100% !important
+        max-width: 100%
+        min-height: 32px
+        span
+            //font-size: 13px
+    .actions
+        margin-top: 0
+    .trans-title
+        position: absolute
+        bottom: -32px
+        padding: 0 30px 
+        height: 32px
+        line-height: 32px
+        color: #6a6868
+        font-size: 12px
+        font-weight: bold
+        text-decoration: none
+        text-shadow: 0 1px 0 rgba(255,255,255,.8)
+        background: #e3e3e3
+        border-radius: 0 0 7px 7px
+    // .button,
+    // .input
+    //     font-size: 13px
+    
+.filter__in
+    //height: 236px
+    background: #fff 
+.filter__top
+    padding: 21px 0 3px
+    position: relative
+    +background-image(linear-gradient(top, #f5f5f5 0%, #e3e3e3 100%))  
+.filter__bottom
+    margin-bottom: 24px
+    padding: 32px 0 0
+    +clr
+    .action
+        float: left
+    .button
+        margin-top: 32px
+
+.pagin
+    float: right
+    +clr
+    .chosen-container
+        min-width: 100% !important 
+.pagin__select,
+.pagin__nav,
+.pagin__select-text,
+.pagin__select-main
+    display: inline-block
+    vertical-align: middle
+.pagin__select
+    margin-right: 46px
+.pagin__select-main
+    width: 60px
+    margin-left: 20px
+.pagin__nav
+    width: 220px
+    margin-right: 6px
+.btn-bucket
+    display: inline-block
+    vertical-align: middle
+    width: 32px
+    height: 32px
+    border-radius: 0 2px 2px 0
+    background: #c5c5c5
+    text-align: center
+    i
+        display: inline-block
+        vertical-align: middle
+        +s(bucket)
+
+            
+
+.footer
+    margin-top: 55px
+    height: 45px
+    line-height: 45px
+    text-align: center
+    +background-image(linear-gradient(#e2e2e2, #bebebe))
+    
+
+.table-head_mod
+    .btns-wrap
+        top: 20px  
+    .td-6
+        border-bottom: 1px solid #dedede !important
+    .td-2,
+    .td-3,
+    .td-4,
+    .td-5
+        div
+            span
+                top: -9px
+.btn-mob
+    vertical-align: middle
+    +s(mob)
+.btn-check
+    vertical-align: middle
+    +s(check2)
+.btn-phone
+    vertical-align: middle
+    +s(phone) 
+
+.radio-row
+    margin-bottom: 22px
+    font-size: 0
+    .radio
+        margin-left: 1px
+        text-align: center
+        &:first-child
+            margin-left: 0
+            &:after
+                display: none
+        &:after
+            content: "" 
+            position: absolute
+            top: 0
+            left: -18px
+            top: 0
+            margin-top: 6px
+            +s(radio-connect)
+
+
+        
+.l-col4
+    position: relative
+.calendar
+    display: none
+    position: absolute
+    top: 50px
+    left: 0
+    z-index: 100
+    width: 324px
+    height: 438px
+    border-radius: 3px
+    background: #f7f7f7
+    box-shadow: 0 0 5px rgba(0,0,0,.4)
+    ul
+        +clr
+    li
+        float: left 
+        border-radius: 3px
+        cursor: pointer
+        font-weight: bold
+        &:hover,
+        &.is-active
+            color: #fff
+            background: #29a1d1  
+.calendar__wrap
+    padding: 26px 26px 0
+.calendar__months,
+.calendar__years
+    li
+        margin: 0 0 5px 
+        color: #a6a6a6
+        font-size: 15px 
+        text-transform: uppercase
+.calendar__months
+    margin-bottom: 9px
+    border-bottom: 1px solid #cfcfcf 
+    li
+        padding: 3px 0 
+        width: 45px
+        text-align: center
+.calendar__years
+    margin-bottom: 7px
+    li
+        padding: 3px 8px 
+.calendar__days
+    margin-bottom: 19px
+    li
+        font-size: 13px
+        width: 28px
+        height: 28px
+        text-align: center
+        line-height: 28px
+        color: #808080 
+        margin: 0 0 3px 12px
+        &.is-inactive
+            color: #a7a7a7 
+            cursor: default
+            &:hover
+                background: none
+        &:nth-child(7n+1)
+            margin-left: 0
+
+.calendar__slider-row
+    margin-bottom: 18px
+    span,div
+        display: inline-block
+        vertical-align: middle
+    span
+        width: 35px
+        font-size: 12px
+        margin: 0 0 0 10px  
+        &:first-child
+            margin-left: 0
+            margin-right: 10px
+            
+.calendar__btns
+    position: absolute
+    right: 0
+    left: 0
+    bottom: 0
+    border-top: 1px solid #dbdbdb 
+    overflow: hidden
+    .button
+        margin: 0
+        background: none
+        width: 100%
+        height: 39px
+        font-size: 12px
+        +box-sizing(border-box)
+        //font-weight: normal
+        &:first-child
+            border-left: 0
