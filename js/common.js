@@ -542,5 +542,21 @@ $(document).ready(function() {
 		check_radio();
 	});
 	check_radio();
+
+
+// -- --------  news avox ---- //
+
+	$(document).click(function() {
+        $(".js-item").hide();
+    });
+	$(".js-show-item").click(function(event){
+		$(this).parent().find(".js-item").fadeToggle();
+		event.stopPropagation();
+	});
+
+
+
+
+
 });
 
