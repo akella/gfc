@@ -1,6 +1,6 @@
 +font(novareg, proximanova-reg)  
 // +font(novaregc, proximanova-cond-reg)  
-// +font(novabold, proximanova-bold)  
++font(novabold, proximanova-bold)  
 // +font(novablackc, proximanova-cond-black)  
 // +font(rubl, alsrubl-tahoma-regular)
 // +font(rubl-b, alsrubl-tahoma-bold)
@@ -8,8 +8,8 @@
 	font-family: "novareg", Arial, sans-serif 
 =ftah
 	font-family: Tahoma, Arial, sans-serif 
-// =fbold
-// 	font-family: "novabold", Arial, sans-serif 
+=fbold
+	font-family: "novabold", Arial, sans-serif 
 // =fregc
 // 	font-family: "novaregc", Arial, sans-serif 
 // =fblackc
@@ -29,12 +29,6 @@ body
 	&.is-fixed-table
 		.table-wrap
 			margin-top: 324px
-		.filter__in
-			position: fixed
-			left: 0
-			top: 0
-			right: 0
-			z-index: 2
 textarea,input
 	font-family: Tahoma,sans-serif 
 // resets
@@ -57,6 +51,8 @@ html
 
 html
 	height: 100% 
+.l-layout
+	padding: 0 40px 
 .header
 	margin-bottom: 40px
 	border-bottom: 1px solid #fff 
@@ -150,32 +146,40 @@ html
 	&:hover
 		background: #fff 
 		box-shadow: 1px 0 0 #dedede, -1px 0 0 #dedede
-.subnav
-	display: none
-	position: absolute
-	top: 52px
-	left: 0
-	right: 0
-	z-index: 100
-	background: #f7f7f7 
-	border-radius: 0 0 2px 2px
-	box-shadow: 0 4px 7px rgba(0,0,0,.4)
-.subnav__item
-	&.is-active
-		.subnzv__link
-			color: #fff 
-			background: #2aa6da
-.subnav__link
-	display: block
-	padding: 9px 5px 8px 18px 
-	line-height: 1.1
-	color: #505050 
-	font-size: 12px
-	text-decoration: none
-	//+transition(all .2s linear)
-	&:hover
-		background: #2aa6da
-		color: #fff  
+		
+.title
+	margin-bottom: 8px
+	padding: 0 20px 
+	font-size: 20px
+	font-weight: normal
+	+ftah
+	
+// .subnav
+// 	display: none
+// 	position: absolute
+// 	top: 52px
+// 	left: 0
+// 	right: 0
+// 	z-index: 100
+// 	background: #f7f7f7 
+// 	border-radius: 0 0 2px 2px
+// 	box-shadow: 0 4px 7px rgba(0,0,0,.4)
+// .subnav__item
+// 	&.is-active
+// 		.subnzv__link
+// 			color: #fff 
+// 			background: #2aa6da
+// .subnav__link
+// 	display: block
+// 	padding: 9px 5px 8px 18px 
+// 	line-height: 1.1
+// 	color: #505050 
+// 	font-size: 12px
+// 	text-decoration: none
+// 	//+transition(all .2s linear)
+// 	&:hover
+// 		background: #2aa6da
+// 		color: #fff  
 
 .button
 	display: inline-block
@@ -463,14 +467,6 @@ html
 			border-radius: 50%
 			background: #2babdb
 
-.row__main
-	position: relative
-	.row__text,
-	.row__main
-		width: 50%
-	.row_radio
-		.row__text
-			text-align: left 
 			
 .is-active
 	.calendar
@@ -480,7 +476,7 @@ html
 	+box-sizing(border-box)
 	padding: 5px
 	width: 100%
-	height: 32px
+	height: 26px
 	border: 1px solid #d5d5d5
 	+border-radius(3px)
 	font-size: 12px 
@@ -510,3 +506,73 @@ input[type="file"]
 		border-radius: 2px
 		background: #e7e7e7
 		border: 0
+
+.row
+	margin-bottom: 4px
+.row_inline
+	+clr
+	.row__text
+		float: left
+		padding-right: 7px
+		width: 25%
+		+box
+		height: 26px
+		line-height: 26px
+		text-align: right
+	.to-center
+		text-align: center
+	.row__main
+		float: left
+		width: 75%
+		+box
+		.ui-multiselect
+			width: 100% !important
+			max-width: 100%
+		.col_46
+			float: right
+			width: 46%
+			&:first-child
+				float: left
+.row__text
+	span
+		line-height: 1
+		display: inline-block
+		vertical-align: middle
+.col_8
+	height: 26px
+	line-height: 26px
+	color: #5c5c5c
+	text-align: center   
+.row_basket
+	position: relative 
+	.btn-bucket
+		position: absolute
+		right: 0
+		top: 0
+	.row__main
+		padding-right: 22px
+
+.to-center
+	text-align: center
+	
+.filter__title
+	margin: 20px 0 
+	font-size: 16px  
+	font-weight: bold
+	+ftah	
+.btn-reset
+	color: #5c5c5c 
+	background: none 
+	i
+		display: inline-block
+		margin-right: 4px
+		vertical-align: middle
+		+s(bucket2)
+
+.footer
+	padding-bottom: 63px
+	
+.button-wrap
+	display: inline-block
+	margin-right: 8px
+	vertical-align: middle

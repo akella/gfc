@@ -1,9 +1,8 @@
 <!doctype html>
-<!--[if lte IE 8]><html class="lteie8"><![endif]-->
-<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<html>
 <head>
 	<meta charset="utf-8">
-	<title>Client info</title>
+	<title>Traffic</title>
 	<meta name="viewport" content="width=device-width"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
     <script src="js/jquery.js"></script>
@@ -30,12 +29,12 @@
     <div class="nav-wrap">
         <div class="l-container">
             <ul class="nav">
-                <li class="nav__item is-active">
+                <li class="nav__item">
                     <a href="#" class="nav__link">
                         <i class="nav__icon1"></i>Dashboard
                     </a>
                 </li>
-                <li class="nav__item">
+                <li class="nav__item is-active">
                     <a href="#" class="nav__link">
                         <i class="nav__icon2"></i>Traffik
                     </a>
@@ -49,278 +48,655 @@
         </div>
     </div>
 </header>
-<!-- BEGIN popup -->
-<div class="tabwindow"><div class="tabwindow__in">
-
-	<!-- BEGIN popup__content -->
-	<div class="tabwindow__content">
+<div class="l-layout">
+    <h1 class="title">Controller</h1>
+    <div class="filter">
         <div class="wrap">
-            <div class="col">
-                <div class="group group_width">
-                    <div class="group__title">
-                        <h2>SYSTEM INFORMATION:</h2>
+            <div class="col col_25">
+                <div class="row row_inline row_basket">
+                    <span class="row__text">Country:</span>
+                    <div class="row__main">
+                        <select class="js-select-multi" multiple="multiple" >
+                            <option value="var0">var0</option>
+                            <option value="var1">var1</option>
+                            <option value="var2">var2</option>
+                            <option value="var3">var3</option>
+                            <option value="var4">var4</option>
+                        </select>
                     </div>
-                
-                    <div class="row">
-                        <span class="row__text">Name:</span>
+                    <button class="btn-bucket js-clear-select"><i></i></button>
+                </div>
+                <div class="row row_inline row_basket">
+                    <span class="row__text">Code Name:</span>
+                    <div class="row__main">
+                        <select class="js-select-multi" multiple="multiple" >
+                            <option value="var0">var0</option>
+                            <option value="var1">var1</option>
+                            <option value="var2">var2</option>
+                            <option value="var3">var3</option>
+                            <option value="var4">var4</option>
+                        </select>
+                    </div>
+                    <button class="btn-bucket js-clear-select"><i></i></button>
+                </div>
+                <div class="row row_inline">
+                    <span class="row__text">Code Name:</span>
+                    <div class="row__main">
+                        <input type="text" class="input">
+                    </div>
+                </div>
+                <div class="row row_inline row_basket">
+                    <span class="row__text">Groups:</span>
+                    <div class="row__main">
+                        <select class="js-select-multi" multiple="multiple" >
+                            <option value="var0">var0</option>
+                            <option value="var1">var1</option>
+                            <option value="var2">var2</option>
+                            <option value="var3">var3</option>
+                            <option value="var4">var4</option>
+                        </select>
+                    </div>
+                    <button class="btn-bucket js-clear-select"><i></i></button>
+                </div>
+            </div>
+            <div class="col col_50">
+                <div class="col col_50">
+                    <div class="row row_inline">
+                        <span class="row__text"><span>Date:</span></span>
                         <div class="row__main">
                             <input type="text" class="input">
                         </div>
                     </div>
-                    <div class="row">
-                        <span class="row__text">Reseller:</span>
+                    <div class="row row_inline">
+                        <span class="row__text"><span>ASR:</span></span>
                         <div class="row__main">
-                            <select class="chosen-select">
-                                <option value="Any">Darina Bondarets</option>
-                                <option value="...">...</option>
-                            </select> 
+                            <div class="col col_46">
+                                <input type="text" class="input">
+                            </div>
+                            <div class="col col_8">—</div>
+                            <div class="col col_46">
+                                <input type="text" class="input">
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <span class="row__text">Timezone:</span>
+                    <div class="row row_inline">
+                        <span class="row__text"><span>Cell Limit:</span></span>
                         <div class="row__main">
-                            <select class="chosen-select">
-                                <option value="Any">+02:00</option>
-                                <option value="...">...</option>
-                            </select> 
+                            <div class="col col_46">
+                                <input type="text" class="input">
+                            </div>
+                            <div class="col col_8">—</div>
+                            <div class="col col_46">
+                                <input type="text" class="input">
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <span class="row__text">Status:</span>
+                    <div class="row row_inline">
+                        <span class="row__text"><span>Code Name:</span></span>
                         <div class="row__main">
-                            <select class="chosen-select">
-                                <option value="Any">Active</option>
-                                <option value="...">...</option>
-                            </select> 
-                        </div>
-                    </div>
-                    <div class="row">
-                        <span class="row__text">Groups:</span>
-                        <div class="row__main">
-                            <span class="badge-label">Customers</span>
-                            <span class="badge-label">Trance Telecom Inc.</span>     
+                            <input type="text" class="input">
                         </div>
                     </div>
                 </div>
-                <div class="group group_width">
-                    <div class="group__title">
-                        <h2>LOW BALANCE NOTIFICATION:</h2>
-                    </div>
-                    <div class="row row_extend">
-                        <div>
-                            <span class="row__title">ORIG</span>
-                            <span class="row__title">TERM</span>
-                        </div>
-                        <span class="row__text">Notify Client:</span>
+                <div class="col col_50">
+                    <div class="row row_inline row_basket">
+                        <span class="row__text to-center">—</span>
                         <div class="row__main">
-                            <input type="text" class="input input_s">
-                            <input type="text" class="input input_s input_to-right">
+                            <select class="js-select-multi" multiple="multiple" >
+                                <option value="var0">var0</option>
+                                <option value="var1">var1</option>
+                                <option value="var2">var2</option>
+                                <option value="var3">var3</option>
+                                <option value="var4">var4</option>
+                            </select>
                         </div>
+                        <button class="btn-bucket js-clear-select"><i></i></button>
                     </div>
-                    <div class="row row_extend">
-                        <span class="row__text">Notify Admin:</span>
+                    <div class="row row_inline">
+                        <span class="row__text"><span>ACD:</span></span>
                         <div class="row__main">
-                            <input type="text" class="input input_s">
-                            <input type="text" class="input input_s input_to-right">
-                        </div>
-                    </div>
-                </div>
-                <div class="group group_width is-inactive-group">
-                    <div class="group__title">
-                        <h2> 
-                            <label class="customcheckbox" for="">
-                              <input type="checkbox" name="" id="">
-                              <i></i>
-                            </label> 
-                            AUTOINVOICING
-                        </h2>
-                    </div>
-                    <div class="row">
-                        <span class="row__text">Template:</span>
-                        <div class="row__main">
-                            <select class="chosen-select">
-                                <option value="Customers">Customers</option>
-                                <option value="Trance Telecom Inc.">Trance Telecom Inc.</option>
-                            </select> 
+                            <div class="col col_46">
+                                <input type="text" class="input">
+                            </div>
+                            <div class="col col_8">—</div>
+                            <div class="col col_46">
+                                <input type="text" class="input">
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <span class="row__text">Last Invoiced:</span>
+                    <div class="row row_inline">
+                        <span class="row__text"><span>Daily Limit:</span></span>
                         <div class="row__main">
-                            <input type="text" class="input input_s">
+                            <div class="col col_46">
+                                <input type="text" class="input">
+                            </div>
+                            <div class="col col_8">—</div>
+                            <div class="col col_46">
+                                <input type="text" class="input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row_inline">
+                        <span class="row__text"><span>GFC Tel. #:</span></span>
+                        <div class="row__main">
+                            <input type="text" class="input">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="group group_width">
-                    <div class="group__title">
-                        <h2>ORIGINATOR SETTINGS:</h2>
-                    </div>
-                
-                    <div class="row">
-                        <span class="row__text">Allowed Credit:</span>
-                        <div class="row__main">
-                            <input type="text" class="input input_s">
+            <div class="col col_25">
+                <div class="row row_inline">
+                    <span class="row__text"><span>Volume:</span></span>
+                    <div class="row__main">
+                        <div class="col col_46">
+                            <input type="text" class="input">
                         </div>
-                    </div>
-                    <div class="row">
-                        <span class="row__text">Payment Terms:</span>
-                        <div class="row__main">
-                            <select class="chosen-select">
-                                <option value="Any">30net15</option>
-                                <option value="...">...</option>
-                            </select> 
-                        </div>
-                    </div>
-                    <div class="row">
-                        <span class="row__text">Rate Table:</span>
-                        <div class="row__main">
-                            <span class="badge-label">Alaska Odrex ORIG</span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <span class="row__text">Routing Plan:</span>
-                        <div class="row__main">
-                            <select class="chosen-select">
-                                <option value="Routing Plan:">Routing Plan:</option>
-                                <option value="...">...</option>
-                            </select> 
-                        </div>
-                    </div>
-                    <div class="row">
-                        <span class="row__text">Capacity:</span>
-                        <div class="row__main">
-                            <input type="text" class="input input_s">
-                            <span class="row__add-text">channels</span>
+                        <div class="col col_8">—</div>
+                        <div class="col col_46">
+                            <input type="text" class="input">
                         </div>
                     </div>
                 </div>
-                <div class="group group_width">
-                    <div class="group__title">
-                        <h2>TERMINATOR SETTINGS:</h2>
-                    </div>
-                    <div class="row">
-                        <span class="row__text">Rate Table:</span>
-                        <div class="row__main">
-                            <span class="badge-label">Alaska TERM</span>
-                            <span class="badge-label">Alaska Premium TERM</span>
+                <div class="row row_inline">
+                    <span class="row__text"><span>Avg. Cell Vol:</span></span>
+                    <div class="row__main">
+                        <div class="col col_46">
+                            <input type="text" class="input">
                         </div>
-                    </div>
-                    <div class="row">
-                        <span class="row__text">Capacity:</span>
-                        <div class="row__main">
-                            <input type="text" class="input input_s">
-                            <span class="row__add-text">channels</span>
+                        <div class="col col_8">—</div>
+                        <div class="col col_46">
+                            <input type="text" class="input">
                         </div>
                     </div>
                 </div>
-                <div class="group group_width">
-                    <div class="group__title">
-                        <h2> 
-                            <label class="customcheckbox" for="">
-                              <input type="checkbox" name="" id="" checked>
-                              <i></i>
-                            </label> 
-                            RATE NOTIFICATION:
-                        </h2>
-                    </div>
-                    <div class="row">
-                        <span class="row__text">Format:</span>
-                        <div class="row__main">
-                            <select class="chosen-select">
-                                <option value="Customers">Customers</option>
-                                <option value="Trance Telecom Inc.">Trance Telecom Inc.</option>
-                            </select> 
+                <div class="row row_inline">
+                    <span class="row__text"><span>Attempts:</span></span>
+                    <div class="row__main">
+                        <div class="col col_46">
+                            <input type="text" class="input">
+                        </div>
+                        <div class="col col_8">—</div>
+                        <div class="col col_46">
+                            <input type="text" class="input">
                         </div>
                     </div>
-                    <div class="row">
-                        <span class="row__text">Notify type:</span>
-                        <div class="row__main">
-                            <select class="chosen-select">
-                                <option value="Customers">Customers</option>
-                                <option value="Trance Telecom Inc.">Trance Telecom Inc.</option>
-                            </select> 
-                        </div>
+                </div>
+                <div class="row row_inline row_basket">
+                    <span class="row__text"><span>Work-Rest Int.:</span></span>
+                    <div class="row__main">
+                        <select class="js-select-multi" multiple="multiple" >
+                            <option value="var0">var0</option>
+                            <option value="var1">var1</option>
+                            <option value="var2">var2</option>
+                            <option value="var3">var3</option>
+                            <option value="var4">var4</option>
+                        </select>
                     </div>
+                    <button class="btn-bucket js-clear-select"><i></i></button>
                 </div>
             </div>
-            <div class="col">
-                <div class="group group_width">
-                    <div class="group__title">
-                        <h2>COMPANY INFO:</h2>
-                    </div>
-                    <div class="row">
-                        <span class="row__text">Name:</span>
+        </div>
+        <div class="wrap">
+            <form action="">
+                <div class="filter__title">Splits</div>
+                <div class="col col_20">
+                    <div class="row row_inline">
+                        <span class="row__text"><span>1:</span></span>
                         <div class="row__main">
-                            <input type="text" class="input">
+                            <select data-placeholder="TERM Rate Table" class="chosen-select" >
+                                <option value="">&nbsp;</option>
+                                <option value="Slovak premium some">Slovak premium some</option>
+                                <option value="var2">var2</option>
+                                <option value="var3">var3</option>
+                                <option value="var4">var4</option>
+                            </select> 
                         </div>
                     </div>
-                    <div class="row">
-                        <span class="row__text">Main Email:</span>
+                    <div class="row row_inline">
+                        <span class="row__text"><span>2:</span></span>
                         <div class="row__main">
-                            <input type="text" class="input">
+                            <select data-placeholder="TERM Rate Table" class="chosen-select" >
+                                <option value="">&nbsp;</option>
+                                <option value="Slovak premium some">Slovak premium some</option>
+                                <option value="var2">var2</option>
+                                <option value="var3">var3</option>
+                                <option value="var4">var4</option>
+                            </select> 
                         </div>
                     </div>
-                    <div class="row">
-                        <span class="row__text">NOC Email:</span>
+                    <div class="row row_inline">
+                        <span class="row__text"><span>3:</span></span>
                         <div class="row__main">
-                            <input type="text" class="input">
+                            <select data-placeholder="TERM Rate Table" class="chosen-select" >
+                                <option value="">&nbsp;</option>
+                                <option value="Slovak premium some">Slovak premium some</option>
+                                <option value="var2">var2</option>
+                                <option value="var3">var3</option>
+                                <option value="var4">var4</option>
+                            </select> 
                         </div>
                     </div>
-                    <div class="row">
-                        <span class="row__text">Billing Email:</span>
+                </div>
+                <div class="col col_20">
+                    <div class="row row_inline">
+                        <span class="row__text"><span>1:</span></span>
                         <div class="row__main">
-                            <input type="text" class="input">
+                            <select data-placeholder="TERM Rate Table" class="chosen-select" >
+                                <option value="">&nbsp;</option>
+                                <option value="Slovak premium some">Slovak premium some</option>
+                                <option value="var2">var2</option>
+                                <option value="var3">var3</option>
+                                <option value="var4">var4</option>
+                            </select> 
                         </div>
                     </div>
-                    <div class="row">
-                        <span class="row__text">Rates Email:</span>
+                    <div class="row row_inline">
+                        <span class="row__text"><span>2:</span></span>
                         <div class="row__main">
-                            <input type="text" class="input">
+                            <select data-placeholder="TERM Rate Table" class="chosen-select" >
+                                <option value="">&nbsp;</option>
+                                <option value="Slovak premium some">Slovak premium some</option>
+                                <option value="var2">var2</option>
+                                <option value="var3">var3</option>
+                                <option value="var4">var4</option>
+                            </select> 
                         </div>
                     </div>
-                    <div class="row">
-                        <span class="row__text">Address:</span>
+                    <div class="row row_inline">
+                        <span class="row__text"><span>3:</span></span>
                         <div class="row__main">
-                            <textarea class="input input_textarea"></textarea>
+                            <select data-placeholder="TERM Rate Table" class="chosen-select" >
+                                <option value="">&nbsp;</option>
+                                <option value="Slovak premium some">Slovak premium some</option>
+                                <option value="var2">var2</option>
+                                <option value="var3">var3</option>
+                                <option value="var4">var4</option>
+                            </select> 
                         </div>
                     </div>
-                    <div class="row">
-                        <span class="row__text">Reg ID:</span>
+                </div>
+                <div class="col col_20">
+                    <div class="row row_inline">
+                        <span class="row__text"><span>1:</span></span>
                         <div class="row__main">
-                            <input type="text" class="input">
+                            <select data-placeholder="TERM Rate Table" class="chosen-select" >
+                                <option value="">&nbsp;</option>
+                                <option value="Slovak premium some">Slovak premium some</option>
+                                <option value="var2">var2</option>
+                                <option value="var3">var3</option>
+                                <option value="var4">var4</option>
+                            </select> 
                         </div>
                     </div>
-                    <div class="row">
-                        <span class="row__text">Bank Details:</span>
+                    <div class="row row_inline">
+                        <span class="row__text"><span>2:</span></span>
                         <div class="row__main">
-                            <textarea class="input input_textarea"></textarea>
+                            <select data-placeholder="TERM Rate Table" class="chosen-select" >
+                                <option value="">&nbsp;</option>
+                                <option value="Slovak premium some">Slovak premium some</option>
+                                <option value="var2">var2</option>
+                                <option value="var3">var3</option>
+                                <option value="var4">var4</option>
+                            </select> 
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row row_inline">
+                        <span class="row__text"><span>3:</span></span>
+                        <div class="row__main">
+                            <select data-placeholder="TERM Rate Table" class="chosen-select" >
+                                <option value="">&nbsp;</option>
+                                <option value="Slovak premium some">Slovak premium some</option>
+                                <option value="var2">var2</option>
+                                <option value="var3">var3</option>
+                                <option value="var4">var4</option>
+                            </select> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col col_20">
+                    <div class="row row_inline">
+                        <span class="row__text"><span>1:</span></span>
+                        <div class="row__main">
+                            <select data-placeholder="TERM Rate Table" class="chosen-select" >
+                                <option value="">&nbsp;</option>
+                                <option value="Slovak premium some">Slovak premium some</option>
+                                <option value="var2">var2</option>
+                                <option value="var3">var3</option>
+                                <option value="var4">var4</option>
+                            </select> 
+                        </div>
+                    </div>
+                    <div class="row row_inline">
+                        <span class="row__text"><span>2:</span></span>
+                        <div class="row__main">
+                            <select data-placeholder="TERM Rate Table" class="chosen-select" >
+                                <option value="">&nbsp;</option>
+                                <option value="Slovak premium some">Slovak premium some</option>
+                                <option value="var2">var2</option>
+                                <option value="var3">var3</option>
+                                <option value="var4">var4</option>
+                            </select> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col col_20">
+                    <div class="row row_inline">
                         <span class="row__text"></span>
-                        <div class="row__main">
-                            <button class="button button_blue"><i class="icon icon_refresh"></i>View Send History</button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <span class="row__text"></span>
-                        <div class="row__main">
-                            <div class="actions">
-                                <div class="button">Ok</div>
-                                <div class="button">Cancel</div>
-                                <div class="button button_blue">Apply</div>
+                        <div class="row__main to-center">
+                            <button class="button button_blue">Search</button>
+                            <div>
+                                <button class="btn-reset" type="reset"><i></i>Reset All</button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-		</div>
-	</div>
-	<!-- END popup__content -->
-</div></div>
-<!-- END popup -->
+            </form>
+        </div>
+        
+    </div>
+   <div class="wrap">
+        <div class="table-info">
+            <i class="icon-flag"></i>
+            <span>Ukraine</span> | <span>ASR:</span> 17-60 | <span>ACD:</span> 2-4 | <span>Cell:</span> > 200 | <span>Daily:</span> < 300 | <span>Vol:</span> > 200
+        </div>
 
+        <button class="button button_blue button_icon">
+            <i class="icon icon_export"></i>Export Filtered
+        </button>
+    </div>
+    <table class="table">
+        <thead class="table__head">
+            <tr>
+                <th rowspan="2">Country</th>
+                <th rowspan="2">Code name</th>
+                <th rowspan="2">Code</th>
+                <th rowspan="3">
+                    ID
+                    <div>
+                        <label class="customcheckbox" for="">
+                            <input type="checkbox">
+                            <i></i>
+                        </label>
+                    </div>
+                </th>
+                <th rowspan="2">GFC <br>Clients ID</th>
+                <th rowspan="2">Tel. NO</th>
+                <th rowspan="2">Volume <br>(min)</th>
+                <th rowspan="2">Avg. Volume <br>per Cell (min)</th>
+                <th rowspan="2">ASR</th>
+                <th rowspan="2">ASR</th>
+                <th colspan="4">AVOX</th>
+                <th rowspan="2">Groups</th>
+            </tr>
+            <tr>
+                <th>ORIG Cost</th>
+                <th colspan="2">TERM Cost</th>
+                <th>Profit</th>
+            </tr>
+            <tr>
+                <th>
+                    <div class="btns-wrap">
+                        <button class="btn-sort btn-sort_top"><i></i></button>
+                        <button class="btn-sort btn-sort_down"><i></i></button>
+                    </div>
+                </th>
+                <th>
+                    <div class="btns-wrap">
+                        <button class="btn-sort btn-sort_top"><i></i></button>
+                        <button class="btn-sort btn-sort_down"><i></i></button>
+                    </div>
+                </th>
+                <th>
+                    <div class="btns-wrap">
+                        <button class="btn-sort btn-sort_top"><i></i></button>
+                        <button class="btn-sort btn-sort_down"><i></i></button>
+                    </div>
+                </th>
+                <th>
+                    <div class="btns-wrap">
+                        <button class="btn-sort btn-sort_top"><i></i></button>
+                        <button class="btn-sort btn-sort_down"><i></i></button>
+                    </div>
+                </th>
+                <th>
+                    <div class="btns-wrap">
+                        <button class="btn-sort btn-sort_top"><i></i></button>
+                        <button class="btn-sort btn-sort_down"><i></i></button>
+                    </div>
+                </th>
+                <th>
+                    <div class="btns-wrap">
+                        <button class="btn-sort btn-sort_top"><i></i></button>
+                        <button class="btn-sort btn-sort_down"><i></i></button>
+                    </div>
+                </th>
+                <th>
+                    <div class="btns-wrap">
+                        <button class="btn-sort btn-sort_top"><i></i></button>
+                        <button class="btn-sort btn-sort_down"><i></i></button>
+                    </div>
+                </th>
+                <th>
+                    <div class="btns-wrap">
+                        <button class="btn-sort btn-sort_top"><i></i></button>
+                        <button class="btn-sort btn-sort_down"><i></i></button>
+                    </div>
+                </th>
+                <th>
+                    <div class="btns-wrap">
+                        <button class="btn-sort btn-sort_top"><i></i></button>
+                        <button class="btn-sort btn-sort_down"><i></i></button>
+                    </div>
+                </th>
+                <th>
+                    <div class="btns-wrap">
+                        <button class="btn-sort btn-sort_top"><i></i></button>
+                        <button class="btn-sort btn-sort_down"><i></i></button>
+                    </div>
+                </th>
+                <th>
+                    <div class="btns-wrap">
+                        <button class="btn-sort btn-sort_top"><i></i></button>
+                        <button class="btn-sort btn-sort_down"><i></i></button>
+                    </div>
+                </th>
+                <th>
+                    <div class="btns-wrap">
+                        <button class="btn-sort btn-sort_top"><i></i></button>
+                        <button class="btn-sort btn-sort_down"><i></i></button>
+                    </div>
+                </th>
+                <th>
+                    <div class="btns-wrap">
+                        <button class="btn-sort btn-sort_top"><i></i></button>
+                        <button class="btn-sort btn-sort_down"><i></i></button>
+                    </div>
+                </th>
+                <th>
+                    <div class="btns-wrap">
+                        <button class="btn-sort btn-sort_top"><i></i></button>
+                        <button class="btn-sort btn-sort_down"><i></i></button>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody class="table__body">
+             <tr>
+                <td>Madagascar</td>
+                <td>Mada Mobile</td>
+                <td>71134</td>
+                <td>
+                    <label class="customcheckbox" for="">
+                        <input type="checkbox">
+                        <i></i>
+                    </label>
+                </td>
+                <td>1287483242</td>
+                <td>380677654321</td>
+                <td>9 675.43</td>
+                <td>436.87</td>
+                <td>34%</td>
+                <td>2.14</td>
+                <td>$ 38 934</td>
+                <td>$ 31 487</td>
+                <td>$ 0</td>
+                <td>$ 7 447</td>
+                <td>Mad T, Crazy</td>
+            </tr>
+            <tr>
+                <td>Madagascar</td>
+                <td>Mada Mobile</td>
+                <td>71134</td>
+                <td>
+                    <label class="customcheckbox" for="">
+                        <input type="checkbox">
+                        <i></i>
+                    </label>
+                </td>
+                <td>1287483242</td>
+                <td>380677654321</td>
+                <td>9 675.43</td>
+                <td>436.87</td>
+                <td>34%</td>
+                <td>2.14</td>
+                <td>$ 38 934</td>
+                <td>$ 31 487</td>
+                <td>$ 0</td>
+                <td>$ 7 447</td>
+                <td>Mad T, Crazy</td>
+            </tr>
+            <tr>
+                <td>Madagascar</td>
+                <td>Mada Mobile</td>
+                <td>71134</td>
+                <td>
+                    <label class="customcheckbox" for="">
+                        <input type="checkbox">
+                        <i></i>
+                    </label>
+                </td>
+                <td>1287483242</td>
+                <td>380677654321</td>
+                <td>9 675.43</td>
+                <td>436.87</td>
+                <td>34%</td>
+                <td>2.14</td>
+                <td>$ 38 934</td>
+                <td>$ 31 487</td>
+                <td>$ 0</td>
+                <td>$ 7 447</td>
+                <td>Mad T, Crazy</td>
+            </tr>
+            <tr>
+                <td>Madagascar</td>
+                <td>Mada Mobile</td>
+                <td>71134</td>
+                <td>
+                    <label class="customcheckbox" for="">
+                        <input type="checkbox">
+                        <i></i>
+                    </label>
+                </td>
+                <td>1287483242</td>
+                <td>380677654321</td>
+                <td>9 675.43</td>
+                <td>436.87</td>
+                <td>34%</td>
+                <td>2.14</td>
+                <td>$ 38 934</td>
+                <td>$ 31 487</td>
+                <td>$ 0</td>
+                <td>$ 7 447</td>
+                <td>Mad T, Crazy</td>
+            </tr>
+            <tr>
+                <td>Madagascar</td>
+                <td>Mada Mobile</td>
+                <td>71134</td>
+                <td>
+                    <label class="customcheckbox" for="">
+                        <input type="checkbox">
+                        <i></i>
+                    </label>
+                </td>
+                <td>1287483242</td>
+                <td>380677654321</td>
+                <td>9 675.43</td>
+                <td>436.87</td>
+                <td>34%</td>
+                <td>2.14</td>
+                <td>$ 38 934</td>
+                <td>$ 31 487</td>
+                <td>$ 0</td>
+                <td>$ 7 447</td>
+                <td>Mad T, Crazy</td>
+            </tr>
+            <tr>
+                <td>Madagascar</td>
+                <td>Mada Mobile</td>
+                <td>71134</td>
+                <td>
+                    <label class="customcheckbox" for="">
+                        <input type="checkbox">
+                        <i></i>
+                    </label>
+                </td>
+                <td>1287483242</td>
+                <td>380677654321</td>
+                <td>9 675.43</td>
+                <td>436.87</td>
+                <td>34%</td>
+                <td>2.14</td>
+                <td>$ 38 934</td>
+                <td>$ 31 487</td>
+                <td>$ 0</td>
+                <td>$ 7 447</td>
+                <td>Mad T, Crazy</td>
+            </tr>
+            <tr>
+                <td>Madagascar</td>
+                <td>Mada Mobile</td>
+                <td>71134</td>
+                <td>
+                    <label class="customcheckbox" for="">
+                        <input type="checkbox">
+                        <i></i>
+                    </label>
+                </td>
+                <td>1287483242</td>
+                <td>380677654321</td>
+                <td>9 675.43</td>
+                <td>436.87</td>
+                <td>34%</td>
+                <td>2.14</td>
+                <td>$ 38 934</td>
+                <td>$ 31 487</td>
+                <td>$ 0</td>
+                <td>$ 7 447</td>
+                <td>Mad T, Crazy</td>
+            </tr>
+        </tbody>
+    </table>
+    <footer class="footer">
+        <div class="button-wrap">
+            <button class="button">Set Daily Limit</button>
+        </div>
+        <div class="button-wrap">
+            <button class="button">Set Cell Limit</button>
+        </div>
+        <div class="button-wrap">
+            <button class="button">Set WR Interval</button>
+        </div>
+        <div class="button-wrap">
+            <button class="button">Add to Group</button>
+        </div>
+        <div class="button-wrap">
+            <button class="button">Kick From Group</button>
+        </div>
+        <div class="button-wrap">
+            <button class="button button_red">Stop GFC</button>
+        </div>
+    </footer>
+</div>
 </body>
 </html>

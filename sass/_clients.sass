@@ -29,16 +29,6 @@ html
 .icon_edit   
 	+s(edit-white)
 
-.tabwindow
-	.tabwindow__in
-		padding: 20px 
-	.tabwindow__content
-		background: #ffffff 
-		+box-shadow(0 0 10px rgba(#000, .2))
-		padding: 35px 20px 
-		position: relative
-.tabwindow__nav
-	+clr
 .tabs
 	float: left
 	list-style: none
@@ -78,61 +68,10 @@ html
 				background: #fff
 				bottom: -10px  
 				left: 0 
-.tabwindow__state
-	float: right
-	color: #6a6969
-	font-size: 18px
-	font-weight: bold 
 
-.table-simple
-	border-spacing: 0
-	border-collapse: collapse
-	width: 100%
-	td, th
-		border: 1px solid #D5D5D5 
-		text-align: center
-		vertical-align: middle
-	th
-		padding: 7px 3px
-		background: #D5D5D5
-		border-color: #fff
-		text-align: center
-		font-weight: normal    
-		color: #666666
-		font-size: 12px  
-		min-height: 40px 
-		border-bottom-style: none
-		&:first-child
-			border-left: none 
-			border-top-left-radius: 4px
-		&:last-child
-			border-right-color: #D5D5D5 
-	td
-		padding: 4px 
-		&:first-child,&:last-child
-			padding-top: 6px 
-		&.td_icon
-			width: 33px 
-			text-align: center
-	tbody
-		tr
-			&:nth-child(2n)
-				background: #f0f0f0 
-	.input-wrap
-		margin-bottom: 0
-		.icon
-			position: absolute
-			top: 50%
-			right: 9px
-			left: auto
-		.icon_glass
-			margin-top: -7px
-		.input
-			&:focus
-				+ i
-					+s(glass-h)
 .customcheckbox
 	position: relative
+	z-index: 2
 	display: inline-block
 	input  
 		position: relative
@@ -188,80 +127,7 @@ html
 
 .wrap
 	+clr
-.col
-	float: left
-	width: 33.3%
-	padding-right: 4%
-	+box-sizing(border-box)
-	&:last-child
-		padding-right: 0
-	.group_width
-		margin-bottom: 28px
-		&.is-inactive-group
-			.row
-				+opacity(.3)
-				+transition(all .2s linear)
-				position: relative
-				&:before
-					position: absolute
-					top: 0
-					z-index: 20  
-					left: 0
-					right: 0  
-					bottom: 0
-					content: ' ' 
-		.group__title 
-			margin-bottom: 28px
-			left: -20px
-			h2
-				width: 100%
-.row
-	margin-bottom: 4px
-	font-size: 0
-	+transition(all .2s linear)
-	.button
-		margin-top: 17px
-	.actions
-		margin-top: 35px
-		text-align: left
-		.button
-			&:first-child
-				margin-left: 0
-.row__title
-	display: inline-block
-	margin-bottom: 10px
-	width: 33%
-	margin-left: 16.5%
-	text-align: center
-	color: #b0b0b0
-	font-weight: bold
-	font-size: 12px  
-.row__text,
-.row__main
-	display: inline-block
-	vertical-align: middle
-.row__text
-	width: 26%
-	padding-right: 5px
-	font-size: 12px
-	text-align: right
-	+box-sizing(border-box)
-.row__add-text
-	display: inline-block
-	font-size: 12px
-	margin-left: 6px
-.row__main
-	width: 74%
-	+clr
-	+box-sizing(border-box)
-	.input_s
-		width: 40%
-		display: inline-block
-		text-align: right
-	.input_to-right
-		float: right
-	.input-wrap
-		margin-bottom: 0
+
 .icon_refresh
 	display: inline-block
 	vertical-align: middle
