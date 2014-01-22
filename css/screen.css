@@ -406,6 +406,7 @@ input[type="file"]::-webkit-file-upload-button { height: 24px; border-radius: 2p
 .button-wrap { position: relative; display: inline-block; margin-right: 8px; vertical-align: middle; }
 .button-wrap .chosen-container, .button-wrap .ui-multiselect { position: absolute; top: 0; left: 0; right: 0; }
 .button-wrap .chosen-single, .button-wrap .ui-multiselect { opacity: 0; }
+.button-wrap .ui-multiselect { max-height: 85px; }
 
 .btn-opt { display: none; position: absolute; top: 100%; width: 100%; margin-top: 7px; background: #f7f7f7; border-radius: 2px; box-shadow: 0 4px 8px rgba(0, 1, 1, 0.3); }
 .btn-opt button { float: left; border-top: 1px solid #dbdbdb; border-left: 1px solid #dbdbdb; width: 50%; height: 29px; background: none; text-align: center; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
