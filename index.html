@@ -165,6 +165,7 @@
 				            },
 				            yAxis: {
 				                min: 0,
+				                gridLineWidth: 0,
 				                title: {
 				                    text: ' ',
 				                    align: 'high'
@@ -177,7 +178,10 @@
 				                valueSuffix: ' millions'
 				            },
 				            plotOptions: {
+
 				                bar: {
+				                	borderWidth: '0',
+				                	pointWidth: "12",
 				                    dataLabels: {
 				                        enabled: true
 				                    }
@@ -199,10 +203,10 @@
 				            },
 				            series: [{
 				                name: 'Blabla 1',
-				                data: [107, 31, 635]
+				                data: [107, 31, 635,940],
 				            }, {
 				                name: 'Blabla 2',
-				                data: [133, 156, 947]
+				                data: [133, 156, 947,980]
 				            }]
 				        });
 				    });
@@ -235,7 +239,10 @@
 			                type: 'pie'
 			            },
 			            title: {
-			                text: ' '
+			                text: '<strong>1285</strong><br>channels',
+				            align: 'center',
+				            verticalAlign: 'middle',
+				            y: -25
 			            },
 			            yAxis: {
 			                title: {
@@ -244,7 +251,9 @@
 			            },
 			            plotOptions: {
 			                pie: {
-			                    shadow: false
+			                    shadow: false,
+			                    showInLegend: true,
+			                    borderWidth: 0
 			                }
 			            },
 			            tooltip: {
@@ -254,7 +263,7 @@
 			            },
 			            series: [{
 			                name: 'Browsers',
-			                data: [["Firefox",6],["MSIE",4],["Chrome",7]],
+			                data: [["Free",6],["Busy",4]],
 			                size: '80%',
 			                innerSize: '40%',
 			             
@@ -296,6 +305,7 @@
 				            },
 		
 				            xAxis: {
+				            	gridLineWidth: 0,
 				                categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
 				                title: {
 				                    text: null
@@ -303,6 +313,7 @@
 				            },
 				            yAxis: {
 				                min: 0,
+				                gridLineWidth: 0,
 				                title: {
 				                    text: ' ',
 				                    align: 'high'
@@ -316,10 +327,12 @@
 				            },
 				            plotOptions: {
 				                bar: {
+				                	pointWidth: "20",
 				                    dataLabels: {
-				                        enabled: true
+				                        enabled: false
 				                    }
 				                }
+
 				            },
 				            legend: {
 				                layout: 'vertical',
@@ -374,12 +387,14 @@
 				            },
 		
 				            xAxis: {
+				            	gridLineWidth: 0,
 				                categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
 				                title: {
 				                    text: null
 				                }
 				            },
 				            yAxis: {
+				            	gridLineWidth: 0,
 				                min: 0,
 				                title: {
 				                    text: ' ',
@@ -394,8 +409,9 @@
 				            },
 				            plotOptions: {
 				                bar: {
+				                	pointWidth: "20",
 				                    dataLabels: {
-				                        enabled: true
+				                        enabled: false
 				                    }
 				                }
 				            },
