@@ -553,9 +553,11 @@ $(document).ready(function() {
 		$(this).parent().find(".js-item").fadeToggle();
 		event.stopPropagation();
 	});
+	$(".js-item").click(function(event){
+		event.stopPropagation();
+	})
 
-
-
+	
 
 
 });
