@@ -105,6 +105,9 @@
 		                }
 
 		            },
+		            credits: {
+			            	enabled: false
+			            },
 		            tooltip: {
 		                enabled: false,
 		                formatter: function() {
@@ -159,21 +162,30 @@
 				            },
 		
 				            xAxis: {
+				            	gridLineWidth: 0,
+								lineWidth: 0,
+								tickWidth: 0,
 				                categories: ['Ukraine', 'Belarus', 'Madagascar', 'Cuba'],
 				                title: {
 				                    text: null
-				                }
+				                },
+				                labels: {
+					            	style: {
+										color: '#707070',
+										fontSize: '16px',
+									}
+					            }
 				            },
 				            yAxis: {
-				                min: 0,
 				                gridLineWidth: 0,
+								lineWidth: 0,
+								labels: {
+				                    enabled: false
+				                },
 				                title: {
 				                    text: ' ',
 				                    align: 'high'
 				                },
-				                labels: {
-				                    overflow: 'justify'
-				                }
 				            },
 				            tooltip: {
 				                valueSuffix: ' millions'
@@ -189,15 +201,7 @@
 				                }
 				            },
 				            legend: {
-				                layout: 'vertical',
-				                align: 'right',
-				                verticalAlign: 'top',
-				                x: -40,
-				                y: 100,
-				                floating: true,
-				                borderWidth: 1,
-				                backgroundColor: '#FFFFFF',
-				                shadow: true
+				                enabled: false
 				            },
 				            credits: {
 				                enabled: false
@@ -264,13 +268,21 @@
 			                    return '<b>'+ this.point.name +'</b>: '+ this.y +' %';
 			                }
 			            },
+			            credits: {
+			            	enabled: false
+			            },
 			            series: [{
 			                name: 'Browsers',
 			                data: [["Free",6],["Busy",4]],
 			                size: '60%',
 			                innerSize: '40%',
 			                dataLabels: {
-			                    enabled: true
+			                    enabled: true,
+			                    format: '<strong>{point.name}</strong>: ({point.percentage:.1f} %)',
+			                    style: {
+			                    	color: '#707070',
+			                    	fontSize: '16px'
+			                    }
 			                }
 			            }]
 			        });
@@ -303,25 +315,27 @@
 				                type: 'bar'
 				            },
 				            title: {
-				                text: ' '
+				                text: ''
 				            },
 		
 				            xAxis: {
 				            	gridLineWidth: 0,
-				                //categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
-				                title: {
-				                    text: null
-				                }
-				            },
-				            yAxis: {
-				                min: 0,
-				                gridLineWidth: 0,
-				                title: {
-				                    text: ' ',
-				                    align: 'high'
-				                },
+				            	lineWidth: 0,
 				                labels: {
-				                    overflow: 'justify'
+				                    enabled: false
+				                },
+				                title: {
+				                	text: ''
+				                },
+				                tickWidth: 0
+				            },
+				            yAxis: {	
+				            	gridLineWidth: 0,
+				                labels: {
+				                    enabled: false
+				                },
+				                title: {
+				                	text: ''
 				                }
 				            },
 				            tooltip: {
@@ -331,19 +345,13 @@
 				                bar: {
 				                	pointWidth: "20",
 				                    dataLabels: {
-				                        enabled: true
+				                        enabled: true,
 				                    }
 				                }
 
 				            },
 				            legend: {
-				                layout: 'vertical',
-				                align: 'right',
-				                verticalAlign: 'top',
-				                floating: true,
-				                borderWidth: 1,
-				                backgroundColor: '#FFFFFF',
-				                shadow: true
+				                enabled: true,
 				            },
 				            credits: {
 				                enabled: false
@@ -396,20 +404,22 @@
 		
 				            xAxis: {
 				            	gridLineWidth: 0,
-				                min: 0,
+				            	lineWidth: 0,
+				                labels: {
+				                    enabled: false
+				                },
 				                title: {
-				                    text: null
-				                }
+				                	text: ''
+				                },
+				                tickWidth: 0
 				            },
 				            yAxis: {
 				            	gridLineWidth: 0,
-				                min: 0,
-				                title: {
-				                    text: ' ',
-				                    align: 'high'
-				                },
 				                labels: {
-				                    overflow: 'justify'
+				                    enabled: false
+				                },
+				                title: {
+				                	text: ''
 				                }
 				            },
 				            tooltip: {
@@ -425,13 +435,7 @@
 				                }
 				            },
 				            legend: {
-				                layout: 'vertical',
-				                align: 'right',
-				                verticalAlign: 'top',
-				                floating: true,
-				                borderWidth: 1,
-				                backgroundColor: '#FFFFFF',
-				                shadow: true
+				                enabled: true
 				            },
 				            credits: {
 				                enabled: false
