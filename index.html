@@ -116,7 +116,9 @@
 			            	enabled: false
 			        },
 			        legend: {
-			        	enabled: false
+			        	enabled: true,
+			        	borderRadius:0,
+         				borderWidth:0
 			        },
 		            tooltip: {
 		                enabled: true,
@@ -130,6 +132,11 @@
 		                    dataLabels: {
 		                        enabled: false
 		                    },
+		                    events: {
+								legendItemClick: function () {
+									return false; 
+								}
+							},
 		                    allowPointSelect: true,
 		                    enableMouseTracking: true,
 		                }
@@ -162,6 +169,10 @@
 						<a href="#">Last month</a>
 					</nav>
 				</header>
+				<style>
+				.highcharts-axis-labels span {
+  left: 0 !important;
+}</style>
 				<script type="text/javascript">
 					$(function () {
 				        $('#g2').highcharts({
@@ -181,9 +192,15 @@
 				                    text: null
 				                },
 				                labels: {
+				                	useHTML:true,
+					                formatter:function(){
+
+					                 return '<div style="font-family: Tahoma,sans-serif;color:#707070;font-size: 14px;">'+this.value+'</div>';
+					                },
 					            	style: {
 										color: '#707070',
 										fontSize: '16px',
+										align: 'left'
 									}
 					            }
 				            },
@@ -202,17 +219,28 @@
 				                valueSuffix: ' millions'
 				            },
 				            plotOptions: {
-
 				                bar: {
-				                	borderWidth: '0',
-				                	pointWidth: "12",
+				                	borderWidth: '4',
+				                	pointWidth: "20",
 				                    dataLabels: {
-				                        enabled: true
-				                    }
+				                        enabled: true,
+				                        useHTML:true,
+					                formatter:function(){
+
+					                 return '<div style="font-family: Tahoma,sans-serif;color:#707070;font-size: 13px;font-weight:bold">'+'12</div>';
+					                },
+				                    },
+				                    events: {
+					                    legendItemClick: function () {
+					                        return false; // <== returning false will cancel the default action
+					                    }
+					                }
 				                }
 				            },
 				            legend: {
-				                enabled: false
+				                enabled: true,
+				                borderRadius:0,
+         						borderWidth:0
 				            },
 				            credits: {
 				                enabled: false
@@ -258,7 +286,7 @@
 			            },
 			            exporting: { enabled: false },
 			            title: {
-			                text: '<span style="color:#707070;font-size:27px;font-family: novabold,sans-serif;">1285</span><br><span style="font-size:14px;color:#707070;">channels</span>',
+			                text: '<strong style="font-weight: bold;color:#707070;font-size:22px;font-family: Tahoma,sans-serif;">1285</strong><br><span style="font-family: Tahoma,sans-serif;font-size:14px;color:#707070;">channels</span>',
 				            align: 'center',
 				            verticalAlign: 'middle',
 				            y: -17,
@@ -269,6 +297,7 @@
 			                    text: 'Total percent market share'
 			                }
 			            },
+
 			            plotOptions: {
 			                pie: {
 			                    shadow: false,
@@ -284,8 +313,15 @@
 								   '#92A8CD', 
 								   '#A47D7C', 
 								   '#B5CA92'
-								]
-			                }
+								],
+								point: {
+								    events: {
+								        legendItemClick: function () {
+								            return false; // <== returning false will cancel the default action
+								        }
+								    }
+								}
+			                },
 			            },
 			            legend: {
 			            	borderWidth: '0',
@@ -344,22 +380,31 @@
 				                type: 'bar'
 				            },
 				            title: {
-				                text: ''
+				                text: ' '
 				            },
 		
 				            xAxis: {
 				            	gridLineWidth: 0,
-				            	lineWidth: 0,
-				            	categories: ['a','b'],
-				                labels: {
-				                    enabled: false
-				                },
+								lineWidth: 0,
+								tickWidth: 0,
+				                categories: ['This&nbsp;month(dec)', 'Previous&nbsp;month(nov)'],
 				                title: {
-				                	text: ''
+				                    text: null
 				                },
-				                tickWidth: 0
+				                labels: {
+				                	useHTML:true,
+					                formatter:function(){
+
+					                return '<div style="font-size:14px;font-family:Tahoma,sans-serif;color:#707070;">'+this.value+'</div>';
+					                },
+					            	style: {
+										color: '#707070',
+										fontSize: '16px',
+										align: 'left'
+									}
+					            }
 				            },
-				            yAxis: {	
+				            yAxis: {
 				            	gridLineWidth: 0,
 				                labels: {
 				                    enabled: false
@@ -374,36 +419,48 @@
 				            plotOptions: {
 				                bar: {
 				                	pointWidth: "20",
-				                	groupPadding: .3,
 				                    dataLabels: {
-				                        enabled: false,
-				                    }
-				                }
+				                        enabled: true,
+				                        useHTML: true,
+				                        formatter:function() {
+					                        return '<div style="font-size: 13px;font-weight: bold;"><div style="text-align:right;position:absolute;left:-60px;width:50px;color:#fff;text-shadow:0 1px 0 #000;top:0">'+this.point.t+'</div>'+this.point.v+'</div>';
+					                    }
+				                    },
+				                    events: {
+										legendItemClick: function () {
+											return false; 
+										}
+									}
 
+				                },
+
+				                series: {
+				                    pointWidth: 20,
+				                    pointPadding: 0
+				                }
 				            },
 				            legend: {
-				                enabled: true,
+				                enabled: false,
+				                borderRadius:0,
+         						borderWidth:0
 				            },
 				            credits: {
 				                enabled: false
 				            },
+				            exporting: { enabled: false },
 				            series: [
-					            {
-					                name: 'This Month (Dec)',
-					                data: [107],
-					                color: '#73c3e4'
-					            },
-					            {
-					                name: 'Previous Month (Nov)',
-					                data: [70],
-					                color: '#609cb5'
+				            	{
+					              data: [
+						              {y:29.9,t:"-12%",v:'122',color: '#76C3E2'}, 
+						              {y:71.5,t:"",v:'122',color:'#629CB5'}
+						            ] 
 					            }
 				            ]
 				        });
 				    });
 				    
 				</script>
-				<div class="b__content" id="g4" style="height: 240px;">
+				<div class="b__content" id="g4" style="height: 90px;width:100%">
 					
 				</div>
 			</div>
@@ -435,14 +492,24 @@
 		
 				            xAxis: {
 				            	gridLineWidth: 0,
-				            	lineWidth: 0,
-				                labels: {
-				                    enabled: false
-				                },
+								lineWidth: 0,
+								tickWidth: 0,
+				                categories: ['Orig Cost', 'Term Cost', 'Profit'],
 				                title: {
-				                	text: ''
+				                    text: null
 				                },
-				                tickWidth: 0
+				                labels: {
+				                	useHTML:true,
+					                formatter:function(){
+
+					                	return '<div style="font-size:14px;font-family:Tahoma,sans-serif;color:#707070;">'+this.value+'</div>';
+					                },
+					            	style: {
+										color: '#707070',
+										fontSize: '16px',
+										align: 'left'
+									}
+					            }
 				            },
 				            yAxis: {
 				            	gridLineWidth: 0,
@@ -460,39 +527,47 @@
 				                bar: {
 				                	pointWidth: "20",
 				                    dataLabels: {
-				                        enabled: true
-				                    }
+				                        enabled: true,
+				                        useHTML: true,
+				                        formatter:function() {
+					                        return '<div style="font-size: 13px;font-weight: bold;"><div style="text-align:right;position:absolute;left:-60px;width:50px;color:#fff;text-shadow:0 1px 0 #000;top:0">'+this.point.t+'</div>'+this.point.v+'</div>';
+					                    }
+				                    },
+				                    events: {
+										legendItemClick: function () {
+											return false; 
+										}
+									}
 
+				                },
+				                series: {
+				                    pointWidth: 20,
+				                    pointPadding: 0
 				                }
 				            },
 				            legend: {
-				                enabled: true
+				                enabled: false,
+				                borderRadius:0,
+         						borderWidth:0
 				            },
 				            credits: {
 				                enabled: false
 				            },
+				            exporting: { enabled: false },
 				            series: [
 				            	{
-					                name: 'ORIG Cost',
-					                data: [107],
-					                color: '#86c6c1'
-				            	},
-				            	{
-					                name: 'TERM Cost',
-					                data: [50],
-					                color: '#f4807e'
-					            },
-				            	{
-					                name: 'Profit',
-					                data: [150],
-					                color: '#7ecf6e'
+					              data: [
+						              {y:29.9,t:"",v:'122',color: '#87C6C0'}, 
+						              {y:71.5,t:"15%",v:'122',color:'#F1817F'},
+						              {y:29.9,t:"14%",v:'122',color:'#80CE72'}
+						            ] 
 					            }
 				            ]
 				        });
 				    });
 				    
 				</script>
-				<div class="b__content" id="g5" style="height: 240px">
+				<div class="b__content" id="g5" style="height: 120px">
 					
 				</div>
 			</div>
