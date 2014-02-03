@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Alerts</title>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+    <script src="js/jquery.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+    <script src="js/chosen.js"></script>
+    <script src="js/jquery.multiselect.js"></script>
+    <script src="js/jquery.multiselect.filter.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+<header class="header js-header">
+    <div class="header__top">
+        <div class="header__user">
+            <div>
+                Logged in as: 
+                <a href="#">Ed2</a>
+            </div>
+            <a href="#">Logout</a>
+        </div>
+        <div class="header__info js-in">
+            Dec 20 2013  |  11:45:18 
+        </div>
+    </div>
+    <div class="nav-wrap">
+        <div class="l-container">
+            <ul class="nav">
+                <li class="nav__item">
+                    <a href="#" class="nav__link">
+                        <i class="nav__icon1"></i>Dashboard
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">
+                        <i class="nav__icon2"></i>Traffik
+                    </a>
+                </li>
+                <li class="nav__item is-active">
+                    <a href="#" class="nav__link">
+                        <span class="nav__counter"><i class="nav__icon3"></i>Alerts <em>2</em>	</span>
+
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<div class="l-layout">
+    <h1 class="title">Urgent Notifications</h1>
+    <table class="alerts">
+    	<thead>
+    		<tr>
+    			<th style="width:6%">№</th>
+    			<th style="width:8%">Date/Time</th>
+    			<th>Report</th>
+    			<th style="width:8%">Status</th>
+    		</tr>
+    	</thead>
+    	<tbody>
+    		<tr>
+    			<td>011</td>
+    			<td>Mar 5 2014 <br>17:10:24</td>
+    			<td>
+					<div class="alert__table-wrap">
+						<p><strong>Lazy GFC Clients </strong> on Uganda mobile XYZtel: during Mar 5 2014 </p>
+						<table>
+							<thead>
+								<tr>
+									<th>Mar 1</th>
+									<th>Mar 2</th>
+									<th>Mar 3</th>
+									<th>Mar 4</th>
+									<th>Mar 5</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>3%</td>
+									<td>3%</td>
+									<td>3%</td>
+									<td>3%</td>
+									<td class="is-red">3%</td>
+								</tr>
+								<tr>
+									<td>113</td>
+									<td>113</td>
+									<td>113</td>
+									<td>113</td>
+									<td class="is-red">113</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+    			</td>
+    			<td><button class="button button_blue">Ok</button></td>
+    		</tr>
+    		<tr>
+    			<td>011</td>
+    			<td>Mar 5 2014 <br>17:10:24</td>
+    			<td>
+    				<div class="alert__table-wrap">
+						<p><strong>Lazy GFC Clients </strong> on Uganda mobile XYZtel: during Mar 5 2014 </p>
+						<table>
+							<thead>
+								<tr>
+									<th>Mar 1</th>
+									<th>Mar 2</th>
+									<th>Mar 3</th>
+									<th>Mar 4</th>
+									<th>Mar 5</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>3%</td>
+									<td>3%</td>
+									<td>3%</td>
+									<td>3%</td>
+									<td class="is-red">3%</td>
+								</tr>
+								<tr>
+									<td>113</td>
+									<td>113</td>
+									<td>113</td>
+									<td>113</td>
+									<td class="is-red">113</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="alert__info">
+						Все исправил. Все теперь работает четко. Была небольшая проблема, но как-то я ее устранил. Не помню как, но все работает.
+					</div>
+    			</td>
+    			<td>
+    				<strong><i class="icon-arr-green"></i>by Ed</strong>
+    				<p>Feb 27 2014 <br>15:45:33</p>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td>011</td>
+    			<td>Mar 5 2014 <br>17:10:24</td>
+    			<td>
+					<div class="alert__table-wrap">
+						<p><strong>Lazy GFC Clients </strong> on Uganda mobile XYZtel: during Mar 5 2014 </p>
+						<table>
+							<thead>
+								<tr>
+									<th>Mar 1</th>
+									<th>Mar 2</th>
+									<th>Mar 3</th>
+									<th>Mar 4</th>
+									<th>Mar 5</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>3%</td>
+									<td>3%</td>
+									<td>3%</td>
+									<td>3%</td>
+									<td class="is-red">3%</td>
+								</tr>
+								<tr>
+									<td>113</td>
+									<td>113</td>
+									<td>113</td>
+									<td>113</td>
+									<td class="is-red">113</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+    			</td>
+    			<td><button class="button button_blue">Ok</button></td>
+    		</tr>
+    		<tr>
+    			<td>011</td>
+    			<td>Mar 5 2014 <br>17:10:24</td>
+    			<td>
+    				<div class="alert__table-wrap">
+						<p><strong>Lazy GFC Clients </strong> on Uganda mobile XYZtel: during Mar 5 2014 </p>
+						<table>
+							<thead>
+								<tr>
+									<th>Mar 1</th>
+									<th>Mar 2</th>
+									<th>Mar 3</th>
+									<th>Mar 4</th>
+									<th>Mar 5</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>3%</td>
+									<td>3%</td>
+									<td>3%</td>
+									<td>3%</td>
+									<td class="is-red">3%</td>
+								</tr>
+								<tr>
+									<td>113</td>
+									<td>113</td>
+									<td>113</td>
+									<td>113</td>
+									<td class="is-red">113</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="alert__info">
+						Все исправил. Все теперь работает четко. Была небольшая проблема, но как-то я ее устранил. Не помню как, но все работает.
+					</div>
+    			</td>
+    			<td>
+    				<strong><i class="icon-arr-green"></i>by Ed</strong>
+    				<p>Feb 27 2014 <br>15:45:33</p>
+    			</td>
+    		</tr>
+    	</tbody>
+    </table>
+	<button class="button button_liquid">Old Alerts</button>
+</div>
+</body>
+</html>
