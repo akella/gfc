@@ -8,8 +8,13 @@
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
 	<script src="js/highcharts/highcharts.js"></script>
 	<script src="js/highcharts/modules/exporting.js"></script>
+	<script src="js/chosen.js"></script>
+    <script src="js/jquery.multiselect.js"></script>
+    <script src="js/jquery.multiselect.filter.js"></script>
+    <script src="js/common.js"></script>
 	
 </head>
 <body>
@@ -27,27 +32,30 @@
             Dec 20 2013  |  11:45:18 
         </div>
     </div>
-    <div class="nav-wrap">
-        <div class="l-container">
-            <ul class="nav">
-                <li class="nav__item">
-                    <a href="#" class="nav__link">
-                        <i class="nav__icon1"></i>Dashboard
-                    </a>
-                </li>
-                <li class="nav__item is-active">
-                    <a href="#" class="nav__link">
-                        <i class="nav__icon2"></i>Traffik
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a href="#" class="nav__link">
-                        <i class="nav__icon3"></i>Alerts
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
+    <div class="js-nav">
+	    <div class="nav-wrap">
+	        <div class="l-container">
+	            <ul class="nav">
+	                <li class="nav__item is-active">
+	                    <a href="#" class="nav__link">
+	                        <i class="nav__icon1"></i>Dashboard
+	                    </a>
+	                </li>
+	                <li class="nav__item">
+	                    <a href="#" class="nav__link">
+	                        <i class="nav__icon2"></i>Traffik
+	                    </a>
+	                </li>
+	                <li class="nav__item">
+	                    <a href="#" class="nav__link">
+	                        <span class="nav__counter"><i class="nav__icon3"></i>Alerts <em>2</em>	</span>
+
+	                    </a>
+	                </li>
+	            </ul>
+	        </div>
+	    </div>
+	</div>
 </header>
 
 <!-- begin content  -->

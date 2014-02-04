@@ -557,8 +557,23 @@ $(document).ready(function() {
 		event.stopPropagation();
 	})
 
-	
-
+	function sticky_nav() {
+		if ($(".js-nav").length) {
+			var top = $(".js-header").height() - $(".js-nav").outerHeight();		
+		}
+		if ($(window).scrollTop() >= top) {
+			$("body").addClass("is-fixed-nav")
+		}
+		else {
+			$("body").removeClass("is-fixed-nav")
+		}
+		console.log($(window).scrollTop());
+		console.log('top'+ top);
+	}
+	sticky_nav();
+	$(window).scroll(function() {
+		sticky_nav();
+	});
 
 });
 

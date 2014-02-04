@@ -26,9 +26,16 @@ body
 	font-size: 12px
 	+freg
 	color: #666  
-	&.is-fixed-table
-		.table-wrap
-			margin-top: 324px
+	&.is-fixed-nav
+		.header
+			padding-top: 61px
+		.nav-wrap
+			position: fixed
+			left: 0
+			right: 0
+			top: 0
+			z-index: 1000
+			box-shadow: 0 1px 3px rgba(0,0,0,.3)
 textarea,input
 	font-family: Tahoma,sans-serif 
 // resets

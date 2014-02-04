@@ -226,7 +226,8 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 @font-face { font-family: novabold; src: url("fonts/proximanova-bold.eot"); src: url("fonts/proximanova-bold.eot?#iefix") format("embedded-opentype"), url("fonts/proximanova-bold.woff") format("woff"), url("fonts/proximanova-bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 
 body { min-width: 1000px; line-height: 1.1; font-size: 12px; font-family: "novareg", Arial, sans-serif; color: #666666; }
-body.is-fixed-table .table-wrap { margin-top: 324px; }
+body.is-fixed-nav .header { padding-top: 61px; }
+body.is-fixed-nav .nav-wrap { position: fixed; left: 0; right: 0; top: 0; z-index: 1000; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); }
 
 textarea, input { font-family: Tahoma, sans-serif; }
 
