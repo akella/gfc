@@ -575,5 +575,9 @@ $(document).ready(function() {
 		sticky_nav();
 	});
 
+	$(".js-show-popup-com").on("click", function(){
+		$(this).parents("tr").find(".js-popup-comment").toggle();
+	});
+
 });
 

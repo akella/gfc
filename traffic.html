@@ -52,7 +52,6 @@
     </div>
 </header>
 <div class="l-layout">
-    <h1 class="title">Controller</h1>
     <div class="filter">
         <div class="wrap">
             <div class="col col_25">
@@ -106,13 +105,85 @@
                 <div class="col col_50">
                     <div class="row row_inline">
                         <span class="row__text"><span>Date:</span></span>
-                        <div class="row__main">
-                            <input type="text" class="input">
+                        <div class="row__main js-with-calendar">
+                            <input type="text" class="input js-date-input">
+                            <div class="calendar js-calendar">
+                                <div class="calendar__wrap">
+                                    <ul class="calendar__years" data-class="js-year">
+                                        <li>2013</li>
+                                        <li>2014</li>
+                                    </ul>
+                                    <ul class="calendar__months" data-class="js-month">
+                                        <li data-id="0">Jan</li>
+                                        <li data-id="1">Feb</li>
+                                        <li data-id="2">Mar</li>
+                                        <li data-id="3">Apr</li>
+                                        <li data-id="4">May</li>
+                                        <li data-id="5">Jun</li>
+                                        <li data-id="6">Jul</li>
+                                        <li data-id="7">Aug</li>
+                                        <li data-id="8">Sep</li>
+                                        <li data-id="9">Oct</li>
+                                        <li data-id="10">Nov</li>
+                                        <li data-id="11">Dec</li>
+                                    </ul>
+                                    <ul class="calendar__days" data-class="js-date">
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li>5</li>
+                                        <li>6</li>
+                                        <li>7</li>
+                                        <li>8</li>
+                                        <li>9</li>
+                                        <li>10</li>
+                                        <li>11</li>
+                                        <li>12</li>
+                                        <li>13</li>
+                                        <li>14</li>
+                                        <li>15</li>
+                                        <li>16</li>
+                                        <li>17</li>
+                                        <li>18</li>
+                                        <li>19</li>
+                                        <li>20</li>
+                                        <li>21</li>
+                                        <li>22</li>
+                                        <li>23</li>
+                                        <li>24</li>
+                                        <li>25</li>
+                                        <li>26</li>
+                                        <li>27</li>
+                                        <li>28</li>
+                                        <li>29</li>
+                                        <li>30</li>     
+                                        <li class="is-inactive">1</li>
+                                        <li class="is-inactive">2</li>
+                                        <li class="is-inactive">3</li>
+                                        <li class="is-inactive">4</li>
+                                        <li class="is-inactive">5</li>
+                                    </ul>
+                                    <div class="calendar__slider">
+                                        <div class="calendar__slider-row" data-class="js-time">
+                                            <span>00:00</span><div class="js-slider-time"></div><span>23:59</span>
+                                        </div>
+                                        <div class="calendar__slider-row" data-class="js-zone">
+                                            <span>GMT</span><div class="calendar__zone-slider js-slider-zone"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calendar__btns">
+                                    <button class="button js-ok">Ok</button>
+                                </div>
+                                
+                                <div class="js-input-text" hidden><span class="js-year"></span> <span class="js-month"></span> <span class="js-date"></span> <span class="js-time"></span> <span class="js-zone"></span></div>
+                            </div>
                         </div>
                     </div>
                     <div class="row row_inline">
                         <span class="row__text"><span>ASR:</span></span>
-                        <div class="row__main">
+                        <div class="row__main row__main_55">
                             <div class="col col_46">
                                 <input type="text" class="input">
                             </div>
@@ -124,7 +195,7 @@
                     </div>
                     <div class="row row_inline">
                         <span class="row__text"><span>Cell Limit:</span></span>
-                        <div class="row__main">
+                        <div class="row__main row__main_55">
                             <div class="col col_46">
                                 <input type="text" class="input">
                             </div>
@@ -135,27 +206,92 @@
                         </div>
                     </div>
                     <div class="row row_inline">
-                        <span class="row__text"><span>Code Name:</span></span>
-                        <div class="row__main">
+                        <span class="row__text"><span>GFC Client ID:</span></span>
+                        <div class="row__main row__main_55">
                             <input type="text" class="input">
                         </div>
                     </div>
                 </div>
                 <div class="col col_50">
-                    <div class="row row_inline row_basket">
-                        <span class="row__text to-center">-</span>
-                        <div class="row__main">
-                            <select class="js-select-multi" multiple="multiple" >
-                                <option value="var0">var0</option>
-                                <option value="var1">var1</option>
-                                <option value="var2">var2</option>
-                                <option value="var3">var3</option>
-                                <option value="var4">var4</option>
-                            </select>
-                        </div>
-                        <button class="btn-bucket js-clear-select"><i></i></button>
-                    </div>
                     <div class="row row_inline">
+                        <span class="row__text to-center">-</span>
+                        <div class="row__main js-with-calendar">
+                            <input type="text" class="input js-date-input">
+                            <div class="calendar js-calendar">
+                                <div class="calendar__wrap">
+                                    <ul class="calendar__years" data-class="js-year">
+                                        <li>2013</li>
+                                        <li>2014</li>
+                                    </ul>
+                                    <ul class="calendar__months" data-class="js-month">
+                                        <li data-id="0">Jan</li>
+                                        <li data-id="1">Feb</li>
+                                        <li data-id="2">Mar</li>
+                                        <li data-id="3">Apr</li>
+                                        <li data-id="4">May</li>
+                                        <li data-id="5">Jun</li>
+                                        <li data-id="6">Jul</li>
+                                        <li data-id="7">Aug</li>
+                                        <li data-id="8">Sep</li>
+                                        <li data-id="9">Oct</li>
+                                        <li data-id="10">Nov</li>
+                                        <li data-id="11">Dec</li>
+                                    </ul>
+                                    <ul class="calendar__days" data-class="js-date">
+                                        <li>1</li>
+                                        <li>2</li>
+                                        <li>3</li>
+                                        <li>4</li>
+                                        <li>5</li>
+                                        <li>6</li>
+                                        <li>7</li>
+                                        <li>8</li>
+                                        <li>9</li>
+                                        <li>10</li>
+                                        <li>11</li>
+                                        <li>12</li>
+                                        <li>13</li>
+                                        <li>14</li>
+                                        <li>15</li>
+                                        <li>16</li>
+                                        <li>17</li>
+                                        <li>18</li>
+                                        <li>19</li>
+                                        <li>20</li>
+                                        <li>21</li>
+                                        <li>22</li>
+                                        <li>23</li>
+                                        <li>24</li>
+                                        <li>25</li>
+                                        <li>26</li>
+                                        <li>27</li>
+                                        <li>28</li>
+                                        <li>29</li>
+                                        <li>30</li>     
+                                        <li class="is-inactive">1</li>
+                                        <li class="is-inactive">2</li>
+                                        <li class="is-inactive">3</li>
+                                        <li class="is-inactive">4</li>
+                                        <li class="is-inactive">5</li>
+                                    </ul>
+                                    <div class="calendar__slider">
+                                        <div class="calendar__slider-row" data-class="js-time">
+                                            <span>00:00</span><div class="js-slider-time"></div><span>23:59</span>
+                                        </div>
+                                        <div class="calendar__slider-row" data-class="js-zone">
+                                            <span>GMT</span><div class="calendar__zone-slider js-slider-zone"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calendar__btns">
+                                    <button class="button js-ok">Ok</button>
+                                </div>
+                                
+                                <div class="js-input-text" hidden><span class="js-year"></span> <span class="js-month"></span> <span class="js-date"></span> <span class="js-time"></span> <span class="js-zone"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row_inline row_inline-82">
                         <span class="row__text"><span>ACD:</span></span>
                         <div class="row__main">
                             <div class="col col_46">
@@ -167,7 +303,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row row_inline">
+                    <div class="row row_inline row_inline-82">
                         <span class="row__text"><span>Daily Limit:</span></span>
                         <div class="row__main">
                             <div class="col col_46">
@@ -179,7 +315,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row row_inline">
+                    <div class="row row_inline row_inline-82">
                         <span class="row__text"><span>GFC Tel. #:</span></span>
                         <div class="row__main">
                             <input type="text" class="input">
@@ -242,7 +378,7 @@
         <div class="wrap">
             <form action="">
                 <div class="filter__title">Splits</div>
-                <div class="col col_20">
+                <div class="col col_25">
                     <div class="row row_inline">
                         <span class="row__text"><span>1:</span></span>
                         <div class="row__main">
@@ -255,32 +391,8 @@
                             </select> 
                         </div>
                     </div>
-                    <div class="row row_inline">
-                        <span class="row__text"><span>2:</span></span>
-                        <div class="row__main">
-                            <select data-placeholder="TERM Rate Table" class="chosen-select" >
-                                <option value="">&nbsp;</option>
-                                <option value="Slovak premium some">Slovak premium some</option>
-                                <option value="var2">var2</option>
-                                <option value="var3">var3</option>
-                                <option value="var4">var4</option>
-                            </select> 
-                        </div>
-                    </div>
-                    <div class="row row_inline">
-                        <span class="row__text"><span>3:</span></span>
-                        <div class="row__main">
-                            <select data-placeholder="TERM Rate Table" class="chosen-select" >
-                                <option value="">&nbsp;</option>
-                                <option value="Slovak premium some">Slovak premium some</option>
-                                <option value="var2">var2</option>
-                                <option value="var3">var3</option>
-                                <option value="var4">var4</option>
-                            </select> 
-                        </div>
-                    </div>
                 </div>
-                <div class="col col_20">
+                <div class="col col_25">
                     <div class="row row_inline">
                         <span class="row__text"><span>1:</span></span>
                         <div class="row__main">
@@ -293,32 +405,8 @@
                             </select> 
                         </div>
                     </div>
-                    <div class="row row_inline">
-                        <span class="row__text"><span>2:</span></span>
-                        <div class="row__main">
-                            <select data-placeholder="TERM Rate Table" class="chosen-select" >
-                                <option value="">&nbsp;</option>
-                                <option value="Slovak premium some">Slovak premium some</option>
-                                <option value="var2">var2</option>
-                                <option value="var3">var3</option>
-                                <option value="var4">var4</option>
-                            </select> 
-                        </div>
-                    </div>
-                    <div class="row row_inline">
-                        <span class="row__text"><span>3:</span></span>
-                        <div class="row__main">
-                            <select data-placeholder="TERM Rate Table" class="chosen-select" >
-                                <option value="">&nbsp;</option>
-                                <option value="Slovak premium some">Slovak premium some</option>
-                                <option value="var2">var2</option>
-                                <option value="var3">var3</option>
-                                <option value="var4">var4</option>
-                            </select> 
-                        </div>
-                    </div>
                 </div>
-                <div class="col col_20">
+                <div class="col col_25">
                     <div class="row row_inline">
                         <span class="row__text"><span>1:</span></span>
                         <div class="row__main">
@@ -329,67 +417,16 @@
                                 <option value="var3">var3</option>
                                 <option value="var4">var4</option>
                             </select> 
-                        </div>
-                    </div>
-                    <div class="row row_inline">
-                        <span class="row__text"><span>2:</span></span>
-                        <div class="row__main">
-                            <select data-placeholder="TERM Rate Table" class="chosen-select" >
-                                <option value="">&nbsp;</option>
-                                <option value="Slovak premium some">Slovak premium some</option>
-                                <option value="var2">var2</option>
-                                <option value="var3">var3</option>
-                                <option value="var4">var4</option>
-                            </select> 
-                        </div>
-                    </div>
-                    <div class="row row_inline">
-                        <span class="row__text"><span>3:</span></span>
-                        <div class="row__main">
-                            <select data-placeholder="TERM Rate Table" class="chosen-select" >
-                                <option value="">&nbsp;</option>
-                                <option value="Slovak premium some">Slovak premium some</option>
-                                <option value="var2">var2</option>
-                                <option value="var3">var3</option>
-                                <option value="var4">var4</option>
-                            </select> 
+                            <button class="btn-add"></button>
                         </div>
                     </div>
                 </div>
-                <div class="col col_20">
-                    <div class="row row_inline">
-                        <span class="row__text"><span>1:</span></span>
-                        <div class="row__main">
-                            <select data-placeholder="TERM Rate Table" class="chosen-select" >
-                                <option value="">&nbsp;</option>
-                                <option value="Slovak premium some">Slovak premium some</option>
-                                <option value="var2">var2</option>
-                                <option value="var3">var3</option>
-                                <option value="var4">var4</option>
-                            </select> 
-                        </div>
-                    </div>
-                    <div class="row row_inline">
-                        <span class="row__text"><span>2:</span></span>
-                        <div class="row__main">
-                            <select data-placeholder="TERM Rate Table" class="chosen-select" >
-                                <option value="">&nbsp;</option>
-                                <option value="Slovak premium some">Slovak premium some</option>
-                                <option value="var2">var2</option>
-                                <option value="var3">var3</option>
-                                <option value="var4">var4</option>
-                            </select> 
-                        </div>
-                    </div>
-                </div>
-                <div class="col col_20">
+                <div class="col col_25">
                     <div class="row row_inline">
                         <span class="row__text"></span>
                         <div class="row__main to-center">
                             <button class="button button_blue">Search</button>
-                            <div>
-                                <button class="btn-reset" type="reset"><i></i>Reset All</button>
-                            </div>
+                            <button class="btn-reset" type="reset"><i></i>Reset All</button>
                         </div>
                     </div>
                 </div>
