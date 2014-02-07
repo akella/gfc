@@ -5,11 +5,11 @@
 // +font(rubl, alsrubl-tahoma-regular)
 // +font(rubl-b, alsrubl-tahoma-bold)
 =freg
-	font-family: "novareg", Arial, sans-serif 
+	font-family: Tahoma,"novareg", Arial, sans-serif 
 =ftah
 	font-family: Tahoma, Arial, sans-serif 
 =fbold
-	font-family: "novabold", Arial, sans-serif 
+	font-family: Tahoma, "novabold", Arial, sans-serif 
 // =fregc
 // 	font-family: "novaregc", Arial, sans-serif 
 // =fblackc
@@ -71,6 +71,8 @@ html
 	text-shadow: 0 1px 1px rgba(0,0,0,.4)   
 .header__info
 	float: right
+	color: #e4e4e4 
+	font-size: 12px 
 	span
 		position: relative
 		padding-left: 10px
@@ -89,22 +91,23 @@ html
 			height: 14px
 			width: 1px
 			background: #c7c7c7  
+	
+.sep
+	height: 14px
+	width: 1px
+	background: #c7c7c7  
+	display: inline-block
+	vertical-align: middle
+	margin: 0 6px 
 .header__user
 	float: right
 	margin-left: 73px
+	color: #e4e4e4
+	font-size: 12px 
 	div
 		display: inline-block
 		position: relative
-		padding-right: 10px
-		margin-right: 10px
-		&:before
-			content: ""
-			position: absolute
-			right: 0
-			top: 2px
-			height: 14px
-			width: 1px
-			background: #c7c7c7  
+	
 		a
 			color: $blue 
 	a
@@ -542,6 +545,7 @@ input[type="file"]
 
 .row
 	margin-bottom: 4px
+	margin-bottom: 3px 
 .row_inline
 	+clr
 	.row__text
@@ -589,7 +593,7 @@ input[type="file"]
 	text-align: center
 	
 .filter__title
-	margin: 20px 0 
+	margin: 15px 0 
 	font-size: 16px  
 	font-weight: bold
 	+ftah	
