@@ -580,7 +580,19 @@ $(document).ready(function() {
 	});
 
 
-	$(".js-date").datetimepicker();  
+	$(".js-date").datetimepicker({
+        dateFormat: 'yy-mm-dd',
+        firstDay: 1,
+        changeMonth: true,
+        changeYear: true,
+        showOtherMonths: true,
+        showTimezone: true,
+        selectOtherMonths: true,
+        yearRange: '-10:+3',
+        showSecond: true,
+        showButtonPanel: false,
+        timeFormat: 'HH:mm:ss z',
+    });
 
 });
 

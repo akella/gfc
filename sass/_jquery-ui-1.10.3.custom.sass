@@ -26,3 +26,18 @@
 		top: -17px
 		color: #505050 
 		
+.ui-datepicker-prev,
+.ui-datepicker-next
+	cursor: pointer
+	.ui-icon
+		position: absolute
+		top: 50%
+		left: 50%
+		margin: -6px 0 0 -4px   
+		+unselectable  
+.ui-datepicker-prev
+	.ui-icon
+		+s(arr-left) 
+.ui-datepicker-next
+	.ui-icon
+		+s(arr-right) 
