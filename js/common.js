@@ -579,5 +579,8 @@ $(document).ready(function() {
 		$(this).parents("tr").find(".js-popup-comment").toggle();
 	});
 
+
+	$(".js-date").datetimepicker();  
+
 });
 

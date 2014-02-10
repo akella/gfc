@@ -683,8 +683,8 @@ html { height: 100%; }
 .table tr.is-clicked { background: #ffefe5; }
 .table tr.is-clicked:nth-child(2n) { background: #f8e8de; }
 .table td { text-align: center; padding: 8px 10px; vertical-align: middle; border-left: 1px solid #e7e7e7; -webkit-transition: background 0.2s linear; -moz-transition: background 0.2s linear; -o-transition: background 0.2s linear; transition: background 0.2s linear; }
-.table td[data-href], .table td[data-window-url] { cursor: pointer; }
-.table td[data-href]:hover, .table td[data-window-url]:hover { background: #9ed6ea; }
+.table td[data-href], .table td[data-window-url], .table td.has-checkbox { cursor: pointer; }
+.table td[data-href]:hover, .table td[data-window-url]:hover, .table td.has-checkbox:hover { background: #9ed6ea; }
 .table .has-checkbox { padding: 0; }
 .table .customcheckbox { display: block; margin: 0 auto; text-align: center; }
 .table .customcheckbox i { left: 50%; margin-left: -9px; top: 50%; margin-top: -9px; }

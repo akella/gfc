@@ -22,14 +22,15 @@
         border-left: 1px solid #e7e7e7 
         +transition(background .2s linear)
         &[data-href],
-        &[data-window-url]
+        &[data-window-url],
+        &.has-checkbox  
             cursor: pointer
             &:hover
                 background: #9ed6ea
     .has-checkbox
         padding: 0 
     .customcheckbox
-        display: block
+        display: block  
         margin: 0 auto
         text-align: center
         i
