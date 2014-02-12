@@ -2,6 +2,7 @@ $(document).ready(function() {
 
 	$(document).click(function() {
         $(".js-tooltip").hide();
+        $(".js-popup-comment").hide();
         $(".js-calendar").removeClass("is-active");
         $(".js-date-input").parent().removeClass("is-active");
 
@@ -72,6 +73,7 @@ $(document).ready(function() {
 				header: "",
    		 		open: function () {
    		 			$(this).multiselect("widget").find("input[type='search']:first").focus();
+   		 			$(this).parents(".footer").find(".chosen-container").removeClass("chosen-with-drop");
    		 		},
    		 		close: function () {
    		 			$(this).multiselect("widget").find("input[type='search']:first").val("");
@@ -573,10 +575,13 @@ $(document).ready(function() {
 		sticky_nav();
 	});
 
-	$(".js-show-popup-com").on("click", function(){
+	$(".js-show-popup-com").on("click", function(event){
 		$(this).parents("tr").find(".js-popup-comment").toggle();
+		event.stopPropagation();
 	});
-
+	$(".js-popup-comment").on("click", function(event){
+		event.stopPropagation();
+	});
 	if ($(".js-date").length) {
 		$(".js-date").datetimepicker({
 	        dateFormat: 'yy-mm-dd',

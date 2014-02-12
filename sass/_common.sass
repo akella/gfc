@@ -142,6 +142,7 @@ html
 		@for $i from 1 through 3
 			.nav__icon#{$i}       
 				+s(nav#{$i}-act)
+		
 @for $i from 1 through 3
 	.nav__icon#{$i}       
 		+s(nav#{$i})
@@ -155,12 +156,14 @@ html
 	text-decoration: none
 	+ftah
 	&:hover
-		background: #fff 
-		box-shadow: 1px 0 0 #dedede, -1px 0 0 #dedede
+		color: $blue 
+		@for $i from 1 through 3
+			.nav__icon#{$i}       
+				+s(nav#{$i}-act)
 .nav__counter
 	position: relative
 	display: inline-block
-	em
+	em  
 		position: absolute
 		top: 12px
 		right: -20px 
