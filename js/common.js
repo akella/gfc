@@ -567,8 +567,6 @@ $(document).ready(function() {
 		else {
 			$("body").removeClass("is-fixed-nav")
 		}
-		console.log($(window).scrollTop());
-		console.log('top'+ top);
 	}
 	sticky_nav();
 	$(window).scroll(function() {
@@ -579,20 +577,22 @@ $(document).ready(function() {
 		$(this).parents("tr").find(".js-popup-comment").toggle();
 	});
 
-
-	$(".js-date").datetimepicker({
-        dateFormat: 'yy-mm-dd',
-        firstDay: 1,
-        changeMonth: true,
-        changeYear: true,
-        showOtherMonths: true,
-        showTimezone: true,
-        selectOtherMonths: true,
-        yearRange: '-10:+3',
-        showSecond: true,
-        showButtonPanel: false,
-        timeFormat: 'HH:mm:ss z',
-    });
+	if ($(".js-date").length) {
+		$(".js-date").datetimepicker({
+	        dateFormat: 'yy-mm-dd',
+	        firstDay: 1,
+	        changeMonth: true,
+	        changeYear: true,
+	        showOtherMonths: true,
+	        showTimezone: true,
+	        selectOtherMonths: true,
+	        yearRange: '-10:+3',
+	        showSecond: true,
+	        showButtonPanel: false,
+	        timeFormat: 'HH:mm:ss z',
+	    });
+	}
+	
 
 });
 
