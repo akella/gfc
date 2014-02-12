@@ -231,9 +231,9 @@ body .ui-tooltip { border-width: 2px; }
 .ui-widget { font-family: Tahoma,arial,sans-serif; font-size: 1.2em; }
 .ui-widget .ui-widget { font-size: 1em; }
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: Tahoma,arial,sans-serif; font-size: 1em; }
-.ui-widget-content { border: 1px solid #dadada; background: #ffffff url(images/ui-bg_flat_100_ffffff_40x100.png) 50% 50% repeat-x; color: #333333; }
+.ui-widget-content { border: 1px solid #dadada; background: #ffffff; color: #333333; }
 .ui-widget-content a { color: #333333; }
-.ui-widget-header { border: 1px solid #dadada; background: #eaeaea url(images/ui-bg_highlight-soft_70_eaeaea_1x100.png) 50% 50% repeat-x; color: #333333; font-weight: bold; }
+.ui-widget-header { border: 1px solid #dadada; background: #eaeaea; color: #333333; font-weight: bold; }
 .ui-widget-header a { color: #333333; }
 
 /* Interaction states
@@ -241,7 +241,7 @@ body .ui-tooltip { border-width: 2px; }
 .ui-datepicker .ui-state-default, 
 .ui-datepicker .ui-widget-content .ui-state-default, 
 .ui-datepicker .ui-widget-header .ui-state-default { 
-    border: 1px solid #b3bdc7; background: #edf0f2 url(images/ui-bg_highlight-hard_100_edf0f2_1x100.png) 50% 50% repeat-x; font-weight: normal; color: #444444; 
+    border: 1px solid #b3bdc7; background: #edf0f2; font-weight: normal; color: #444444; 
 }
 .ui-datepicker .ui-state-default a, 
 .ui-datepicker .ui-state-default a:link, 
@@ -251,7 +251,7 @@ body .ui-tooltip { border-width: 2px; }
 .ui-datepicker .ui-widget-header .ui-state-hover, 
 .ui-datepicker .ui-state-focus, 
 .ui-datepicker .ui-widget-content .ui-state-focus, 
-.ui-datepicker .ui-widget-header .ui-state-focus { border: 1px solid #9ca7b1; background: #dae1e5 url(images/ui-bg_highlight-soft_40_dae1e5_1x100.png) 50% 50% repeat-x; font-weight: normal; color: #212121; }
+.ui-datepicker .ui-widget-header .ui-state-focus { border: 1px solid #9ca7b1; background: #dae1e5; font-weight: normal; color: #212121; }
 .ui-datepicker .ui-state-hover a, 
 .ui-datepicker .ui-state-hover a:hover, 
 .ui-datepicker .ui-state-hover a:link, 
@@ -259,7 +259,7 @@ body .ui-tooltip { border-width: 2px; }
 .ui-datepicker .ui-state-active, 
 .ui-datepicker .ui-widget-content .ui-state-active, 
 .ui-datepicker .ui-widget-header .ui-state-active 
-{ border: 1px solid #ffcd6d; background: #ffe0a4 url(images/ui-bg_highlight-soft_30_ffe0a4_1x100.png) 50% 50% repeat-x; font-weight: normal; color: #212121; }
+{ border: 1px solid #ffcd6d; background: #ffe0a4; font-weight: normal; color: #212121; }
 .ui-datepicker .ui-state-active a, 
 .ui-datepicker .ui-state-active a:link, 
 .ui-datepicker .ui-state-active a:visited { color: #212121; text-decoration: none; }

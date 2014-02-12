@@ -570,9 +570,9 @@ $(document).ready(function() {
 			$("body").removeClass("is-fixed-nav")
 		}
 	}
-	sticky_nav();
+	//sticky_nav();
 	$(window).scroll(function() {
-		sticky_nav();
+		//sticky_nav();
 	});
 
 	$(".js-show-popup-com").on("click", function(event){
