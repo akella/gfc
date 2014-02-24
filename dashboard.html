@@ -807,7 +807,7 @@
 			            },
 			            exporting: { enabled: false },
 			            title: {
-			                text: '<strong style="font-weight: bold;color:#707070;font-size:22px;font-family: Tahoma,sans-serif;">1331</strong><br><span style="font-family: Tahoma,sans-serif;font-size:14px;color:#707070;">channels</span>',
+			                text: '<strong style="font-weight: bold;color:#707070;font-size:22px;font-family: Tahoma,sans-serif;">1265</strong><br><span style="font-family: Tahoma,sans-serif;font-size:14px;color:#707070;">channels</span>',
 				            align: 'center',
 				            verticalAlign: 'middle',
 				            y: -17,
@@ -889,7 +889,7 @@
 			            },
 			            exporting: { enabled: false },
 			            title: {
-			                text: '<strong style="font-weight: bold;color:#707070;font-size:22px;font-family: Tahoma,sans-serif;">1331</strong><br><span style="font-family: Tahoma,sans-serif;font-size:14px;color:#707070;">channels</span>',
+			                text: '<strong style="font-weight: bold;color:#707070;font-size:22px;font-family: Tahoma,sans-serif;">1273</strong><br><span style="font-family: Tahoma,sans-serif;font-size:14px;color:#707070;">channels</span>',
 				            align: 'center',
 				            verticalAlign: 'middle',
 				            y: -17,
@@ -971,7 +971,7 @@
 			            },
 			            exporting: { enabled: false },
 			            title: {
-			                text: '<strong style="font-weight: bold;color:#707070;font-size:22px;font-family: Tahoma,sans-serif;">1331</strong><br><span style="font-family: Tahoma,sans-serif;font-size:14px;color:#707070;">channels</span>',
+			                text: '<strong style="font-weight: bold;color:#707070;font-size:22px;font-family: Tahoma,sans-serif;">1214</strong><br><span style="font-family: Tahoma,sans-serif;font-size:14px;color:#707070;">channels</span>',
 				            align: 'center',
 				            verticalAlign: 'middle',
 				            y: -17,
@@ -1025,7 +1025,7 @@
 			            },
 			            series: [{
 			                name: 'Browsers',
-			                data: [["Free",34.9, 464],["Busy",65.1, 867]],
+			                data: [["Free",33.4, 405],["Busy",66.6, 809]],
 			                size: '65%',
 			                innerSize: '45%',
 			                dataLabels: {
@@ -1053,7 +1053,7 @@
 			            },
 			            exporting: { enabled: false },
 			            title: {
-			                text: '<strong style="font-weight: bold;color:#707070;font-size:22px;font-family: Tahoma,sans-serif;">1331</strong><br><span style="font-family: Tahoma,sans-serif;font-size:14px;color:#707070;">channels</span>',
+			                text: '<strong style="font-weight: bold;color:#707070;font-size:22px;font-family: Tahoma,sans-serif;">1293</strong><br><span style="font-family: Tahoma,sans-serif;font-size:14px;color:#707070;">channels</span>',
 				            align: 'center',
 				            verticalAlign: 'middle',
 				            y: -17,
@@ -1135,7 +1135,7 @@
 			            },
 			            exporting: { enabled: false },
 			            title: {
-			                text: '<strong style="font-weight: bold;color:#707070;font-size:22px;font-family: Tahoma,sans-serif;">1331</strong><br><span style="font-family: Tahoma,sans-serif;font-size:14px;color:#707070;">channels</span>',
+			                text: '<strong style="font-weight: bold;color:#707070;font-size:22px;font-family: Tahoma,sans-serif;">1190</strong><br><span style="font-family: Tahoma,sans-serif;font-size:14px;color:#707070;">channels</span>',
 				            align: 'center',
 				            verticalAlign: 'middle',
 				            y: -17,
@@ -1250,7 +1250,7 @@
 				            	gridLineWidth: 0,
 								lineWidth: 0,
 								tickWidth: 0,
-				                categories: ['This&nbsp;month&nbsp;(dec)', 'Previous&nbsp;month&nbsp;(nov)'],
+				                categories: ['This&nbsp;month&nbsp;(Feb)', 'Previous&nbsp;month&nbsp;(Jan)'],
 				                title: {
 				                    text: null
 				                },
@@ -1315,8 +1315,8 @@
 				            series: [
 				            	{
 					              data: [
-						              {y:29.9,t:"-12%",v:'122',color: '#76C3E2'}, 
-						              {y:71.5,t:"",v:'122',color:'#629CB5'}
+						              {y:55.7,t:"+5.7%",v:'1316',color: '#76C3E2'}, 
+						              {y:44.3,t:"",v:'1245',color:'#629CB5'}
 						            ] 
 					            }
 				            ]
@@ -1333,22 +1333,22 @@
 		<!-- end l-col1 -->
 		<!-- begin l-col2  -->
 		<div class="l-col2">
-			<div class="b">
+			<div class="b js-tab-group">
 				<header class="b__header">
 					<h3>Income</h3>
-					<nav>
-						<a href="#" class="is-active">Today</a>
-						<a href="#">Y-day</a>
-						<a href="#">This week</a>
-						<a href="#">Last week</a>
-						<a href="#">This Mo</a>
-						<a href="#">Last Mo</a>
+					<nav class="js-tab">
+						<a href="js-tab1" class="is-active">Today</a>
+						<a href="js-tab2">Y-day</a>
+						<a href="js-tab3">This week</a>
+						<a href="js-tab4">Last week</a>
+						<a href="js-tab5">This Mo</a>
+						<a href="js-tab6">Last Mo</a>
 					</nav>
 				</header>
 				<script type="text/javascript">
 					$(function () {
 				        
-				        $('#g5').highcharts({
+				        $('#g51').highcharts({
 				            chart: {
 				                type: 'bar'
 				            },
@@ -1423,18 +1423,461 @@
 				            series: [
 				            	{
 					              data: [
-						              {y:29.9,t:"",v:'122',color: '#87C6C0'}, 
-						              {y:71.5,t:"15%",v:'122',color:'#F1817F'},
-						              {y:29.9,t:"14%",v:'122',color:'#80CE72'}
+						              {y:266,t:"",v:'122',color: '#87C6C0'}, 
+						              {y:180,t:"15%",v:'122',color:'#F1817F'},
+						              {y:86,t:"14%",v:'122',color:'#80CE72'}
 						            ] 
 					            }
 				            ]
 				        });
-				    });
-				    
+				    }); 
 				</script>
-				<div class="b__content" id="g5" style="height: 120px">
-					
+				<script type="text/javascript">
+					$(function () {
+				        
+				        $('#g52').highcharts({
+				            chart: {
+				                type: 'bar'
+				            },
+				            title: {
+				                text: ' '
+				            },
+		
+				            xAxis: {
+				            	gridLineWidth: 0,
+								lineWidth: 0,
+								tickWidth: 0,
+				                categories: ['Orig Cost', 'Term Cost', 'Profit'],
+				                title: {
+				                    text: null
+				                },
+				                labels: {
+				                	useHTML:true,
+					                formatter:function(){
+
+					                	return '<div style="font-size:14px;font-family:Tahoma,sans-serif;color:#707070;">'+this.value+'</div>';
+					                },
+					            	style: {
+										color: '#707070',
+										fontSize: '16px',
+										align: 'left'
+									}
+					            }
+				            },
+				            yAxis: {
+				            	gridLineWidth: 0,
+				                labels: {
+				                    enabled: false
+				                },
+				                title: {
+				                	text: ''
+				                }
+				            },
+				            tooltip: {
+				                 enabled: false
+				            },
+				            plotOptions: {
+				                bar: {
+				                	pointWidth: "20",
+				                    dataLabels: {
+				                        enabled: true,
+				                        useHTML: true,
+				                        formatter:function() {
+					                        return '$'+this.point.y;
+					                    }
+				                    },
+				                    events: {
+										legendItemClick: function () {
+											return false; 
+										}
+									}
+
+				                },
+				                series: {
+				                    pointWidth: 20,
+				                    pointPadding: 0
+				                }
+				            },
+				            legend: {
+				                enabled: false,
+				                borderRadius:0,
+         						borderWidth:0
+				            },
+				            credits: {
+				                enabled: false
+				            },
+				            exporting: { enabled: false },
+				            series: [
+				            	{
+					              data: [
+						              {y:799,t:"",v:'122',color: '#87C6C0'}, 
+						              {y:540,t:"15%",v:'122',color:'#F1817F'},
+						              {y:259,t:"14%",v:'122',color:'#80CE72'}
+						            ] 
+					            }
+				            ]
+				        });
+				    }); 
+				</script>
+				<script type="text/javascript">
+					$(function () {
+				        
+				        $('#g53').highcharts({
+				            chart: {
+				                type: 'bar'
+				            },
+				            title: {
+				                text: ' '
+				            },
+		
+				            xAxis: {
+				            	gridLineWidth: 0,
+								lineWidth: 0,
+								tickWidth: 0,
+				                categories: ['Orig Cost', 'Term Cost', 'Profit'],
+				                title: {
+				                    text: null
+				                },
+				                labels: {
+				                	useHTML:true,
+					                formatter:function(){
+
+					                	return '<div style="font-size:14px;font-family:Tahoma,sans-serif;color:#707070;">'+this.value+'</div>';
+					                },
+					            	style: {
+										color: '#707070',
+										fontSize: '16px',
+										align: 'left'
+									}
+					            }
+				            },
+				            yAxis: {
+				            	gridLineWidth: 0,
+				                labels: {
+				                    enabled: false
+				                },
+				                title: {
+				                	text: ''
+				                }
+				            },
+				            tooltip: {
+				                 enabled: false
+				            },
+				            plotOptions: {
+				                bar: {
+				                	pointWidth: "20",
+				                    dataLabels: {
+				                        enabled: true,
+				                        useHTML: true,
+				                        formatter:function() {
+					                        return '$'+this.point.y;
+					                    }
+				                    },
+				                    events: {
+										legendItemClick: function () {
+											return false; 
+										}
+									}
+
+				                },
+				                series: {
+				                    pointWidth: 20,
+				                    pointPadding: 0
+				                }
+				            },
+				            legend: {
+				                enabled: false,
+				                borderRadius:0,
+         						borderWidth:0
+				            },
+				            credits: {
+				                enabled: false
+				            },
+				            exporting: { enabled: false },
+				            series: [
+				            	{
+					              data: [
+						              {y:1398,t:"",v:'122',color: '#87C6C0'}, 
+						              {y:945,t:"15%",v:'122',color:'#F1817F'},
+						              {y:453,t:"14%",v:'122',color:'#80CE72'}
+						            ] 
+					            }
+				            ]
+				        });
+				    }); 
+				</script>
+				<script type="text/javascript">
+					$(function () {
+				        
+				        $('#g54').highcharts({
+				            chart: {
+				                type: 'bar'
+				            },
+				            title: {
+				                text: ' '
+				            },
+		
+				            xAxis: {
+				            	gridLineWidth: 0,
+								lineWidth: 0,
+								tickWidth: 0,
+				                categories: ['Orig Cost', 'Term Cost', 'Profit'],
+				                title: {
+				                    text: null
+				                },
+				                labels: {
+				                	useHTML:true,
+					                formatter:function(){
+
+					                	return '<div style="font-size:14px;font-family:Tahoma,sans-serif;color:#707070;">'+this.value+'</div>';
+					                },
+					            	style: {
+										color: '#707070',
+										fontSize: '16px',
+										align: 'left'
+									}
+					            }
+				            },
+				            yAxis: {
+				            	gridLineWidth: 0,
+				                labels: {
+				                    enabled: false
+				                },
+				                title: {
+				                	text: ''
+				                }
+				            },
+				            tooltip: {
+				                 enabled: false
+				            },
+				            plotOptions: {
+				                bar: {
+				                	pointWidth: "20",
+				                    dataLabels: {
+				                        enabled: true,
+				                        useHTML: true,
+				                        formatter:function() {
+					                        return '$'+this.point.y;
+					                    }
+				                    },
+				                    events: {
+										legendItemClick: function () {
+											return false; 
+										}
+									}
+
+				                },
+				                series: {
+				                    pointWidth: 20,
+				                    pointPadding: 0
+				                }
+				            },
+				            legend: {
+				                enabled: false,
+				                borderRadius:0,
+         						borderWidth:0
+				            },
+				            credits: {
+				                enabled: false
+				            },
+				            exporting: { enabled: false },
+				            series: [
+				            	{
+					              data: [  
+						              {y:5593,t:"",v:'122',color: '#87C6C0'}, 
+						              {y:3780,t:"15%",v:'122',color:'#F1817F'},
+						              {y:1813,t:"14%",v:'122',color:'#80CE72'}
+						            ] 
+					            }
+				            ]
+				        });
+				    }); 
+				</script>
+				<script type="text/javascript">
+					$(function () {
+				        
+				        $('#g55').highcharts({
+				            chart: {
+				                type: 'bar'
+				            },
+				            title: {
+				                text: ' '
+				            },
+		
+				            xAxis: {
+				            	gridLineWidth: 0,
+								lineWidth: 0,
+								tickWidth: 0,
+				                categories: ['Orig Cost', 'Term Cost', 'Profit'],
+				                title: {
+				                    text: null
+				                },
+				                labels: {
+				                	useHTML:true,
+					                formatter:function(){
+
+					                	return '<div style="font-size:14px;font-family:Tahoma,sans-serif;color:#707070;">'+this.value+'</div>';
+					                },
+					            	style: {
+										color: '#707070',
+										fontSize: '16px',
+										align: 'left'
+									}
+					            }
+				            },
+				            yAxis: {
+				            	gridLineWidth: 0,
+				                labels: {
+				                    enabled: false
+				                },
+				                title: {
+				                	text: ''
+				                }
+				            },
+				            tooltip: {
+				                 enabled: false
+				            },
+				            plotOptions: {
+				                bar: {
+				                	pointWidth: "20",
+				                    dataLabels: {
+				                        enabled: true,
+				                        useHTML: true,
+				                        formatter:function() {
+					                        return '$'+this.point.y;
+					                    }
+				                    },
+				                    events: {
+										legendItemClick: function () {
+											return false; 
+										}
+									}
+
+				                },
+				                series: {
+				                    pointWidth: 20,
+				                    pointPadding: 0
+				                }
+				            },
+				            legend: {
+				                enabled: false,
+				                borderRadius:0,
+         						borderWidth:0
+				            },
+				            credits: {
+				                enabled: false
+				            },
+				            exporting: { enabled: false },
+				            series: [
+				            	{
+					              data: [  
+						              {y:9588,t:"",v:'122',color: '#87C6C0'}, 
+						              {y:6480,t:"15%",v:'122',color:'#F1817F'},
+						              {y:3108,t:"14%",v:'122',color:'#80CE72'}
+						            ] 
+					            }
+				            ]
+				        });
+				    }); 
+				</script>
+				<script type="text/javascript">
+					$(function () {
+				        
+				        $('#g56').highcharts({
+				            chart: {
+				                type: 'bar'
+				            },
+				            title: {
+				                text: ' '
+				            },
+		
+				            xAxis: {
+				            	gridLineWidth: 0,
+								lineWidth: 0,
+								tickWidth: 0,
+				                categories: ['Orig Cost', 'Term Cost', 'Profit'],
+				                title: {
+				                    text: null
+				                },
+				                labels: {
+				                	useHTML:true,
+					                formatter:function(){
+
+					                	return '<div style="font-size:14px;font-family:Tahoma,sans-serif;color:#707070;">'+this.value+'</div>';
+					                },
+					            	style: {
+										color: '#707070',
+										fontSize: '16px',
+										align: 'left'
+									}
+					            }
+				            },
+				            yAxis: {
+				            	gridLineWidth: 0,
+				                labels: {
+				                    enabled: false
+				                },
+				                title: {
+				                	text: ''
+				                }
+				            },
+				            tooltip: {
+				                 enabled: false
+				            },
+				            plotOptions: {
+				                bar: {
+				                	pointWidth: "20",
+				                    dataLabels: {
+				                        enabled: true,
+				                        useHTML: true,
+				                        formatter:function() {
+					                        return '$'+this.point.y;
+					                    }
+				                    },
+				                    events: {
+										legendItemClick: function () {
+											return false; 
+										}
+									}
+
+				                },
+				                series: {
+				                    pointWidth: 20,
+				                    pointPadding: 0
+				                }
+				            },
+				            legend: {
+				                enabled: false,
+				                borderRadius:0,
+         						borderWidth:0
+				            },
+				            credits: {
+				                enabled: false
+				            },
+				            exporting: { enabled: false },
+				            series: [
+				            	{
+					              data: [   
+						              {y:23970,t:"",v:'122',color: '#87C6C0'}, 
+						              {y:16200,t:"15%",v:'122',color:'#F1817F'},
+						              {y:7770,t:"14%",v:'122',color:'#80CE72'}
+						            ] 
+					            }
+				            ]
+				        });
+				    }); 
+				</script>
+				<div class="b__content js-tab-cont js-tab1" id="g51" style="height: 120px">
+				</div>
+				<div class="b__content js-tab-cont js-tab2" id="g52" style="height: 120px">
+				</div>
+				<div class="b__content js-tab-cont js-tab3" id="g53" style="height: 120px">
+				</div>
+				<div class="b__content js-tab-cont js-tab4" id="g54" style="height: 120px">
+				</div>
+				<div class="b__content js-tab-cont js-tab5" id="g55" style="height: 120px">
+				</div>
+				<div class="b__content js-tab-cont js-tab6" id="g56" style="height: 120px">
 				</div>
 			</div>
 			<!-- end b -->
