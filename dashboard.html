@@ -41,18 +41,17 @@
 	            <ul class="nav">
 	                <li class="nav__item is-active">
 	                    <a href="dashboard.html" class="nav__link">
-	                        <i class="nav__icon1"></i>Dashboard
+	                        <span class="nav__counter"><i class="nav__icon1"></i>Dashboard</span>
 	                    </a>
 	                </li>
 	                <li class="nav__item">
 	                    <a href="traffic.html" class="nav__link">
-	                        <i class="nav__icon2"></i>Traffik
+	                        <span class="nav__counter"><i class="nav__icon2"></i>Traffik</span>
 	                    </a>
 	                </li>
 	                <li class="nav__item">
 	                    <a href="alerts.html" class="nav__link">
 	                        <span class="nav__counter"><i class="nav__icon3"></i>Alerts <em>2</em>	</span>
-
 	                    </a>
 	                </li>
 	            </ul>
@@ -94,9 +93,9 @@
 			            tickmarkPlacement: 'on',
 			            gridLineWidth: 1,
 			            lineColor: '#c9c9c9',
-			            lineWidth: '3',
+			            lineWidth: 3,
 			            gridLineColor: '#ececec',
-			            gridLineWidth: '1',
+			            gridLineWidth: 1,
 			            max: 31,
 			            min: 1,
 			            labels: {
@@ -106,11 +105,15 @@
 		                }
 			        },
 		            yAxis: {
+		            	tickInterval:1,
+			            tickmarkPlacement: 'on',
+			            gridLineWidth: 1,
+			            maxPadding: 0.05,
 		            	tickPositions: [0,2000, 4000, 6000, 8000, 10000],
 		            	lineColor: '#c9c9c9',
-			            lineWidth: '3',
+			            lineWidth: 3,
 			            gridLineColor: '#ececec',
-			            gridLineWidth: '1',
+			            gridLineWidth: 1,
 			            max: 10000,
 			            min: 100,
 		                title: {
@@ -118,7 +121,7 @@
 		                },
 		                labels: {
 		                    formatter: function() {
-		                        return this.value +'$'
+		                        return  '$ '+ this.value
 		                    }
 		                }
 
@@ -132,7 +135,7 @@
 		            tooltip: {
 		                enabled: true,
 		                formatter: function() {
-		                    return /*this.x +': '+*/ this.y +'$';
+		                    return  '$ ' + this.y;
 		                }
 		            },
 		            plotOptions: {
@@ -228,22 +231,22 @@
 				            },
 				            plotOptions: {
 				                bar: {
-				                	borderWidth: '4',
-				                	pointWidth: "20",
+				                	borderWidth: '0',
+				                	pointWidth: "12",
 				                    dataLabels: {
 				                        enabled: true,
 				                        useHTML:true,
-					                formatter:function(){
+					                	formatter:function(){
 
-					                 return '<div style="font-family: Tahoma,sans-serif;color:#707070;font-size: 13px;font-weight:bold">'+'12</div>';
-					                },
+					                 	return '<div style="font-family: Tahoma,sans-serif;color:#707070;font-size: 12px;font-weight:bold">'+'12</div>';
+					                	},
 				                    },
 				                    events: {
 					                    legendItemClick: function () {
 					                        return false; // <== returning false will cancel the default action
 					                    }
 					                }
-				                }
+				                },
 				            },
 				            legend: {
 				                enabled: true,
@@ -312,14 +315,14 @@
 				            },
 				            plotOptions: {
 				                bar: {
-				                	borderWidth: '4',
-				                	pointWidth: "20",
+				                	borderWidth: '0',
+				                	pointWidth: "12",
 				                    dataLabels: {
 				                        enabled: true,
 				                        useHTML:true,
 					                formatter:function(){
 
-					                 return '<div style="font-family: Tahoma,sans-serif;color:#707070;font-size: 13px;font-weight:bold">'+'12</div>';
+					                 return '<div style="font-family: Tahoma,sans-serif;color:#707070;font-size: 12px;font-weight:bold">'+'12</div>';
 					                },
 				                    },
 				                    events: {
@@ -396,14 +399,14 @@
 				            },
 				            plotOptions: {
 				                bar: {
-				                	borderWidth: '4',
-				                	pointWidth: "20",
+				                	borderWidth: '0',
+				                	pointWidth: "12",
 				                    dataLabels: {
 				                        enabled: true,
 				                        useHTML:true,
 					                formatter:function(){
 
-					                 return '<div style="font-family: Tahoma,sans-serif;color:#707070;font-size: 13px;font-weight:bold">'+'12</div>';
+					                 return '<div style="font-family: Tahoma,sans-serif;color:#707070;font-size: 12px;font-weight:bold">'+'12</div>';
 					                },
 				                    },
 				                    events: {
@@ -480,14 +483,14 @@
 				            },
 				            plotOptions: {
 				                bar: {
-				                	borderWidth: '4',
-				                	pointWidth: "20",
+				                	borderWidth: '0',
+				                	pointWidth: "12",
 				                    dataLabels: {
 				                        enabled: true,
 				                        useHTML:true,
 					                formatter:function(){
 
-					                 return '<div style="font-family: Tahoma,sans-serif;color:#707070;font-size: 13px;font-weight:bold">'+'12</div>';
+					                 return '<div style="font-family: Tahoma,sans-serif;color:#707070;font-size: 12px;font-weight:bold">'+'12</div>';
 					                },
 				                    },
 				                    events: {
@@ -564,14 +567,14 @@
 				            },
 				            plotOptions: {
 				                bar: {
-				                	borderWidth: '4',
-				                	pointWidth: "20",
+				                	borderWidth: '0',
+				                	pointWidth: "12",
 				                    dataLabels: {
 				                        enabled: true,
 				                        useHTML:true,
 					                formatter:function(){
 
-					                 return '<div style="font-family: Tahoma,sans-serif;color:#707070;font-size: 13px;font-weight:bold">'+'12</div>';
+					                 return '<div style="font-family: Tahoma,sans-serif;color:#707070;font-size: 12px;font-weight:bold">'+'12</div>';
 					                },
 				                    },
 				                    events: {
@@ -648,14 +651,14 @@
 				            },
 				            plotOptions: {
 				                bar: {
-				                	borderWidth: '4',
-				                	pointWidth: "20",
+				                	borderWidth: '0',
+				                	pointWidth: "12",
 				                    dataLabels: {
 				                        enabled: true,
 				                        useHTML:true,
 					                formatter:function(){
 
-					                 return '<div style="font-family: Tahoma,sans-serif;color:#707070;font-size: 13px;font-weight:bold">'+'12</div>';
+					                 return '<div style="font-family: Tahoma,sans-serif;color:#707070;font-size: 12px;font-weight:bold">'+'12</div>';
 					                },
 				                    },
 				                    events: {
@@ -1423,9 +1426,9 @@
 				            series: [
 				            	{
 					              data: [
-						              {y:266,t:"",v:'122',color: '#87C6C0'}, 
+						              {y:266,t:"",v:'122',color: '#7ecf6e'}, 
 						              {y:180,t:"15%",v:'122',color:'#F1817F'},
-						              {y:86,t:"14%",v:'122',color:'#80CE72'}
+						              {y:86,t:"14%",v:'122',color:'#64a0e3'}
 						            ] 
 					            }
 				            ]
@@ -1510,9 +1513,9 @@
 				            series: [
 				            	{
 					              data: [
-						              {y:799,t:"",v:'122',color: '#87C6C0'}, 
+						              {y:799,t:"",v:'122',color: '#7ecf6e'}, 
 						              {y:540,t:"15%",v:'122',color:'#F1817F'},
-						              {y:259,t:"14%",v:'122',color:'#80CE72'}
+						              {y:259,t:"14%",v:'122',color:'#64a0e3'}
 						            ] 
 					            }
 				            ]
@@ -1597,9 +1600,9 @@
 				            series: [
 				            	{
 					              data: [
-						              {y:1398,t:"",v:'122',color: '#87C6C0'}, 
+						              {y:1398,t:"",v:'122',color: '#7ecf6e'}, 
 						              {y:945,t:"15%",v:'122',color:'#F1817F'},
-						              {y:453,t:"14%",v:'122',color:'#80CE72'}
+						              {y:453,t:"14%",v:'122',color:'#64a0e3'}
 						            ] 
 					            }
 				            ]
@@ -1684,9 +1687,9 @@
 				            series: [
 				            	{
 					              data: [  
-						              {y:5593,t:"",v:'122',color: '#87C6C0'}, 
+						              {y:5593,t:"",v:'122',color: '#7ecf6e'}, 
 						              {y:3780,t:"15%",v:'122',color:'#F1817F'},
-						              {y:1813,t:"14%",v:'122',color:'#80CE72'}
+						              {y:1813,t:"14%",v:'122',color:'#64a0e3'}
 						            ] 
 					            }
 				            ]
@@ -1771,9 +1774,9 @@
 				            series: [
 				            	{
 					              data: [  
-						              {y:9588,t:"",v:'122',color: '#87C6C0'}, 
+						              {y:9588,t:"",v:'122',color: '#7ecf6e'}, 
 						              {y:6480,t:"15%",v:'122',color:'#F1817F'},
-						              {y:3108,t:"14%",v:'122',color:'#80CE72'}
+						              {y:3108,t:"14%",v:'122',color:'#64a0e3'}
 						            ] 
 					            }
 				            ]
@@ -1858,9 +1861,9 @@
 				            series: [
 				            	{
 					              data: [   
-						              {y:23970,t:"",v:'122',color: '#87C6C0'}, 
+						              {y:23970,t:"",v:'122',color: '#7ecf6e'}, 
 						              {y:16200,t:"15%",v:'122',color:'#F1817F'},
-						              {y:7770,t:"14%",v:'122',color:'#80CE72'}
+						              {y:7770,t:"14%",v:'122',color:'#64a0e3'}
 						            ] 
 					            }
 				            ]

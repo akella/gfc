@@ -24,6 +24,7 @@ body
 	min-width: 1000px    
 	line-height: 1.1
 	font-size: 12px
+	+font-smoothing
 	+freg
 	color: #666  
 	&.is-fixed-nav
@@ -134,11 +135,28 @@ html
 .nav__item
 	position: relative
 	float: left
+	width: 180px
+	&:before
+		content: ""
+		position: absolute
+		left: 0
+		top: 13px
+		bottom: 13px
+		width: 1px 
+		background: #ababab 
+	&:first-child
+		&:before
+			display: none
 	&.is-active
+		+ .nav__item
+			&:before
+				display: none   
 		.nav__link
 			background: #fff
 			color: $blue  
 			box-shadow: inset 0 3px 0 $red, inset 1px 0 0 #dedede, inset -1px 0 0 #dedede, 0 1px 0 #fff
+			span
+				text-shadow: none
 		@for $i from 1 through 3
 			.nav__icon#{$i}       
 				+s(nav#{$i}-act)
@@ -149,12 +167,16 @@ html
 .nav__link  
 	position: relative
 	display: block
-	padding: 0 40px
+	padding: 0 5px
 	font-size: 16px
 	color: #ababab
+	text-align: center
 	font-weight: bold  
 	text-decoration: none
+	
 	+ftah
+	span
+		text-shadow: 0 1px 0 #fff
 	&:hover
 		color: $blue 
 		@for $i from 1 through 3
@@ -191,7 +213,7 @@ html
 		height: 31px
 .title_fixed-width
 	padding-right: 0
-	max-width: 974px
+	max-width: 840px
 	+box
 // .subnav
 // 	display: none
