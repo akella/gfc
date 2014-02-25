@@ -182,10 +182,15 @@ $(document).ready(function() {
 			td_width();
 		}); 
 
-		$(".js-table tr").click(function(){
-			$(this).toggleClass("is-clicked");
+		$(".js-table td").on("click", function(){
+			if ($(this).attr("data-href") || $(this).attr("data-window-url") || $(this).hasClass("with-checkbox") || $(this).parent().attr("data-href")) {
+				
+			}
+			else {
+				$(this).parent().toggleClass("is-clicked");
+			}
+			
 		});
-
 		$(".js-clear-select").click(function(){
 			$(this).parent().find(".js-select-multi").multiselect("uncheckAll");
 			$(this).parent().find(".js-date-input").val("");
@@ -546,7 +551,7 @@ $(document).ready(function() {
 	check_radio();
 
 
-// -- --------  news avox ---- //
+// -- --------  GFC ---- //
 
 	$(document).click(function() {
         $(".js-item").hide();
@@ -595,6 +600,7 @@ $(document).ready(function() {
 	        showSecond: true,
 	        showButtonPanel: false,
 	        timeFormat: 'HH:mm:ss z',
+	        //value:'2014-02-25 23:56:59 0'
 	    });
 	}
 	
@@ -616,6 +622,8 @@ $(document).ready(function() {
        });
   }
   tab();
+
+  
 
 });
 
