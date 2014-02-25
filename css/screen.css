@@ -734,26 +734,27 @@ html { height: 100%; }
 .alerts { margin: 30px 0 38px; font-size: 13px; color: #707070; border: 1px solid #dedede; border-top: 0; border-radius: 3px; width: 840px; font: normal 13px Tahoma, Arial, sans-serif; border-collapse: separate; }
 .alerts .is-red { color: #c23e3e; }
 .alerts p { margin: 15px 0; }
+.alerts .button { min-width: 100px; }
 .alerts + .button_liquid { margin-bottom: 30px; }
 .alerts > thead th { padding: 15px 0; font-weight: normal; border-top: 1px solid #dedede; border-left: 1px solid white; background: #e7e7e7; }
 .alerts > thead th:first-child { border-left: 0; }
 .alerts > tbody td { padding: 17px 20px; border-top: 1px solid #dedede; border-left: 1px solid #dedede; }
 .alerts > tbody td:first-child { border-left: 0; }
-.alerts > tbody td:last-child { text-align: center; }
+.alerts > tbody td:last-child, .alerts > tbody td:nth-child(1), .alerts > tbody td:nth-child(2) { text-align: center; }
 .alerts > tbody td:nth-child(3) { padding: 0; }
 .alerts tr:first-child td { border-top: 0; }
-.alerts table { margin-top: 15px; border: 1px solid #d3e1e9; border-collapse: separate; text-align: center; width: auto; }
-.alerts table thead th { padding: 5px 14px; font-weight: normal; background: #e3edf3; border-bottom: 1px solid #d3e1e9; border-left: 1px solid white; }
+.alerts table { margin: 15px 0 0 10px; border: 1px solid #d3e1e9; border-collapse: separate; table-layout: fixed; text-align: center; width: 290px; }
+.alerts table thead th { padding: 5px; font-weight: normal; background: #e3edf3; border-bottom: 1px solid #d3e1e9; border-left: 1px solid white; }
 .alerts table thead th:first-child { border-left: 0; }
 .alerts table tr:nth-child(2n) td { background: #f6fafd; }
-.alerts table td { padding: 5px 0; border-top: 0; min-width: 69px; border-left: 1px solid #d3e1e9; }
+.alerts table td { padding: 5px; border-top: 0; min-width: 69px; border-left: 1px solid #d3e1e9; }
 .alerts .icon-arr-green { margin-right: 10px; vertical-align: middle; }
 
 .alert__table-wrap { position: relative; padding: 17px 20px; }
 
 .icon-arr-green { display: inline-block; background: url('../img/icons-s26110313dc.png') 0 -1264px no-repeat; width: 13px; height: 14px; }
 
-.alert__info { padding: 20px; color: #2cabdc; border-top: 1px solid #d3e1e9; }
+.alert__info { padding: 13px 20px; color: #2cabdc; border-top: 1px solid #d3e1e9; }
 
 .button_liquid { width: 100%; text-align: center; }
 

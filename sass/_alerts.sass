@@ -12,6 +12,8 @@
 		color: #c23e3e
 	p
 		margin: 15px 0
+	.button
+		min-width: 100px
 	+ .button_liquid
 		margin-bottom: 30px
 	> thead
@@ -31,7 +33,9 @@
 			border-left: 1px solid #dedede
 			&:first-child
 				border-left: 0
-			&:last-child
+			&:last-child,
+			&:nth-child(1),
+			&:nth-child(2)
 				text-align: center
 			&:nth-child(3)
 				padding: 0 
@@ -40,14 +44,15 @@
 			td
 				border-top: 0
 	table
-		margin-top: 15px
+		margin: 15px 0 0 10px
 		border: 1px solid #d3e1e9
 		border-collapse: separate 
+		table-layout: fixed
 		text-align: center
-		width: auto
+		width: 290px
 		thead
 			th
-				padding: 5px  14px
+				padding: 5px
 				font-weight: normal
 				background: #e3edf3 
 				border-bottom: 1px solid #d3e1e9 
@@ -59,10 +64,11 @@
 				td
 					background: #f6fafd 
 		td
-			padding: 5px 0 
+			padding: 5px
 			border-top: 0 
 			min-width: 69px
 			border-left: 1px solid #d3e1e9 
+			
 	.icon-arr-green
 		margin-right: 10px
 		vertical-align: middle
@@ -74,7 +80,7 @@
 	+s(check-green)
 
 .alert__info
-	padding: 20px 
+	padding: 13px 20px
 	color: #2cabdc 
 	border-top: 1px solid #d3e1e9 
 	
