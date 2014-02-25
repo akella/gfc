@@ -444,6 +444,9 @@ input[type="file"]::-webkit-file-upload-button { height: 24px; border-radius: 2p
 
 .b_top { border-bottom: 1px solid #ebebeb; padding-bottom: 20px; }
 
+.b_capacity .b__content { width: 600px; }
+.b_capacity .highcharts-container { width: 600px !important; }
+
 html ::-moz-scrollbar { width: 8px; margin-right: 10px; }
 html ::-webkit-scrollbar { width: 8px; margin-right: 10px; }
 html ::scrollbar { width: 8px; margin-right: 10px; }
