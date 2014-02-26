@@ -623,7 +623,31 @@ $(document).ready(function() {
   }
   tab();
 
-  
+  $(".js-check-all input").on("change", function(){
+  		var group_id = $(this).parent().attr("data-group-id");
+
+  		if ($(this).is(":checked")) {
+			//alert("checked");
+			$(".customcheckbox").each(function(){
+	  			var check_id = $(this).attr("data-id");
+	  			if (check_id == group_id) {
+	  				$(this).find("input").attr("checked","checked");
+	  				$(this).addClass("is-checked");
+	  			}
+	  		});
+		}
+		else {
+			//alert("unchecked");
+			$(".customcheckbox").each(function(){
+	  			var check_id = $(this).attr("data-id");
+	  			if (check_id == group_id) {
+	  				$(this).find("input").removeAttr("checked");
+	  				$(this).removeClass("is-checked");
+	  			}
+	  		});
+		}
+
+  });
 
 });
 
