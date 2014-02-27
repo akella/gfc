@@ -664,6 +664,8 @@ html { height: 100%; }
 
 .ui-datepicker-next .ui-icon { background: url('../img/icons-s26110313dc.png') 0 -1556px no-repeat; width: 7px; height: 12px; }
 
+.ui-datepicker-unselectable span { background: white !important; }
+
 .filter { margin-bottom: 30px; border: 1px solid #dfdfdf; padding: 25px; padding-bottom: 15px; border-radius: 3px; background-color: #e8e8e8; *zoom: 1; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 .filter:after { content: " "; display: table; clear: both; }
 .filter .col { padding-right: 5%; }

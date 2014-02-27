@@ -587,8 +587,8 @@ $(document).ready(function() {
 	$(".js-popup-comment").on("click", function(event){
 		event.stopPropagation();
 	});
-	if ($(".js-date").length) {
-		$(".js-date").datetimepicker({
+	if ($(".js-date-from").length) {
+		$(".js-date-from").datetimepicker({
 	        dateFormat: 'yy-mm-dd',
 	        firstDay: 1,
 	        changeMonth: true,
@@ -600,7 +600,30 @@ $(document).ready(function() {
 	        showSecond: true,
 	        showButtonPanel: false,
 	        timeFormat: 'HH:mm:ss z',
-	        //value:'2014-02-25 23:56:59 0'
+	        onClose: function( selectedDate ) {
+		        $( ".js-date-to" ).datepicker( "option", "minDate", selectedDate );
+		    }
+	    });
+	}
+	if ($(".js-date-to").length) {
+		$(".js-date-to").datetimepicker({
+	        dateFormat: 'yy-mm-dd',
+	        firstDay: 1,
+	        changeMonth: true,
+	        changeYear: true,
+	        showOtherMonths: true,
+	        showTimezone: true,
+	        selectOtherMonths: true,
+	        yearRange: '-10:+3',
+	        showSecond: true,
+	        showButtonPanel: false,
+	        timeFormat: 'HH:mm:ss z',
+	        hour: 23,
+	        minute: 59,
+	        second: 59,
+	        onClose: function( selectedDate ) {
+		        $( ".js-date-from" ).datepicker( "option", "maxDate", selectedDate );
+		    }
 	    });
 	}
 	

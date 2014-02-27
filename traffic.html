@@ -110,7 +110,7 @@
                     <div class="row row_inline">
                         <span class="row__text"><span>Date:</span></span>
                         <div class="row__main js-with-calendar">
-                            <input type="text" class="input js-date">
+                            <input type="text" class="input js-date-from">
                         </div>
                     </div>
                     <div class="row row_inline">
@@ -148,7 +148,7 @@
                     <div class="row row_inline">
                         <span class="row__text to-center">-</span>
                         <div class="row__main js-with-calendar">
-                            <input type="text" class="input js-date">
+                            <input type="text" class="input js-date-to">
                         </div>
                     </div>
                     <div class="row row_inline row_inline-82">
@@ -625,6 +625,14 @@
             <button class="button button_red">Stop GFC</button>
         </div>
     </footer>
+    <script>
+      $(function() {
+        $( "#datepicker" ).datepicker({
+            defaultDate: '01/26/2012'
+        });
+      });
+  </script>
+  <p>Date: <input type="text" id="datepicker"></p>
 </div>
 </body>
 </html>
