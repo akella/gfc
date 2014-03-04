@@ -610,12 +610,13 @@ $(document).ready(function() {
 	        changeMonth: true,
 	        changeYear: true,
 	        showOtherMonths: true,
-	        showTimezone: true,
+	        //showTimezone: true,
 	        selectOtherMonths: true,
 	        yearRange: '-10:+3',
 	        showSecond: true,
 	        showButtonPanel: false,
-	        timeFormat: 'HH:mm:ss z',
+	        //timeFormat: 'HH:mm:ss z',
+	        timeFormat: 'HH:mm:ss',
 	        onClose: function( selectedDate ) {
 		        $( ".js-date-to" ).datepicker( "option", "minDate", selectedDate );
 		    }
@@ -628,12 +629,13 @@ $(document).ready(function() {
 	        changeMonth: true,
 	        changeYear: true,
 	        showOtherMonths: true,
-	        showTimezone: true,
+	        //showTimezone: true,
 	        selectOtherMonths: true,
 	        yearRange: '-10:+3',
 	        showSecond: true,
 	        showButtonPanel: false,
-	        timeFormat: 'HH:mm:ss z',
+	        //timeFormat: 'HH:mm:ss z',
+	        timeFormat: 'HH:mm:ss',
 	        hour: 23,
 	        minute: 59,
 	        second: 59,
@@ -642,7 +644,27 @@ $(document).ready(function() {
 		    }
 	    });
 	}
-	
+	// if ($(".js-date-zone").length) {
+	// 	$(".js-date-zone").datetimepicker({
+	//         //dateFormat: 'yy-mm-dd',
+	//         firstDay: 1,
+	//         changeMonth: false,
+	//         changeYear: false,
+	//         showOtherMonths: false,
+	//         showTimezone: true,
+	//         selectOtherMonths: false,
+	//         yearRange: '-10:+3',
+	//         showSecond: false,
+	//         showButtonPanel: false,
+	//         timeFormat: 'HH:mm:ss z',
+	//         hour: 23,
+	//         minute: 59,
+	//         second: 59,
+	//         onClose: function( selectedDate ) {
+	// 	        $( ".js-date-zone" ).datepicker( "option", "maxDate", selectedDate );
+	// 	    }
+	//     });
+	// }
 	function tab() {
        $(".js-tab").each(function(){
         	var tab_link = $(this).find("a");

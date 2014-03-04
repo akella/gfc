@@ -146,7 +146,15 @@
                 </div>
                 <div class="col col_50">
                     <div class="row row_inline">
-                        <span class="row__text to-center">-</span>
+                        <span class="row__text to-center chosen-select-input">
+                             <select data-placeholder="TERM Rate Table" class="chosen-select" >
+                                <option value="">&nbsp;</option>
+                                <option value="Slovak premium some">-0001</option>
+                                <option value="var2">+0000</option>
+                                <option value="var3">+0001</option>
+                                <option value="var4">+0002</option>
+                            </select> 
+                        </span>
                         <div class="row__main js-with-calendar">
                             <input type="text" class="input js-date-to">
                         </div>
@@ -277,21 +285,22 @@
                                 <option value="var3">var3</option>
                                 <option value="var4">var4</option>
                             </select> 
-                            <button class="btn-add"></button>
+                            <button class="btn-add"><i></i></button>
                         </div>
                     </div>
                 </div>
                 <div class="col col_25">
                     <div class="row row_inline">
                         <span class="row__text"></span>
-                        <div class="row__main to-center row__buttons">
+                        <div class="row__main row__buttons text-justify">
                             <button class="button button_blue">Search</button>
-                            <button class="btn-reset" type="reset"><i></i>Reset All</button>
+                            <button class="btn-del"><i></i></button>
+                            <button class="btn-down"><i></i></button>
                         </div>
-                    </div>
+                    </div>  
                 </div>
             </form>
-        </div>
+        </div>  
         
     </div>
    <div class="wrap">
@@ -625,14 +634,6 @@
             <button class="button button_red">Stop GFC</button>
         </div>
     </footer>
-    <script>
-      $(function() {
-        $( "#datepicker" ).datepicker({
-            defaultDate: '01/26/2012'
-        });
-      });
-  </script>
-  <p>Date: <input type="text" id="datepicker"></p>
 </div>
 </body>
 </html>

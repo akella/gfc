@@ -1,17 +1,52 @@
-// responsive example, edit or remove
-$breaksmall: 500px
-
-$breaklarge: 1180px
+$step1560: 1560px
+$step760: 760px
+$step680: 680px
+$step480: 480px
+$step450: 450px
+$step360: 360px
+$step320: 320px  
 
 =r($media)
-	@if $media == pda
-		// narrower than $width
-		@media only screen and (max-width: $breaksmall)
+	@if $media == step1560
+		@media only screen and (max-width: $step1560)
 			@content
-	@else if $media == wide
-		// wider than $width
-		@media only screen and (min-width: $breaklarge)
+	@if $media == step1000
+		@media only screen and (max-width: $step1000)
 			@content
+	@if $media == step960
+		@media only screen and (max-width: $step960)
+			@content
+	@if $media == step900
+		@media only screen and (max-width: $step900)
+			@content
+	@if $media == step860
+		@media only screen and (max-width: $step860)
+			@content
+	@if $media == step800
+		@media only screen and (max-width: $step800)
+			@content
+	@if $media == step760
+		@media only screen and (max-width: $step760)
+			@content
+	@if $media == step680
+		@media only screen and (max-width: $step680)
+			@content
+	@if $media == step480
+		@media only screen and (max-width: $step480)
+			@content
+	@if $media == step450
+		@media only screen and (max-width: $step450)
+			@content
+	@if $media == step360
+		@media only screen and (max-width: $step360)
+			@content
+	@if $media == step320
+		@media only screen and (max-width: $step320)
+			@content
+	// @else if $media == wide
+	// 	// wider than $width
+	// 	@media only screen and (min-width: $break2)
+	// 		@content
 
 =fs($sizeValue: 16)
 	font-size: $sizeValue + px

@@ -20,6 +20,9 @@
 	.row__text
 		width: 35%
 		white-space: nowrap
+		&.to-center
+			.input
+				width: 75%
 	.btn-reset 
 		margin-left: 10px
 	.row__main_55  
@@ -40,6 +43,13 @@
 	+box
 .col_25
 	width: 25%
+	.row_inline
+		.chosen-container
+			width: 60% !important
+		.btn-add
+			position: absolute
+			right: 0
+			top: 0
 .col_50
 	width: 50%
 .col_8
@@ -57,6 +67,7 @@
 	font-weight: bold
 	+ button
 		float: right
+		font-size: 12px      
 	span
 		color: $blue 
 	.icon-flag
