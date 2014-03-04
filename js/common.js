@@ -5,7 +5,7 @@ $(document).ready(function() {
         $(".js-popup-comment").hide();
         $(".js-calendar").removeClass("is-active");
         $(".js-date-input").parent().removeClass("is-active");
-
+        $(".js-drop-user-list").fadeOut("fast");
         var text = $(".is-active .js-input-text").text();
 		$(".is-active .js-date-input").val(text);
 		$(".js-date-input").parent().removeClass("is-active");
@@ -708,6 +708,14 @@ $(document).ready(function() {
 	  		});
 		}
 
+  });
+
+  $(".js-drop-user").on("click", function(event){
+  	$(".js-drop-user-list").fadeToggle("fast");
+  	event.stopPropagation();
+  });
+  $(".js-drop-user-list").on("click", function(event){
+  	event.stopPropagation();
   });
 
 });

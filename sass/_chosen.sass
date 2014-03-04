@@ -14,7 +14,7 @@
 
 .chosen-container .chosen-drop
 	position: absolute
-	margin-top: 15px
+	//margin-top: 15px
 	top: 100%
 	left: -9999px
 	z-index: 1010
@@ -26,26 +26,26 @@
 	min-width: 100% 
 	+border-radius(2px)
 	background: #f7f7f7
-	border: 1px solid #c8c8c8
-	+box-shadow(0 3px 15px rgba(0,0,0,.2))
-	&:before,
-	&:after
-		content: ""
-		position: absolute
-		width: 0px
-		height: 0px
-		border-style: solid
-	&:before
-		top: -9px
-		left: 17px
-		border-width: 0 7px 10px 7px
-		border-color: transparent transparent #f7f7f7 transparent
-		z-index: 2
-	&:after
-		top: -10px
-		left: 16px
-		border-width: 0 8px 10px 8px
-		border-color: transparent transparent #c8c8c8 transparent
+	//border: 1px solid #c8c8c8
+	+box-shadow(0 2px 8px rgba(0,0,0,.4))
+	// &:before,
+	// &:after
+	// 	content: ""
+	// 	position: absolute
+	// 	width: 0px
+	// 	height: 0px
+	// 	border-style: solid
+	// &:before
+	// 	top: -9px
+	// 	left: 17px
+	// 	border-width: 0 7px 10px 7px
+	// 	border-color: transparent transparent #f7f7f7 transparent
+	// 	z-index: 2
+	// &:after
+	// 	top: -10px
+	// 	left: 16px
+	// 	border-width: 0 8px 10px 8px
+	// 	border-color: transparent transparent #c8c8c8 transparent
 .chosen-container.chosen-with-drop .chosen-drop
 	left: 0
 
@@ -71,11 +71,7 @@
 		top: 50%
 		margin-top: -3px
 		right: 10px
-		width: 0px
-		height: 0px
-		border-style: solid    
-		border-width: 7px 4px 0 4px
-		border-color: #b0b0b0 transparent transparent transparent
+		+arr(8,7,#c5c5c5,b)
 
 .chosen-container-single .chosen-default
 	color: #999
@@ -143,7 +139,7 @@
 		outline: none  
 
 .chosen-container-single .chosen-drop
-	top: 33px
+	top: 27px
 	border-radius: 0 0 4px 4px
 	background-clip: padding-box
 	.active-result
@@ -153,13 +149,13 @@
 		&.result-selected
 			// background: #2cabdc
 			// color: #fff  
-			&:before
-				content: ""
-				position: absolute
-				left: 9px
-				top: 50%
-				margin-top: -6px
-				+s(check-blue) 
+			// &:before
+			// 	content: ""
+			// 	position: absolute
+			// 	left: 9px
+			// 	top: 50%
+			// 	margin-top: -6px
+			// 	+s(check-blue) 
 			&.highlighted
 				&:before
 					+s(check-white)
@@ -192,8 +188,8 @@
 	display: list-item
 	cursor: pointer
 	position: relative
-	padding-left: 30px
-	
+	padding: 8px 10px
+	white-space: normal
 .chosen-container-multi .chosen-results li.active-result
 	&:before
 		content: ""
@@ -425,7 +421,9 @@
 .chosen-rtl .chosen-single abbr
 	right: auto
 	left: 26px
-
+.button-wrap
+	.chosen-drop
+		top: 31px
 .chosen-rtl .chosen-choices li
 	float: right
 

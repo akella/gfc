@@ -66,10 +66,10 @@ html
 	margin-bottom: 27px
 	border-bottom: 1px solid #fff 
 .header__top
-	overflow: hidden
 	padding: 12px 40px
 	color: #eee
 	background: #4c6a84  
+	+clr
 	text-shadow: 0 1px 1px rgba(0,0,0,.4)   
 .header__info
 	float: right
@@ -102,42 +102,44 @@ html
 	vertical-align: middle
 	margin: 0 6px 
 .header__user
+	position: relative
 	float: right
 	margin-left: 73px
 	color: #e4e4e4
 	font-size: 12px 
-	div
-		display: inline-block
-		position: relative
-	
-		a
-			color: $blue 
-	a
-		color: #fff
-		text-decoration: none 
-		&:hover
-			color: #2cabdc 
 	ul
 		position: absolute
 		top: 100%
-		left: 0
-		z-index: 100
+		left: -14px
+		display: none
+		margin-top: 17px
+		width: 104px
+		z-index: 2000
 		padding: 5px 0 
+		background: #4c6a84 
+		+border-radius(3px)
+		overflow: hidden
 		a
 			display: block
-			padding: 14px 0 10px
+			padding: 0 14px
 			height: 30px
 			line-height: 30px
+			font-size: 12px
+			color: #fff
+			text-decoration: none 
+			&:hover
+				background: #2cabdc 
 			
 .header__user-name
 	display: inline-block
 	position: relative
+	padding-right: 13px
 	cursor: pointer
 	&:after
 		content: ""
 		position: absolute
 		top: 4px
-		right: -13px
+		right: 0
 		+arr(8,7,#eee,b) 
 .l-container
 	width: 90%

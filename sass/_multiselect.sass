@@ -21,13 +21,28 @@
     &.ui-state-active
         background: #bfe6f4
         span.ui-icon
-            +s(arr2)   
+            &:before
+                +arr(8,7,#2cabdc,t)
+            &:after
+                +arr(8,7,#2cabdc,b) 
 .ui-multiselect span.ui-icon
     position: absolute
     top: 50%
     right: 10px
-    margin-top: -8px
-    +s(arr1)
+    margin-top: -9px
+    width: 8px
+    height: 18px
+    &:before,
+    &:after
+        content: ""
+        position: absolute
+        left: 0
+    &:before
+        top: 0
+        +arr(8,7,#c5c5c5,t)
+    &:after
+        bottom: 0
+        +arr(8,7,#c5c5c5,b)
 .ui-multiselect-single .ui-multiselect-checkboxes input
     position: absolute !important
     top: auto !important
@@ -148,10 +163,13 @@
             +box-shadow(inset 0 1px 3px rgba(0,0,0,.07))
 .ui-multiselect-checkboxes li
     display: list-item
-    
     &:hover  
         background: #2cabdc
         color: #fff
+        label
+            span
+                &:after
+                    border-color: #2395c1
 .ui-multiselect-checkboxes li.ui-multiselect-optgroup-label
     text-align: center
     font-weight: bold
