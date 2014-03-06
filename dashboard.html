@@ -8,7 +8,7 @@
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+	<script src="js/jquery-ui-1.10.3.custom.js"></script>
 	<script src="js/highcharts/highcharts.js"></script>
 	<script src="js/highcharts/modules/exporting.js"></script>
 	<script src="js/chosen.js"></script>
@@ -24,13 +24,11 @@
 <header class="header">
     <div class="header__top">
         <div class="header__user">
-            <div>
-                Logged in as: 
-                <a href="#">Ed2</a>
-            </div>
-            <b class="sep"></b>
-            <a href="#">Logout</a>
-        </div>
+	            <span class="header__user-name js-drop-user">Vovkes</span>
+	            <ul class="js-drop-user-list">
+	            	<li><a href="#">Выйти</a></li>
+	            </ul>
+	        </div>
         <div class="header__info js-in">
             Dec 20 2013  <b class="sep"></b>  11:45:18 
         </div>
@@ -371,7 +369,7 @@
 				            	gridLineWidth: 0,
 								lineWidth: 0,
 								tickWidth: 0,
-				                categories: ['South African Republic', 'South African Republic', 'South African Republic', 'South African Republic'],
+				                categories: ['Ukraine', 'Madagascar', 'Gabon', 'Belarus'],
 				                title: {
 				                    text: null
 				                },
@@ -623,7 +621,7 @@
 				            	gridLineWidth: 0,
 								lineWidth: 0,
 								tickWidth: 0,
-				                categories: ['South African Republic', 'South African Republic', 'South African Republic', 'South African Republic'],
+				                categories: ['Ukraine', 'Madagascar', 'Gabon', 'Belarus'],
 				                title: {
 				                    text: null
 				                },
