@@ -712,6 +712,13 @@ html { height: 100%; }
 .filter .row__buttons { white-space: nowrap; }
 .filter .row__buttons .button { width: 100px; padding-left: 0; padding-right: 0; min-width: 0; text-align: center; }
 
+.filter_my { padding-left: 0; padding-right: 0; }
+.filter_my .wrap { width: 1156px; border: 1px solid red; }
+.filter_my .col_11 { width: 326px; padding-right: 0; }
+.filter_my .col_11 .row__text { width: 100px; }
+.filter_my .col_11 .row__main { width: 203px; padding: 0; }
+.filter_my .input_226 { width: 226px; }
+
 .col { float: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 .col_25 { width: 25%; }
