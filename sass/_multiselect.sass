@@ -88,24 +88,24 @@
     width: auto !important 
     max-width: 460px
     padding-right: 2px 
-    &:before,
-    &:after
-        content: ""
-        position: absolute
-        width: 0px
-        height: 0px
-        border-style: solid
-    &:before
-        top: -9px
-        left: 17px
-        border-width: 0 7px 10px 7px
-        border-color: transparent transparent #f7f7f7 transparent
-        z-index: 2
-    &:after
-        top: -10px
-        left: 16px
-        border-width: 0 8px 10px 8px
-        border-color: transparent transparent #c8c8c8 transparent
+    // &:before,
+    // &:after
+    //     content: ""
+    //     position: absolute
+    //     width: 0px
+    //     height: 0px
+    //     border-style: solid
+    // &:before
+    //     top: -9px
+    //     left: 17px
+    //     border-width: 0 7px 10px 7px
+    //     border-color: transparent transparent #f7f7f7 transparent
+    //     z-index: 2
+    // &:after
+    //     top: -10px
+    //     left: 16px
+    //     border-width: 0 8px 10px 8px
+    //     border-color: transparent transparent #c8c8c8 transparent
 
 .ui-multiselect-checkboxes
     position: relative
@@ -114,6 +114,20 @@
     list-style: none
     max-height: 240px
     height: auto !important
+    min-width: 150px !important
+    +scrollbar
+        width: 8px
+        margin-right: 10px    
+    +scrollbar-track-piece 
+        +border-radius(5px)
+        background: #ececec
+        +box-shadow(inset 0 0 3px rgba(44,44,44,.2), inset 0 0 0 1px #d5d5d5)
+    +scrollbar-thumb
+        width: 8px
+        border: 1px solid #2694bf
+        +border-radius(5px)
+        background: #2babdb 
+    
 .ui-multiselect-checkboxes label
     cursor: default
     display: block

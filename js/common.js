@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 	$(document).click(function() {
         $(".js-tooltip").hide();
-        $(".js-popup-comment").hide();
+        //$(".js-popup-comment").hide();
         $(".js-calendar").removeClass("is-active");
         $(".js-date-input").parent().removeClass("is-active");
         $(".js-drop-user-list").fadeOut("fast");
@@ -587,7 +587,10 @@ $(document).ready(function() {
 	$(".js-popup-comment").on("click", function(event){
 		event.stopPropagation();
 	});
-	
+	$(".js-popup-close").on("click", function(event){
+		$(this).parents(".popup").hide();
+		event.stopPropagation();
+	});
 	if ($(".js-date").length) {
 		$(".js-date").datetimepicker({
 	        dateFormat: 'yy-mm-dd',
