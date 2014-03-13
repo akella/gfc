@@ -182,6 +182,8 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
 .ui-multiselect-single .ui-multiselect-checkboxes label { padding: 5px !important; }
 
+.ui-multiselect-header .ui-helper-reset { display: none; }
+
 .ui-multiselect-header ul { font-size: 0.9em; }
 
 .ui-multiselect-header ul li { float: left; padding: 0 10px 0 0; }
@@ -312,13 +314,14 @@ html { height: 100%; }
 
 .title_fixed-width { padding-right: 0; max-width: 840px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-.button { display: inline-block; border-radius: 2px; height: 30px; position: relative; overflow: hidden; padding: 0 15px; min-width: 120px; color: #838383; text-align: center; font: bold 12px/30px Tahoma, Arial, sans-serif; background: #e8e8e8; text-shadow: 0 1px 0 #fafafa; cursor: pointer; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -ms-font-smoothing: antialiased; -o-font-smoothing: antialiased; border: 0; text-decoration: none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-transition: background 0.2s linear; -moz-transition: background 0.2s linear; -o-transition: background 0.2s linear; transition: background 0.2s linear; }
+.button { display: inline-block; border-radius: 2px; height: 30px; position: relative; overflow: hidden; padding: 0 15px; min-width: 120px; color: #838383; text-align: center; font: bold 12px/30px Tahoma, Arial, sans-serif; background: #e8e8e8; text-shadow: 0 1px 0 #fafafa; cursor: pointer; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -ms-font-smoothing: antialiased; -o-font-smoothing: antialiased; border: 0; text-decoration: none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 .button.button_blue { background: #2cabdc; color: white; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); }
 .button.button_blue:hover { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; background: #238db5; }
 .button.is-disabled { background: #e7e7e7; color: white; text-shadow: 0 1px 0 rgba(191, 191, 191, 0.2); }
 .button:hover { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=95); opacity: 0.95; }
 .button:focus { outline: none; }
 .button:active { position: relative; top: 1px; }
+.button.is-active { background: #2cabdc; color: white; text-shadow: none; }
 
 .button_big { height: 32px; font: bold 14px/32px Tahoma, Arial, sans-serif; }
 
@@ -425,12 +428,15 @@ input[type="file"]::-webkit-file-upload-button { height: 24px; border-radius: 2p
 .btn-reset { color: #5c5c5c; background: none; }
 .btn-reset i { display: inline-block; margin-right: 4px; vertical-align: middle; background: url('../img/icons-s41d0eb468c.png') 0 -641px no-repeat; width: 13px; height: 17px; }
 
-.footer { padding-bottom: 140px; }
+.footer { padding-bottom: 50px; }
 
 .button-wrap { position: relative; display: inline-block; margin-right: 8px; vertical-align: middle; }
 .button-wrap .chosen-container, .button-wrap .ui-multiselect { position: absolute; top: 0; left: 0; right: 0; }
 .button-wrap .chosen-single, .button-wrap .ui-multiselect { opacity: 0; }
 .button-wrap .ui-multiselect { max-height: 85px; }
+.button-wrap .chosen-drop { top: auto; bottom: 31px; }
+.button-wrap .btn-opt { top: auto; bottom: 31px; margin-top: 0; }
+.button-wrap .ui-widget { height: 30px; width: 100% !important; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 .btn-opt { display: none; position: absolute; top: 100%; width: 100%; margin-top: 7px; background: #f7f7f7; border-radius: 2px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); }
 .btn-opt button { float: left; border-top: 1px solid #dbdbdb; border-left: 1px solid #dbdbdb; width: 50%; height: 29px; background: none; text-align: center; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }

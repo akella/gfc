@@ -292,7 +292,7 @@ html
 	border: 0
 	text-decoration: none
 	+box-sizing(border-box)
-	+transition(background .2s linear)
+	//+transition(background .2s linear)
 	&.button_blue
 		background: #2cabdc
 		color: #fff
@@ -311,6 +311,10 @@ html
 	&:active
 		position: relative
 		top: 1px 
+	&.is-active
+		background: #2cabdc
+		color: #fff  
+		text-shadow: none
 .button_big
 	height: 32px
 	font: bold 14px/32px Tahoma,Arial,sans-serif
@@ -664,7 +668,7 @@ input[type="file"]
 		+s(bucket2)
 
 .footer
-	padding-bottom: 140px
+	padding-bottom: 50px
 	
 .button-wrap
 	position: relative
@@ -682,6 +686,17 @@ input[type="file"]
 		opacity: 0
 	.ui-multiselect
 		max-height: 85px
+	.chosen-drop
+		top: auto
+		bottom: 31px
+	.btn-opt
+		top: auto
+		bottom: 31px
+		margin-top: 0
+	.ui-widget
+		height: 30px
+		width: 100% !important
+		+box
 .btn-opt
 	display: none
 	position: absolute

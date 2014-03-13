@@ -70,7 +70,7 @@ $(document).ready(function() {
 		$(".js-select-multi").multiselect({
 				selectedList: 7,
 				noneSelectedText: "",
-				header: "",
+				header: true,
    		 		open: function () {
    		 			$(this).multiselect("widget").find("input[type='search']:first").focus();
    		 			$(this).parents(".footer").find(".chosen-container").removeClass("chosen-with-drop");
@@ -81,12 +81,32 @@ $(document).ready(function() {
    		 		}
  
 		}).multiselectfilter();
+
+		$(".js-select-multi.has-top-position").multiselect({
+				selectedList: 7,
+				noneSelectedText: "",
+				header: true,
+				position: {
+				    my: 'left bottom',
+				    at: 'left top'
+				},
+   		 		open: function () {
+   		 			$(this).multiselect("widget").find("input[type='search']:first").focus();
+   		 			$(this).parents(".footer").find(".chosen-container").removeClass("chosen-with-drop");
+   		 		},
+   		 		close: function () {
+   		 			$(this).multiselect("widget").find("input[type='search']:first").val("");
+   		 			$(this).multiselect("widget").find(".ui-multiselect-checkboxes li").removeAttr("style");
+   		 		}
+ 
+		}).multiselectfilter();
+
 		$(".js-select-multi.is-placeholder").each(function () {
 			var placeholder = $(this).attr("data-placeholder");
 			$(this).multiselect({
 				selectedList: 7,
 				noneSelectedText: placeholder,
-				header: "",
+				header: true,
 		 		open: function () {
 		 			$(this).multiselect("widget").find("input[type='search']:first").focus();
 		 		},
@@ -555,9 +575,11 @@ $(document).ready(function() {
 
 	$(document).click(function() {
         $(".js-item").hide();
+        $(".js-show-item").removeClass("is-active");
     });
 	$(".js-show-item").click(function(event){
-		$(this).parent().find(".js-item").fadeToggle();
+		$(this).parent().find(".js-item").toggle();
+		$(this).toggleClass("is-active");
 		event.stopPropagation();
 	});
 	$(".js-item").click(function(event){
