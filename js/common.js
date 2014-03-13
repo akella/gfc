@@ -10,8 +10,10 @@ $(document).ready(function() {
 		$(".is-active .js-date-input").val(text);
 		$(".js-date-input").parent().removeClass("is-active");
 		$(".js-calendar").removeClass("is-active");
-        //$(".js-expand").hide();
+        $(".button").removeClass("is-active");
     });
+
+	
 
 	//chosen stuff
 	var config = {
@@ -116,6 +118,7 @@ $(document).ready(function() {
 		 		}
 			}).multiselectfilter();
 		})
+
 
 		// hiding on blur, needs class, is-shown
 		mouseOverActiveElement = false;

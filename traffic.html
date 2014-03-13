@@ -627,6 +627,22 @@
             <button class="button button_red">Stop GFC</button>
         </div>
     </footer>
+    <script>
+        $(document).ready(function() {
+            $(".ui-widget").on("click", function(event){
+                $(".button").removeClass("is-active");
+                $(".js-item").hide();
+                $(this).parents(".button-wrap").find(".button").toggleClass("is-active");
+                event.stopPropagation();
+            });
+            $(".chosen-container").on("click", function(event){
+                $(".button").removeClass("is-active");
+                $(".js-item").hide();
+                $(this).parents(".button-wrap").find(".button").toggleClass("is-active");
+                event.stopPropagation();
+            });
+        });
+    </script>
 </div>
 </body>
 </html>
