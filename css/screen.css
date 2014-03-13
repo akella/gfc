@@ -714,13 +714,38 @@ html { height: 100%; }
 
 .filter_my { padding-left: 0; padding-right: 0; }
 .filter_my .col { padding-right: 0; }
-.filter_my .wrap { width: 1156px; border: 1px solid red; }
-.filter_my .col_11 { width: 326px; padding-right: 0; }
-.filter_my .col_11 .row__text { width: 100px; }
-.filter_my .col_11 .row__main { width: 203px; padding: 0; }
+.filter_my .wrap { margin: 0 auto; width: 1156px; }
 .filter_my .col_w326 { width: 326px; }
-.filter_my .col_w268 { width: 268px; }
-.filter_my .col_w202 { width: 202px; }
+.filter_my .col_w326 .row__text { width: 100px; }
+.filter_my .col_w326 .row__main { width: 226px; }
+.filter_my .col_w260 { width: 260px; }
+.filter_my .col_w260 .row__text { width: 122px; }
+.filter_my .col_w260 .row__main { width: 138px; }
+.filter_my .col_w260 .row_small .row__main { width: 132px; }
+.filter_my .col_w214 { width: 214px; }
+.filter_my .col_w214 .row__text { width: 82px; }
+.filter_my .col_w214 .row__main { width: 132px; }
+.filter_my .col_w214 .chosen-container { min-width: 56px !important; width: 56px !important; }
+.filter_my .col_w214 .chosen-container .chosen-single { line-height: 23px; }
+.filter_my .col_w214 .chosen-container .chosen-single:after { display: none; }
+.filter_my .col_w214 .chosen-container span { display: inline-block; vertical-align: middle; margin-right: 0 !important; }
+.filter_my .col_w214 .row_small .row__text { padding-left: 10px; width: 77px; }
+.filter_my .col_w214 .row_small .row__main { width: 137px; }
+.filter_my .col_318 { width: 318px; }
+.filter_my .col_318 .row__text { width: 130px; }
+.filter_my .col_318 .row__main { width: 188px; }
+.filter_my .col_222 { width: 222px; }
+.filter_my .col_222 .row__text { width: 100px; }
+.filter_my .col_222 .row__main { width: 122px; }
+.filter_my .col_248 { width: 248px; }
+.filter_my .col_248 .row__text { width: 126px; }
+.filter_my .col_248 .row__main { width: 122px; }
+.filter_my .col_238 { width: 238px; }
+.filter_my .col_238 .row__text { width: 116px; }
+.filter_my .col_238 .row__main { width: 122px; }
+.filter_my .col_188 { float: right; margin-right: 39px; width: 188px; }
+.filter_my .col_188 .row__main { width: 188px; }
+.filter_my .btn-add { margin-left: 19px; }
 
 .col { float: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 

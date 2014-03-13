@@ -103,16 +103,16 @@
                     <button class="btn-bucket js-clear-select"><i></i></button>
                 </div>
             </div>
-            <div class="col col_w268">
+            <div class="col col_w260">
                 <div class="row row_inline">
                     <span class="row__text"><span>Date:</span></span>
                     <div class="row__main js-with-calendar">
                         <input type="text" class="input js-date-from">
                     </div>
                 </div>
-                <div class="row row_inline">
+                <div class="row row_small row_inline">
                     <span class="row__text"><span>ASR:</span></span>
-                    <div class="row__main row__main_55">
+                    <div class="row__main">
                         <div class="col col_46">
                             <input type="text" class="input">
                         </div>
@@ -122,9 +122,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="row row_inline">
+                <div class="row row_small row_inline">
                     <span class="row__text"><span>Cell Limit:</span></span>
-                    <div class="row__main row__main_55">
+                    <div class="row__main">
                         <div class="col col_46">
                             <input type="text" class="input">
                         </div>
@@ -134,23 +134,31 @@
                         </div>
                     </div>
                 </div>
-                <div class="row row_inline">
+                <div class="row row_small row_inline">
                     <span class="row__text"><span>GFC Client ID:</span></span>
-                    <div class="row__main row__main_55">
+                    <div class="row__main">
                         <input type="text" class="input">
                     </div>
                 </div>
             </div>
-            <div class="col col_w268">
-                <div class="row row_inline">
-                    <span class="row__text"><span>Date:</span></span>
+            <div class="col col_w214">
+                <div class="row row_small row_inline">
+                    <span class="row__text">
+                        <select data-placeholder="TERM Rate Table" class="chosen-select" >
+                            <option value="">&nbsp;</option>
+                            <option value="Slovak premium some">+0003</option>
+                            <option value="var2">+0003</option>
+                            <option value="var3">+0003</option>
+                            <option value="var4">+0003</option>
+                        </select> 
+                    </span>
                     <div class="row__main js-with-calendar">
-                        <input type="text" class="input js-date-from">
+                        <input type="text" class="input js-date-to">
                     </div>
                 </div>
                 <div class="row row_inline">
-                    <span class="row__text"><span>ASR:</span></span>
-                    <div class="row__main row__main_55">
+                    <span class="row__text"><span>ACD:</span></span>
+                    <div class="row__main">
                         <div class="col col_46">
                             <input type="text" class="input">
                         </div>
@@ -161,8 +169,8 @@
                     </div>
                 </div>
                 <div class="row row_inline">
-                    <span class="row__text"><span>Cell Limit:</span></span>
-                    <div class="row__main row__main_55">
+                    <span class="row__text"><span>Daily limit</span></span>
+                    <div class="row__main">
                         <div class="col col_46">
                             <input type="text" class="input">
                         </div>
@@ -173,13 +181,13 @@
                     </div>
                 </div>
                 <div class="row row_inline">
-                    <span class="row__text"><span>GFC Client ID:</span></span>
+                    <span class="row__text"><span>GFC Tel. #:</span></span>
                     <div class="row__main row__main_55">
                         <input type="text" class="input">
                     </div>
                 </div>
             </div>
-            <div class="col col_25">
+            <div class="col col_318">
                 <div class="row row_inline">
                     <span class="row__text"><span>Volume:</span></span>
                     <div class="row__main">
@@ -232,9 +240,9 @@
             </div>
         </div>
         <div class="wrap">
-            <form action="" style="padding-top:20px">
+            <form action="" style="padding-top:23px">
                 <!-- <div class="filter__title">Splits</div> -->
-                <div class="col col_25">
+                <div class="col col_222">
                     <div class="row row_inline">
                         <span class="row__text"><span>1:</span></span>
                         <div class="row__main">
@@ -248,9 +256,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col col_25">
+                <div class="col col_248">
                     <div class="row row_inline">
-                        <span class="row__text"><span>1:</span></span>
+                        <span class="row__text"><span>2:</span></span>
                         <div class="row__main">
                             <select data-placeholder="TERM Rate Table" class="chosen-select" >
                                 <option value="">&nbsp;</option>
@@ -262,9 +270,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col col_25">
+                <div class="col col_238">
                     <div class="row row_inline">
-                        <span class="row__text"><span>1:</span></span>
+                        <span class="row__text"><span>3:</span></span>
                         <div class="row__main">
                             <select data-placeholder="TERM Rate Table" class="chosen-select" >
                                 <option value="">&nbsp;</option>
@@ -273,13 +281,12 @@
                                 <option value="var3">var3</option>
                                 <option value="var4">var4</option>
                             </select> 
-                            <button class="btn-add"><i></i></button>
                         </div>
                     </div>
                 </div>
-                <div class="col col_25">
+                <button class="col btn-add"><i></i></button>
+                <div class="col col_188">
                     <div class="row row_inline">
-                        <span class="row__text"></span>
                         <div class="row__main row__buttons text-justify">
                             <button class="button button_blue">Search</button>
                             <button class="btn-down"><i></i></button>
