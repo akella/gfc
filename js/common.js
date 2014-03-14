@@ -94,7 +94,7 @@ $(document).ready(function() {
 				},
    		 		open: function () {
    		 			$(this).multiselect("widget").addClass("is-top-position");
-   		 			$(this).multiselect("widget").append('<div class="wrap"><button type="reset">Cancel</button><button type="submit">ok</button></div>');
+   		 			$(this).multiselect("widget").append('<div class="wrap"><button  class="js-uncheck">Cancel</button><button>ok</button></div>');
    		 			$(this).multiselect("widget").find("input[type='search']:first").focus();  
    		 			$(this).parents(".footer").find(".chosen-container").removeClass("chosen-with-drop");
    		 		},
@@ -106,6 +106,11 @@ $(document).ready(function() {
    		 		}
  
 		}).multiselectfilter();
+
+		$(".ui-multiselect-menu").on("click",".js-uncheck", function(){
+			$(this).parents(".ui-multiselect-menu").find("input").attr("aria-selected","false").removeAttr("checked");
+			return false;
+		});
 
 		$(".js-select-multi.is-placeholder").each(function () {
 			var placeholder = $(this).attr("data-placeholder");

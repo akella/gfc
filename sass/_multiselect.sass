@@ -11,7 +11,6 @@
     min-height: 26px
     border: 1px solid #d5d5d5
     +border-radius(3px)
-    background: #fff
     +box-shadow(inset 0 1px 1px rgba(0,1,1,.05))
     span
         color: #5c5c5c
@@ -25,6 +24,7 @@
                 +arr(8,7,#2cabdc,t)
             &:after
                 +arr(8,7,#2cabdc,b) 
+    
 .ui-multiselect span.ui-icon
     position: absolute
     top: 50%
@@ -84,13 +84,16 @@
     margin-top: 15px
     +box-sizing(border-box)
     width: 100%
-    +border-radius(2px)
-    background: #f7f7f7
+    +border-radius(4px)
+    overflow: hidden
+    background: #f7f7f7 !important
     border: 1px solid #c8c8c8
-    +box-shadow(0 3px 15px rgba(0,0,0,.2))
+    +box-shadow(0 2px 8px rgba(0,0,0,.5))
     width: auto !important 
     max-width: 460px
-    padding-right: 2px 
+    .ui-widget-header
+        background: none !important
+        border: 0
     // &:before,
     // &:after
     //     content: ""
@@ -111,6 +114,8 @@
     //     border-color: transparent transparent #c8c8c8 transparent
     &.is-top-position
         margin-top: -29px
+    .wrap
+        margin-top: 6px
     button
         float: left
         border-top: 1px solid #dbdbdb 
@@ -135,19 +140,19 @@
     overflow-x: hidden
     list-style: none
     max-height: 240px
+    // margin: 6px !important 
     height: auto !important
     min-width: 150px !important
     +scrollbar
-        width: 8px
-        margin-right: 10px    
-    +scrollbar-track-piece 
-        +border-radius(5px)
+        border: 1px solid #d5d5d5
+        +border-radius(3px)
         background: #ececec
-        +box-shadow(inset 0 0 3px rgba(44,44,44,.2), inset 0 0 0 1px #d5d5d5)
+        +box-shadow(inset 0 0 3px rgba(44,44,44,.2))
+
     +scrollbar-thumb
         width: 8px
         border: 1px solid #2694bf
-        +border-radius(5px)
+        +border-radius(7px)
         background: #2babdb 
     
 .ui-multiselect-checkboxes label
@@ -199,6 +204,13 @@
             +box-shadow(inset 0 1px 3px rgba(0,0,0,.07))
 .ui-multiselect-checkboxes li
     display: list-item
+    margin-right: 3px
+    span
+        display: block
+        width: 99%
+        white-space: nowrap
+        text-overflow: ellipsis
+        overflow: hidden
     &:hover  
         background: #2cabdc
         color: #fff
