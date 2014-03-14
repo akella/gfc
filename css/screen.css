@@ -452,7 +452,7 @@ input[type="file"]::-webkit-file-upload-button { height: 24px; border-radius: 2p
 
 .row__buttons.text-justify { overflow: hidden; text-align: justify; white-space: normal !important; }
 .row__buttons.text-justify:after { content: ""; display: inline-block; width: 100%; height: 0; }
-.row__buttons .btn-del, .row__buttons .button { display: inline-block; vertical-align: middle; }
+.row__buttons .btn-del, .row__buttons .button { display: inline-block; vertical-align: top; }
 
 .btn-add { width: 34px; height: 26px; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; background: #c5c5c5; }
 .btn-add i { display: inline-block; vertical-align: middle; background: url('../img/icons-s41d0eb468c.png') 0 -728px no-repeat; width: 17px; height: 18px; }
@@ -738,6 +738,8 @@ html { height: 100%; }
 .filter_my .col_188 { float: right; margin-right: 39px; width: 188px; }
 .filter_my .col_188 .row__main { width: 188px; }
 .filter_my .btn-add { margin-left: 19px; }
+
+.col-group { float: left; }
 
 .col { float: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
