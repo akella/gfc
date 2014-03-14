@@ -93,10 +93,14 @@ $(document).ready(function() {
 				    at: 'left top'
 				},
    		 		open: function () {
-   		 			$(this).multiselect("widget").find("input[type='search']:first").focus();
+   		 			$(this).multiselect("widget").addClass("is-top-position");
+   		 			$(this).multiselect("widget").append('<div class="wrap"><button type="reset">Cancel</button><button type="submit">ok</button></div>');
+   		 			$(this).multiselect("widget").find("input[type='search']:first").focus();  
    		 			$(this).parents(".footer").find(".chosen-container").removeClass("chosen-with-drop");
    		 		},
    		 		close: function () {
+   		 			$(this).multiselect("widget").removeClass("is-top-position");
+   		 			$(this).multiselect("widget").find('.wrap').remove();
    		 			$(this).multiselect("widget").find("input[type='search']:first").val("");
    		 			$(this).multiselect("widget").find(".ui-multiselect-checkboxes li").removeAttr("style");
    		 		}
@@ -744,6 +748,9 @@ $(document).ready(function() {
   });
   $(".js-drop-user-list").on("click", function(event){
   	event.stopPropagation();
+  });
+  $(".ui-multiselect-menu").on("click", function(event){
+  	event.stopPropagation();  
   });
 
 });

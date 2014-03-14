@@ -197,6 +197,10 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 .ui-multiselect-header li.ui-multiselect-close { float: right; text-align: right; padding-right: 0; }
 
 .ui-multiselect-menu { display: none; position: absolute; z-index: 10000; text-align: left; margin-top: 15px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 100%; -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; background: #f7f7f7; border: 1px solid #c8c8c8; -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2); box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2); width: auto !important; max-width: 460px; padding-right: 2px; }
+.ui-multiselect-menu.is-top-position { margin-top: -29px; }
+.ui-multiselect-menu button { float: left; border-top: 1px solid #dbdbdb; border-left: 1px solid #dbdbdb; width: 50%; height: 29px; background: none; font-size: 12px !important; color: #505050; text-align: center; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.ui-multiselect-menu button:first-child { border-left: 0; }
+.ui-multiselect-menu button:active { padding-top: 1px; color: white; background: #2cabdc; }
 
 .ui-multiselect-checkboxes { position: relative; overflow-y: auto; overflow-x: hidden; list-style: none; max-height: 240px; height: auto !important; min-width: 150px !important; }
 .ui-multiselect-checkboxes::-webkit-scrollbar { width: 8px; margin-right: 10px; }
@@ -434,9 +438,10 @@ input[type="file"]::-webkit-file-upload-button { height: 24px; border-radius: 2p
 .button-wrap .chosen-container, .button-wrap .ui-multiselect { position: absolute; top: 0; left: 0; right: 0; }
 .button-wrap .chosen-single, .button-wrap .ui-multiselect { opacity: 0; }
 .button-wrap .ui-multiselect { max-height: 85px; }
-.button-wrap .chosen-drop { top: auto; bottom: 31px; }
-.button-wrap .btn-opt { top: auto; bottom: 31px; margin-top: 0; }
+.button-wrap .chosen-drop { top: auto; bottom: 41px; }
+.button-wrap .btn-opt { top: auto; bottom: 45px; margin-top: 0; }
 .button-wrap .ui-widget { height: 30px; width: 100% !important; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.button-wrap .ui-multiselect-menu { margin-top: 0; }
 
 .btn-opt { display: none; position: absolute; top: 100%; width: 100%; margin-top: 7px; background: #f7f7f7; border-radius: 2px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); }
 .btn-opt button { float: left; border-top: 1px solid #dbdbdb; border-left: 1px solid #dbdbdb; width: 50%; height: 29px; background: none; text-align: center; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
