@@ -210,7 +210,7 @@ $(document).ready(function() {
 		}); 
 
 		$(".js-table td").on("click", function(){
-			if ($(this).attr("data-href") || $(this).attr("data-window-url") || $(this).hasClass("with-checkbox") || $(this).parent().attr("data-href")) {
+			if ($(this).attr("data-href") || $(this).attr("data-window-url") || $(this).hasClass("with-checkbox") || $(this).parent().attr("data-href") || $(this).hasClass("has-checkbox")) {
 				
 			}
 			else {
@@ -740,6 +740,18 @@ $(document).ready(function() {
 	  		});
 		}
 
+  });
+
+  $(".customcheckbox input").on("change", function(){
+  		if ($(this).parent().hasClass("is-checked")) {  
+  			$(this).removeAttr("checked");
+			$(this).parent().removeClass("is-checked");
+			
+		}
+		else {
+			$(this).attr("checked","checked");
+			$(this).parent().addClass("is-checked");
+		}
   });
 
   $(".js-drop-user").on("click", function(event){
