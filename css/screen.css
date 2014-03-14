@@ -768,14 +768,19 @@ html { height: 100%; }
 .table tr.is-clicked { background: #ffefe5; }
 .table tr.is-clicked:nth-child(2n) { background: #f8e8de; }
 .table td { text-align: center; padding: 8px 10px; vertical-align: middle; border-left: 1px solid #e7e7e7; -webkit-transition: background 0.2s linear; -moz-transition: background 0.2s linear; -o-transition: background 0.2s linear; transition: background 0.2s linear; }
-.table td[data-href], .table td[data-window-url], .table td.has-checkbox { cursor: pointer; }
+.table td[data-href], .table td[data-window-url], .table td.has-checkbox { cursor: pointer; padding: 0; }
 .table td[data-href]:hover, .table td[data-window-url]:hover, .table td.has-checkbox:hover { background: #9ed6ea; }
 .table td[data-href]:hover .customcheckbox i, .table td[data-window-url]:hover .customcheckbox i, .table td.has-checkbox:hover .customcheckbox i { border-color: #2395c1; }
+.table td[data-href] .button, .table td[data-window-url] .button, .table td.has-checkbox .button { min-width: 45px; padding: 0 5px; height: 24px; line-height: 24px; margin: 1px; }
+.table td[data-href] .customcheckbox, .table td[data-window-url] .customcheckbox, .table td.has-checkbox .customcheckbox { display: block; padding: 5px 0; cursor: pointer; }
+.table td[data-href] .customcheckbox i, .table td[data-window-url] .customcheckbox i, .table td.has-checkbox .customcheckbox i { left: 50%; top: 50%; margin: -9px 0 0 -9px; }
+.table td[data-href] .customcheckbox input, .table td[data-window-url] .customcheckbox input, .table td.has-checkbox .customcheckbox input { cursor: pointer; }
 
 .td-relative { position: relative; }
-.td-relative span { position: relative; z-index: 2; top: -10px; }
-.td-relative .customcheckbox { position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 1; }
+.td-relative span { position: relative; cursor: pointer; top: -10px; }
+.td-relative .customcheckbox { position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 3; margin-top: 0 !important; cursor: pointer; }
 .td-relative .customcheckbox i { margin-top: 0 !important; }
+.td-relative .customcheckbox input { cursor: pointer; }
 .td-relative .has-checkbox { padding: 0; }
 .td-relative .customcheckbox { display: block; margin: 0 auto; text-align: center; }
 .td-relative .customcheckbox i { left: 50%; margin-left: -9px; top: 50%; margin-top: -9px; }
