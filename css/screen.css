@@ -749,6 +749,10 @@ html { height: 100%; }
 .filter_my .col_188 .row__main { width: 188px; }
 .filter_my .btn-add { margin-left: 19px; }
 
+.js-newrow, .col-mycols { margin-left: 82px; }
+.js-newrow .row__text, .col-mycols .row__text { width: 20px !important; }
+.js-newrow .col, .col-mycols .col { width: 166px !important; }
+
 .col-group { float: left; }
 
 .col { float: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
