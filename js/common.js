@@ -84,7 +84,30 @@ $(document).ready(function() {
  
 		}).multiselectfilter();
 
-		$(".js-select-multi.has-top-position").multiselect({
+		$(".js-select-multi.has-top-position#s2").multiselect({
+				selectedList: 7,
+				noneSelectedText: "",
+				header: true,
+				position: {
+				    my: 'left bottom',
+				    at: 'left top'
+				},
+   		 		open: function () {
+   		 			$(this).multiselect("widget").addClass("is-top-position");
+   		 			$(this).multiselect("widget").append('<div class="wrap"><button  class="js-uncheck">Cancel</button><button>ok</button></div>');
+   		 			$(this).multiselect("widget").find("input[type='search']:first").focus();  
+   		 			$(this).parents(".footer").find(".chosen-container").removeClass("chosen-with-drop");
+   		 		},
+   		 		close: function () {
+   		 			$(this).multiselect("widget").removeClass("is-top-position");
+   		 			$(this).multiselect("widget").find('.wrap').remove();
+   		 			$(this).multiselect("widget").find("input[type='search']:first").val("");
+   		 			$(this).multiselect("widget").find(".ui-multiselect-checkboxes li").removeAttr("style");
+   		 		}
+ 
+		}).multiselectfilter();
+
+		$(".js-select-multi.has-top-position#s1").multiselect({
 				selectedList: 7,
 				noneSelectedText: "",
 				header: true,
