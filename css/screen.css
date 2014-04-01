@@ -311,7 +311,7 @@ html { height: 100%; }
 .nav__link:hover .nav__icon3 { background: url('../img/icons-s41d0eb468c.png') 0 -455px no-repeat; width: 25px; height: 28px; }
 
 .nav__counter { position: relative; display: inline-block; }
-.nav__counter em { position: absolute; top: 12px; right: -20px; width: 19px; height: 19px; line-height: 19px; text-align: center; font-style: normal; font-size: 12px; color: white; font-weight: bold; border: 1px solid #d35050; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; background: #eb6767; text-shadow: 0 1px 0 rgba(235, 104, 104, 0.4); }
+.nav__counter em { position: relative; display: inline-block; top: -12px; left: -4px; min-width: 13px; padding: 0 3px; height: 19px; line-height: 19px; text-align: center; font-style: normal; font-size: 12px; color: white; font-weight: bold; border: 1px solid #d35050; -webkit-border-radius: 14px; -moz-border-radius: 14px; -ms-border-radius: 14px; -o-border-radius: 14px; border-radius: 14px; background: #eb6767; text-shadow: 0 1px 0 rgba(235, 104, 104, 0.4); }
 
 .title { margin-bottom: 8px; padding: 0 20px; font-size: 20px; font-weight: normal; letter-spacing: 0.4px; font-family: Tahoma, Arial, sans-serif; *zoom: 1; }
 .title:after { content: " "; display: table; clear: both; }
