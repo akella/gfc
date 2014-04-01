@@ -468,6 +468,14 @@ input[type="file"]::-webkit-file-upload-button { height: 24px; border-radius: 2p
 .btn-close { position: absolute; background: url('../img/icons-s41d0eb468c.png') 0 -1201px no-repeat; width: 18px; height: 18px; }
 .btn-close:hover { background: url('../img/icons-s41d0eb468c.png') 0 -1173px no-repeat; width: 18px; height: 18px; }
 
+.is-blue { color: #2cabdc !important; }
+
+.is-green { color: #438420 !important; }
+
+.is-red { color: #990000 !important; }
+
+.is-gray { color: darkgrey !important; }
+
 .content { margin: 0 auto; width: 1100px; }
 
 .b .b__header { position: relative; margin-bottom: 20px; }
