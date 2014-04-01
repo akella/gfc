@@ -1,5 +1,16 @@
 $(document).ready(function() {
 
+
+
+	$('.js-addrows').click(function(event) {
+		//js-new-select
+		$( ".js-new-select:first-child" ).clone().insertBefore( ".js-addrows" ).addClass('col-group newrow').show();
+		$('.newrow .chosen-select1').addClass('chosen-select').removeClass('chosen-select1').chosen({"disable_search_threshold": 15});
+		// for (var selector in config) {
+		// 	$(selector).chosen(config[selector]).change(function(){ $(this).trigger('chosen:updated') });
+		// }
+		return false;
+	});
 	$(document).click(function() {
         $(".js-tooltip").hide();
         //$(".js-popup-comment").hide();
