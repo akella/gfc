@@ -1,0 +1,759 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Traffic</title>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.css">
+    <script src="js/jquery.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+    <script src="js/chosen.js"></script>
+    <script src="js/jquery.multiselect.js"></script>
+    <script src="js/jquery.multiselect.filter.js"></script>
+    <script src="js/jquery-ui-1.js"></script>
+    <script src="js/jquery-ui-timepicker-addon.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+<header class="header">
+    <div class="header__top">
+        <div class="header__user">
+                <span class="header__user-name js-drop-user">Vovkes</span>
+                <ul class="js-drop-user-list">
+                    <li><a href="#">Выйти</a></li>
+                </ul>
+            </div>
+        <div class="header__info js-in">
+            Dec 20 2013  <b class="sep"></b>  11:45:18 
+        </div>
+    </div>
+    <div class="js-nav">
+        <div class="nav-wrap">
+            <div class="l-container">
+                <ul class="nav">
+                    <li class="nav__item">
+                        <a href="dashboard.html" class="nav__link">
+                            <span class="nav__counter"><i class="nav__icon1"></i>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav__item is-active">
+                        <a href="traffic.html" class="nav__link">
+                            <span class="nav__counter"><i class="nav__icon2"></i>Traffik</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="alerts.html" class="nav__link">
+                            <span class="nav__counter"><i class="nav__icon3"></i>Alerts <em>2</em>  </span>
+
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="l-layout">
+    <div class="filter filter_my">
+        <div class="wrap">
+            <div class="col col_w326">
+                <div class="row row_inline row_basket">
+                    <span class="row__text">Country:</span>
+                    <div class="row__main">
+                        <select class="js-select-multi" multiple="multiple" >
+                            <option value="var0">var0</option>
+                            <option value="var1">var1</option>
+                            <option value="var2">var2</option>
+                            <option value="var3">var3</option>
+                            <option value="var4">var4</option>
+                        </select>
+                    </div>
+                    <button class="btn-bucket js-clear-select"><i></i></button>
+                </div>
+                <div class="row row_inline row_basket">
+                    <span class="row__text">Code Name:</span>
+                    <div class="row__main">
+                        <select class="js-select-multi" multiple="multiple" >
+                            <option value="var0">var0</option>
+                            <option value="var1">var1</option>
+                            <option value="var2">var2</option>
+                            <option value="var3">var3</option>
+                            <option value="var4">var4</option>
+                        </select>
+                    </div>
+                    <button class="btn-bucket js-clear-select"><i></i></button>
+                </div>
+                <div class="row row_inline">
+                    <span class="row__text">Code:</span>
+                    <div class="row__main">
+                        <input type="text" class="input input_226">
+                    </div>
+                </div>
+                <div class="row row_inline row_basket">
+                    <span class="row__text">Groups:</span>
+                    <div class="row__main">
+                        <select class="js-select-multi" multiple="multiple" >
+                            <option value="var0">var0</option>
+                            <option value="var1">var1</option>
+                            <option value="var2">var2</option>
+                            <option value="var3">var3</option>
+                            <option value="var4">var4</option>
+                        </select>
+                    </div>
+                    <button class="btn-bucket js-clear-select"><i></i></button>
+                </div>
+            </div>
+            <div class="col col_w260">
+                <div class="row row_inline">
+                    <span class="row__text"><span>Date:</span></span>
+                    <div class="row__main js-with-calendar">
+                        <input type="text" class="input js-date-from">
+                    </div>
+                </div>
+                <div class="row row_small row_inline">
+                    <span class="row__text"><span>ASR:</span></span>
+                    <div class="row__main">
+                        <div class="col col_46">
+                            <input type="text" class="input">
+                        </div>
+                        <div class="col col_8">-</div>
+                        <div class="col col_46">
+                            <input type="text" class="input">
+                        </div>
+                    </div>
+                </div>
+                <div class="row row_small row_inline">
+                    <span class="row__text"><span>Cell Limit:</span></span>
+                    <div class="row__main">
+                        <div class="col col_46">
+                            <input type="text" class="input">
+                        </div>
+                        <div class="col col_8">-</div>
+                        <div class="col col_46">
+                            <input type="text" class="input">
+                        </div>
+                    </div>
+                </div>
+                <div class="row row_small row_inline">
+                    <span class="row__text"><span>GFC Client ID:</span></span>
+                    <div class="row__main">
+                        <input type="text" class="input">
+                    </div>
+                </div>
+            </div>
+            <div class="col col_w214">
+                <div class="row row_small row_inline">
+                    <span class="row__text">
+                        <select data-placeholder="TERM Rate Table" class="chosen-select" >
+                            <option value="">&nbsp;</option>
+                            <option value="Slovak premium some">+0003</option>
+                            <option value="var2">+0003</option>
+                            <option value="var3">+0003</option>
+                            <option value="var4">+0003</option>
+                        </select> 
+                    </span>
+                    <div class="row__main js-with-calendar">
+                        <input type="text" class="input js-date-to">
+                    </div>
+                </div>
+                <div class="row row_inline">
+                    <span class="row__text"><span>ACD:</span></span>
+                    <div class="row__main">
+                        <div class="col col_46">
+                            <input type="text" class="input">
+                        </div>
+                        <div class="col col_8">-</div>
+                        <div class="col col_46">
+                            <input type="text" class="input">
+                        </div>
+                    </div>
+                </div>
+                <div class="row row_inline">
+                    <span class="row__text"><span>Daily limit</span></span>
+                    <div class="row__main">
+                        <div class="col col_46">
+                            <input type="text" class="input">
+                        </div>
+                        <div class="col col_8">-</div>
+                        <div class="col col_46">
+                            <input type="text" class="input">
+                        </div>
+                    </div>
+                </div>
+                <div class="row row_inline">
+                    <span class="row__text"><span>GFC Tel. #:</span></span>
+                    <div class="row__main row__main_55">
+                        <input type="text" class="input">
+                    </div>
+                </div>
+            </div>
+            <div class="col col_318">
+                <div class="row row_inline">
+                    <span class="row__text"><span>Volume:</span></span>
+                    <div class="row__main">
+                        <div class="col col_46">
+                            <input type="text" class="input">
+                        </div>
+                        <div class="col col_8">-</div>
+                        <div class="col col_46">
+                            <input type="text" class="input">
+                        </div>
+                    </div>
+                </div>
+                <div class="row row_inline">
+                    <span class="row__text"><span>Avg. Cell Vol:</span></span>
+                    <div class="row__main">
+                        <div class="col col_46">
+                            <input type="text" class="input">
+                        </div>
+                        <div class="col col_8">-</div>
+                        <div class="col col_46">
+                            <input type="text" class="input">
+                        </div>
+                    </div>
+                </div>
+                <div class="row row_inline">
+                    <span class="row__text"><span>Attempts:</span></span>
+                    <div class="row__main">
+                        <div class="col col_46">
+                            <input type="text" class="input">
+                        </div>
+                        <div class="col col_8">-</div>
+                        <div class="col col_46">
+                            <input type="text" class="input">
+                        </div>
+                    </div>
+                </div>
+                <div class="row row_inline row_basket">
+                    <span class="row__text"><span>Work-Rest Int.:</span></span>
+                    <div class="row__main">
+                        <select class="js-select-multi" multiple="multiple" >
+                            <option value="var0">var0</option>
+                            <option value="var1">var1</option>
+                            <option value="var2">var2</option>
+                            <option value="var3">var3</option>
+                            <option value="var4">var4</option>
+                        </select>
+                    </div>
+                    <button class="btn-bucket js-clear-select"><i></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="wrap">
+            <form action="" style="padding-top:23px">
+                <!-- <div class="filter__title">Splits</div> -->
+                <div class="js-new-select" hidden>
+                    <div>
+                        <div class="col col_222">
+                            <div class="row row_inline">
+                                <span class="row__text"><span>1:</span></span>
+                                <div class="row__main">
+                                    <select data-placeholder="TERM Rate Table" class="chosen-select1" >
+                                        <option value="">&nbsp;</option>
+                                        <option value="Slovak premium some">Slovak premium some</option>
+                                        <option value="var2">var2</option>
+                                        <option value="var3">var3</option>
+                                        <option value="var4">var4</option>
+                                    </select> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col_248">
+                            <div class="row row_inline">
+                                <span class="row__text"><span>2:</span></span>
+                                <div class="row__main">
+                                    <select data-placeholder="TERM Rate Table" class="chosen-select1" >
+                                        <option value="">&nbsp;</option>
+                                        <option value="Slovak premium some">Slovak premium some</option>
+                                        <option value="var2">var2</option>
+                                        <option value="var3">var3</option>
+                                        <option value="var4">var4</option>
+                                    </select> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col_238">
+                            <div class="row row_inline">
+                                <span class="row__text"><span>3:</span></span>
+                                <div class="row__main">
+                                    <select data-placeholder="TERM Rate Table" class="chosen-select1" >
+                                        <option value="">&nbsp;</option>
+                                        <option value="Slovak premium some">Slovak premium some</option>
+                                        <option value="var2">var2</option>
+                                        <option value="var3">var3</option>
+                                        <option value="var4">var4</option>
+                                    </select> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col_238">
+                            <div class="row row_inline">
+                                <span class="row__text"><span>4:</span></span>
+                                <div class="row__main">
+                                    <select data-placeholder="TERM Rate Table" class="chosen-select1" >
+                                        <option value="">&nbsp;</option>
+                                        <option value="Slovak premium some">Slovak premium some</option>
+                                        <option value="var2">var2</option>
+                                        <option value="var3">var3</option>
+                                        <option value="var4">var4</option>
+                                    </select> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-group col-mycols">
+                    <div>
+                        <div class="col col_222">
+                            <div class="row row_inline">
+                                <span class="row__text"><span>1:</span></span>
+                                <div class="row__main">
+                                    <select data-placeholder="TERM Rate Table" class="chosen-select" >
+                                        <option value="">&nbsp;</option>
+                                        <option value="Slovak premium some">Slovak premium some</option>
+                                        <option value="var2">var2</option>
+                                        <option value="var3">var3</option>
+                                        <option value="var4">var4</option>
+                                    </select> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col_248">
+                            <div class="row row_inline">
+                                <span class="row__text"><span>2:</span></span>
+                                <div class="row__main">
+                                    <select data-placeholder="TERM Rate Table" class="chosen-select" >
+                                        <option value="">&nbsp;</option>
+                                        <option value="Slovak premium some">Slovak premium some</option>
+                                        <option value="var2">var2</option>
+                                        <option value="var3">var3</option>
+                                        <option value="var4">var4</option>
+                                    </select> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col_238">
+                            <div class="row row_inline">
+                                <span class="row__text"><span>3:</span></span>
+                                <div class="row__main">
+                                    <select data-placeholder="TERM Rate Table" class="chosen-select" >
+                                        <option value="">&nbsp;</option>
+                                        <option value="Slovak premium some">Slovak premium some</option>
+                                        <option value="var2">var2</option>
+                                        <option value="var3">var3</option>
+                                        <option value="var4">var4</option>
+                                    </select> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col_238">
+                            <div class="row row_inline">
+                                <span class="row__text"><span>4:</span></span>
+                                <div class="row__main">
+                                    <select data-placeholder="TERM Rate Table" class="chosen-select" >
+                                        <option value="">&nbsp;</option>
+                                        <option value="Slovak premium some">Slovak premium some</option>
+                                        <option value="var2">var2</option>
+                                        <option value="var3">var3</option>
+                                        <option value="var4">var4</option>
+                                    </select> 
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <button class="col btn-add js-addrows"><i></i></button>
+                <div class="col col_188">
+                    <div class="row row_inline">
+                        <div class="row__main row__buttons text-justify">
+                            <button class="button button_blue">Search</button>
+                            <button class="btn-down"><i></i></button>
+                            <button class="btn-del"><i></i></button>
+                        </div>
+                    </div>  
+                </div>
+            </form>
+        </div>  
+        
+    </div>
+   <div class="wrap">
+        <div class="table-info">
+            <i class="icon-flag"></i>
+            <span>Ukraine mobile Kyivstar</span> | <span>ASR:</span> 17-60 | <span>ACD:</span> 2-4 | <span>Cell:</span> > 200 | <span>Daily:</span> < 300 | <span>Vol:</span> > 200
+        </div>
+
+        <button class="button button_blue button_icon">
+            <i class="icon icon_export"></i>Export Filtered
+        </button>
+    </div>
+    <table class="table js-table">
+        <thead class="table__head">
+            <tr>
+                <th rowspan="2">Country</th>
+                <th rowspan="2">Code name</th>
+                <th rowspan="2">Code</th>
+                <th rowspan="3" class="td-relative">
+                    <span>ID</span>
+                    <div>
+                        <label class="customcheckbox js-check-all" data-group-id="1">
+                            <input type="checkbox">
+                            <i></i>
+                        </label>
+                    </div>
+                </th>
+                <th rowspan="2">GFC <br>Clients ID</th>
+                <th rowspan="2">Tel. NO</th>
+                <th rowspan="2">Volume <br>(min)</th>
+                <th rowspan="2">Avg. Volume <br>per Cell (min)</th>
+                <th rowspan="2">ASR</th>
+                <th rowspan="2">ASR</th>
+                <th colspan="4">AVOX</th>
+                <th rowspan="2">Groups</th>
+            </tr>
+            <tr>
+                <th>ORIG Cost</th>
+                <th colspan="2">TERM Cost</th>
+                <th>Profit</th>
+            </tr>
+            <tr>
+                <th>
+                    <div class="btns-wrap">
+                        <button class="btn-sort btn-sort_top"><i></i></button>
+                        <button class="btn-sort btn-sort_down"><i></i></button>
+                    </div>
+                </th>
+                <th>
+                    <div class="btns-wrap">
+                        <button class="btn-sort btn-sort_top"><i></i></button>
+                        <button class="btn-sort btn-sort_down"><i></i></button>
+                    </div>
+                </th>
+                <th>
+                    <div class="btns-wrap">
+                        <button class="btn-sort btn-sort_top"><i></i></button>
+                        <button class="btn-sort btn-sort_down"><i></i></button>
+                    </div>
+                </th>
+                <th>
+                    <div class="btns-wrap">
+                        <button class="btn-sort btn-sort_top"><i></i></button>
+                        <button class="btn-sort btn-sort_down"><i></i></button>
+                    </div>
+                </th>
+                <th>
+                    <div class="btns-wrap">
+                        <button class="btn-sort btn-sort_top"><i></i></button>
+                        <button class="btn-sort btn-sort_down"><i></i></button>
+                    </div>
+                </th>
+                <th>
+                    <div class="btns-wrap">
+                        <button class="btn-sort btn-sort_top"><i></i></button>
+                        <button class="btn-sort btn-sort_down"><i></i></button>
+                    </div>
+                </th>
+                <th>
+                    <div class="btns-wrap">
+                        <button class="btn-sort btn-sort_top"><i></i></button>
+                        <button class="btn-sort btn-sort_down"><i></i></button>
+                    </div>
+                </th>
+                <th>
+                    <div class="btns-wrap">
+                        <button class="btn-sort btn-sort_top"><i></i></button>
+                        <button class="btn-sort btn-sort_down"><i></i></button>
+                    </div>
+                </th>
+                <th>
+                    <div class="btns-wrap">
+                        <button class="btn-sort btn-sort_top"><i></i></button>
+                        <button class="btn-sort btn-sort_down"><i></i></button>
+                    </div>
+                </th>
+                <th>
+                    <div class="btns-wrap">
+                        <button class="btn-sort btn-sort_top"><i></i></button>
+                        <button class="btn-sort btn-sort_down"><i></i></button>
+                    </div>
+                </th>
+                <th>
+                    <div class="btns-wrap">
+                        <button class="btn-sort btn-sort_top"><i></i></button>
+                        <button class="btn-sort btn-sort_down"><i></i></button>
+                    </div>
+                </th>
+                <th>
+                    <div class="btns-wrap">
+                        <button class="btn-sort btn-sort_top"><i></i></button>
+                        <button class="btn-sort btn-sort_down"><i></i></button>
+                    </div>
+                </th>
+                <th>
+                    <div class="btns-wrap">
+                        <button class="btn-sort btn-sort_top"><i></i></button>
+                        <button class="btn-sort btn-sort_down"><i></i></button>
+                    </div>
+                </th>
+                <th>
+                    <div class="btns-wrap">
+                        <button class="btn-sort btn-sort_top"><i></i></button>
+                        <button class="btn-sort btn-sort_down"><i></i></button>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody class="table__body">
+             <tr>
+                <td data-href="#">Madagascar</td>
+                <td data-href="#">Mada Mobile</td>
+                <td data-href="#">71134</td>
+                <td class="has-checkbox" style="width:40px">
+                    <label class="customcheckbox" data-id="1">
+                        <input type="checkbox">
+                        <i></i>
+                    </label>
+                </td>
+                <td data-href="#">1287483242</td>
+                <td data-href="#">380677654321</td>
+                <td data-href="#">9 675.43</td>
+                <td data-href="#">436.87</td>
+                <td data-href="#">34%</td>
+                <td data-href="#">2.14</td>
+                <td data-href="#">$ 38 934</td>
+                <td data-href="#">$ 31 487</td>
+                <td data-href="#">$ 0</td>
+                <td data-href="#">$ 7 447</td>
+                <td data-href="#">Mad T, Crazy</td>
+            </tr>
+            <tr>
+                <td>Madagascar</td>
+                <td>Mada Mobile</td>
+                <td>71134</td>
+                <td class="has-checkbox">
+                    <label class="customcheckbox" data-id="1">
+                        <input type="checkbox">
+                        <i></i>
+                    </label>
+                </td>
+                <td>1287483242</td>
+                <td>380677654321</td>
+                <td>9 675.43</td>
+                <td>436.87</td>
+                <td>34%</td>
+                <td>2.14</td>
+                <td>$ 38 934</td> 
+                <td>$ 31 487</td>
+                <td>$ 0</td>
+                <td>$ 7 447</td>
+                <td>Mad T, Crazy</td>
+            </tr>
+            <tr>
+                <td>Madagascar</td>
+                <td>Mada Mobile</td>
+                <td>71134</td>
+                <td class="has-checkbox">
+                    <label class="customcheckbox" data-id="1">
+                        <input type="checkbox">
+                        <i></i>
+                    </label>
+                </td>
+                <td>1287483242</td>
+                <td>380677654321</td>
+                <td>9 675.43</td>
+                <td>436.87</td>
+                <td>34%</td>
+                <td>2.14</td>
+                <td>$ 38 934</td>
+                <td>$ 31 487</td>
+                <td>$ 0</td>
+                <td>$ 7 447</td>
+                <td>Mad T, Crazy</td>
+            </tr>
+            <tr>
+                <td>Madagascar</td>
+                <td>Mada Mobile</td>
+                <td>71134</td>
+                <td class="has-checkbox">
+                    <label class="customcheckbox" data-id="1">
+                        <input type="checkbox">
+                        <i></i>
+                    </label>
+                </td>
+                <td>1287483242</td>
+                <td>380677654321</td>
+                <td>9 675.43</td>
+                <td>436.87</td>
+                <td>34%</td>
+                <td>2.14</td>
+                <td>$ 38 934</td>
+                <td>$ 31 487</td>
+                <td>$ 0</td>
+                <td>$ 7 447</td>
+                <td>Mad T, Crazy</td>
+            </tr>
+            <tr>
+                <td>Madagascar</td>
+                <td>Mada Mobile</td>
+                <td>71134</td>
+                <td class="has-checkbox">
+                    <label class="customcheckbox" data-id="1">
+                        <input type="checkbox">
+                        <i></i>
+                    </label>
+                </td>
+                <td>1287483242</td>
+                <td>380677654321</td>
+                <td>9 675.43</td>
+                <td>436.87</td>
+                <td>34%</td>
+                <td>2.14</td>
+                <td>$ 38 934</td>
+                <td>$ 31 487</td>
+                <td>$ 0</td>
+                <td>$ 7 447</td>
+                <td>Mad T, Crazy</td>
+            </tr>
+            <tr>
+                <td>Madagascar</td>
+                <td>Mada Mobile</td>
+                <td>71134</td>
+                <td class="has-checkbox">
+                    <label class="customcheckbox" data-id="1">
+                        <input type="checkbox">
+                        <i></i>
+                    </label>
+                </td>
+                <td>1287483242</td>
+                <td>380677654321</td>
+                <td>9 675.43</td>
+                <td>436.87</td>
+                <td>34%</td>
+                <td>2.14</td>
+                <td>$ 38 934</td>
+                <td>$ 31 487</td>
+                <td>$ 0</td>
+                <td>$ 7 447</td>
+                <td>Mad T, Crazy</td>
+            </tr>
+            <tr>
+                <td>Madagascar</td>
+                <td>Mada Mobile</td>
+                <td>71134</td>
+                <td class="has-checkbox">
+                    <label class="customcheckbox" data-id="1">
+                        <input type="checkbox">
+                        <i></i>
+                    </label>
+                </td>
+                <td>1287483242</td>
+                <td>380677654321</td>
+                <td>9 675.43</td>
+                <td>436.87</td>
+                <td>34%</td>
+                <td>2.14</td>
+                <td>$ 38 934</td>
+                <td>$ 31 487</td>
+                <td>$ 0</td>
+                <td>$ 7 447</td>
+                <td>Mad T, Crazy</td>
+            </tr>
+        </tbody>
+    </table>
+    <footer class="footer">
+        <div class="button-wrap">
+            <button class="button js-show-item">Set Daily Limit</button>
+            <div class="btn-opt js-item">
+                <div class="btn-opt__top">
+                    <input type="text" class="input">
+                </div>
+                <button>Cancel</button>
+                <button>Ok</button>
+            </div>
+        </div>
+        <div class="button-wrap">
+            <button class="button js-show-item">Set Cell Limit</button>
+            <div class="btn-opt js-item">
+                <div class="btn-opt__top">
+                    <input type="text" class="input">
+                </div>
+                <button>Cancel</button>
+                <button>Ok</button>
+            </div>
+        </div>
+        <div class="button-wrap">
+            <button class="button">Set WR Interval</button>
+            <select data-placeholder="TERM Rate Table" class="chosen-select" >
+                <option value="Slovak premium some">Ukraine-5-7-3</option>
+                <option value="var2">Ukraine-5-7-3</option>
+                <option value="var3">Ukraine-5-7-3</option>
+            </select>
+        </div>
+        <div class="button-wrap">
+            <button class="button">Add to Group</button>
+            <select class="js-select-multi has-top-position" id="s2" multiple="multiple" >
+                <option value="City boys">City boys</option>
+                <option value="Roamers">Roamers</option>
+                <option value="Ударники">Ударники</option>
+                <option value="Twosim">Twosim</option>
+                <option value="CorpOnWifi">CorpOnWifi</option>
+                <option value="Слабаки Кокшетау">Слабаки Кокшетау</option>
+                <option value="Самал-2">Самал-2</option>
+                <option value="Лес 1488">Лес 1488</option>
+                <option value="Лес 1771">Лес 1771</option>
+            </select>
+        </div>
+        <div class="button-wrap">
+            <button class="button">Kick from Group</button>
+            <select class="js-select-multi has-top-position" id="s1" multiple="multiple" >
+                <option value="City boys">City boys111</option>
+                <option value="Roamers">Roamers</option>
+                <option value="Ударники">Ударники</option>
+                <option value="Twosim">Twosim</option>
+                <option value="CorpOnWifi">CorpOnWifi</option>
+                <option value="Слабаки Кокшетау">Слабаки Кокшетау</option>
+                <option value="Самал-2">Самал-2</option>
+                <option value="Лес 1488">Лес 1488</option>
+                <option value="Лес 1771">Лес 1771</option>
+            </select>
+        </div>
+        <div class="button-wrap">
+            <button class="button button_red">Stop GFC</button>
+        </div>
+		
+		<div class="button-wrap"  style="width: 220px;">
+            <button class="button button_green js-show-item">Set ALERT</button>
+            <div class="btn-opt js-item">
+                <div class="btn-opt__top">
+					check span: <input type="text" class="input row__main" style="width: 80px;"> min
+					<br/><br/>
+					check every: <input type="text" class="input row__main" style="width: 80px;"> min
+                </div>
+                <button>Cancel</button>
+                <button>Ok</button>
+            </div>
+        </div>
+		
+		
+		
+		
+    </footer>
+    <script>
+        $(document).ready(function() {
+            $(".ui-widget").on("click", function(event){
+                $(".button").removeClass("is-active");
+                $(".js-item").hide();
+                $(this).parents(".button-wrap").find(".button").toggleClass("is-active");
+                event.stopPropagation();
+            });
+            $(".chosen-container").on("click", function(event){
+                $(".button").removeClass("is-active");
+                $(".js-item").hide();
+                $(this).parents(".button-wrap").find(".button").toggleClass("is-active");
+                event.stopPropagation();
+            });
+        });
+    </script>
+</div>
+</body>
+</html>
