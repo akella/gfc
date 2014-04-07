@@ -454,7 +454,8 @@ input[type="file"]::-webkit-file-upload-button { height: 24px; border-radius: 2p
 
 .btn-opt__row { padding: 3px 0; }
 .btn-opt__row span { display: inline-block; width: 75px; }
-.btn-opt__row input { width: 40px !important; }
+.btn-opt__row input { width: 40px; }
+.btn-opt__row input.input_longer { width: 119px; }
 
 .row__buttons.text-justify { overflow: hidden; text-align: justify; white-space: normal !important; }
 .row__buttons.text-justify:after { content: ""; display: inline-block; width: 100%; height: 0; }
